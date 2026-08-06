@@ -9,7 +9,7 @@ hide:
   <div class="bdcc-hero__content">
 
     <h1 class="bdcc-title">
-      Big Data e Cloud Computing
+      Projeto Cloud Computing
     </h1>
 
     <div class="bdcc-grid">
