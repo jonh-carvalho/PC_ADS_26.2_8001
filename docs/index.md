@@ -30,7 +30,7 @@ hide:
       <section class="bdcc-card bdcc-card--accent">
         <h2 class="bdcc-card__title">Entrega das atividades</h2>
         <p class="bdcc-note">
-          As APs deverão ser enviadas no GitHub e ACs em Formulários.
+          As APs deverão ser enviadas no GitHub.
         </p>
         <div class="bdcc-accent-line" aria-hidden="true"></div>
       </section>
