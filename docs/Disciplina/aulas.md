@@ -2,13 +2,11 @@
 
 | Aula               | Conteúdo |
 |--------------------|----------|
-| Aula 01 - 04/08/2026 | :material-check: Projeto Cloud Computing |
+| Aula 01 - 06/08/2026 | :material-check: [Projeto de Cloud Computing](../Disciplina/docs/aula01/) |
+| Aula 02 - 13/08/2026 | :material-check: Operações Cloud <br> :material-check: AWS Educate  |
+| Aula 03 - 20/08/2026 | :material-check:  |
+| Aula 04 - 27/08/2026 | :material-check:  |
 
-<!--
-| Aula 02 - 11/08/2026 | :material-check: Introdução ao [Big Data](..//Disciplina/docs/aula02/Introducao-ao-Big-Data-Os-5-Vs-e-Desafios-do-Processamento-em-Larga-Escala.pptx) |
-| Aula 03 - 18/08/2026 | :material-check: [Principais Serviços Aws](../Disciplina/docs/aula02/Principais-Servicos-AWS-Computacao-Armazenamento-e-Redes.pptx) |
-| Aula 04 - 25/08/2026 | :material-check: [Computação](https://awseducate.instructure.com/courses/941) |
--->
 
 <!--
 Aula 05 - 26/03/2026 | :material-check: Roteiro Nginx |
