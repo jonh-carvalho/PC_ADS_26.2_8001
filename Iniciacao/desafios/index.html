@@ -726,57 +726,117 @@
 <h3 id="case-1-fintech-fastpay-instantaneo"><strong>Case 1: Fintech – "FastPay Instantâneo"</strong><a class="headerlink" href="#case-1-fintech-fastpay-instantaneo" title="Permanent link">&para;</a></h3>
 <p><strong>Desafio Detalhado:</strong> O grupo deverá projetar a infraestrutura para uma startup de pagamentos que enfrenta problemas de latência e quedas frequentes em sua API.</p>
 <ul>
-<li><strong>O Problema:</strong> A arquitetura atual não suporta o crescimento acelerado e apresenta latência média de 200ms, o que é inaceitável para pagamentos em tempo real.</li>
-<li><strong>Requisitos Técnicos:</strong><ul>
+<li>
+<p><strong>O Problema:</strong> A arquitetura atual não suporta o crescimento acelerado e apresenta latência média de 200ms, o que é inaceitável para pagamentos em tempo real.</p>
+</li>
+<li>
+<p><strong>Requisitos Técnicos:</strong></p>
+<ul>
 <li><strong>Performance:</strong> Garantir latência <strong>abaixo de 50ms</strong> para 90% das transações.</li>
 <li><strong>Disponibilidade:</strong> SLA de <strong>99,99%</strong> (aproximadamente 52 min de downtime/ano).</li>
 <li><strong>Segurança:</strong> Conformidade estrita com <strong>PCI-DSS</strong> para dados de cartões e <strong>LGPD</strong>.</li>
 </ul>
 </li>
-<li><strong>Restrição Financeira:</strong> O orçamento total é de <strong>US\$ 2.000,00/mês</strong>.</li>
-<li><strong>Serviços Sugeridos para o DAS:</strong> O grupo deve justificar o uso de instâncias EC2, RDS Multi-AZ para o PostgreSQL, ElastiCache (Redis) para reduzir a latência e KMS para criptografia.</li>
+<li>
+<p><strong>Restrição Financeira:</strong> O orçamento total é de <strong>US\$ 2.000,00/mês</strong>.</p>
+</li>
+<li>
+<p><strong>Serviços Sugeridos para o DAS:</strong> O grupo deve justificar o uso de instâncias EC2, RDS Multi-AZ para o PostgreSQL, ElastiCache (Redis) para reduzir a latência e KMS para criptografia.</p>
+</li>
 </ul>
 <h3 id="case-2-e-commerce-black-friday-ready"><strong>Case 2: E-commerce – "Black Friday Ready"</strong><a class="headerlink" href="#case-2-e-commerce-black-friday-ready" title="Permanent link">&para;</a></h3>
-<p><strong>Desafio Detalhado:</strong> O grupo atuará como uma consultoria para uma loja virtual experiente que precisa escalar sua operação em 10x durante picos de tráfego, sem explodir os custos.
-*   <strong>O Problema:</strong> O sistema atual é rígido e caro; o cliente quer pagar apenas pelo que usa (elasticidade) e otimizar gastos em períodos de baixa demanda.
-*   <strong>Requisitos Técnicos:</strong>
-    *   <strong>Escalabilidade:</strong> Implementação de <strong>Auto Scaling</strong> e <strong>Load Balancer</strong> para lidar com o aumento súbito de usuários.
-    *   <strong>Eficiência:</strong> Uso de <strong>S3</strong> para entrega de mídia/arquivos estáticos para aliviar os servidores de aplicação.
-*   <strong>Objetivo de Cloud:</strong> Reduzir o custo operacional mensal comparado ao modelo atual on-premises ou em nuvem mal configurada.</p>
+<p><strong>Desafio Detalhado:</strong> O grupo atuará como uma consultoria para uma loja virtual experiente que precisa escalar sua operação em 10x durante picos de tráfego, sem explodir os custos.</p>
+<ul>
+<li>
+<p><strong>O Problema:</strong> O sistema atual é rígido e caro; o cliente quer pagar apenas pelo que usa (elasticidade) e otimizar gastos em períodos de baixa demanda.</p>
+</li>
+<li>
+<p><strong>Requisitos Técnicos:</strong></p>
+<ul>
+<li><strong>Escalabilidade:</strong> Implementação de <strong>Auto Scaling</strong> e <strong>Load Balancer</strong> para lidar com o aumento súbito de usuários.</li>
+<li><strong>Eficiência:</strong> Uso de <strong>S3</strong> para entrega de mídia/arquivos estáticos para aliviar os servidores de aplicação.</li>
+</ul>
+</li>
+<li>
+<p><strong>Objetivo de Cloud:</strong> Reduzir o custo operacional mensal comparado ao modelo atual on-premises ou em nuvem mal configurada.</p>
+</li>
+</ul>
 <h3 id="case-3-govtech-portal-cidadao-seguro"><strong>Case 3: GovTech – "Portal Cidadão Seguro"</strong><a class="headerlink" href="#case-3-govtech-portal-cidadao-seguro" title="Permanent link">&para;</a></h3>
-<p><strong>Desafio Detalhado:</strong> Planejar a infraestrutura de uma plataforma pública que lida com dados sensíveis de milhões de cidadãos, onde o risco de vazamento deve ser minimizado ao máximo.
-*   <strong>O Problema:</strong> A plataforma é alvo constante de tentativas de invasão e precisa de auditoria completa de cada ação realizada.
-*   <strong>Requisitos Técnicos:</strong>
-    *   <strong>Segurança Máxima:</strong> Implementação de uma <strong>VPC</strong> altamente isolada, com uso rigoroso de <strong>Security Groups</strong> (stateful) e <strong>NACLs</strong> (stateless).
-    *   <strong>Governança:</strong> Controle granular de acesso via <strong>IAM</strong> e monitoramento de logs centralizados no <strong>CloudWatch</strong>.
-*   <strong>Compliance:</strong> Conformidade total com a <strong>LGPD</strong> e trilhas de auditoria para todos os acessos a dados sensíveis.</p>
+<p><strong>Desafio Detalhado:</strong> Planejar a infraestrutura de uma plataforma pública que lida com dados sensíveis de milhões de cidadãos, onde o risco de vazamento deve ser minimizado ao máximo.</p>
+<ul>
+<li>
+<p><strong>O Problema:</strong> A plataforma é alvo constante de tentativas de invasão e precisa de auditoria completa de cada ação realizada.</p>
+</li>
+<li>
+<p><strong>Requisitos Técnicos:</strong></p>
+<ul>
+<li><strong>Segurança Máxima:</strong> Implementação de uma <strong>VPC</strong> altamente isolada, com uso rigoroso de <strong>Security Groups</strong> (stateful) e <strong>NACLs</strong> (stateless).</li>
+<li><strong>Governança:</strong> Controle granular de acesso via <strong>IAM</strong> e monitoramento de logs centralizados no <strong>CloudWatch</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Compliance:</strong> Conformidade total com a <strong>LGPD</strong> e trilhas de auditoria para todos os acessos a dados sensíveis.</p>
+</li>
+</ul>
 <h3 id="case-4-healthtech-vitalis-health"><strong>Case 4: HealthTech – "Vitalis Health"</strong><a class="headerlink" href="#case-4-healthtech-vitalis-health" title="Permanent link">&para;</a></h3>
-<p><strong>Desafio Detalhado:</strong> Desenvolver o projeto para um sistema de monitoramento remoto de pacientes crônicos, integrando dados de dispositivos wearables com dashboards médicos.
-*   <strong>O Problema:</strong> Hospitais não conseguem monitorar pacientes em tempo real de forma confiável e os dados precisam estar disponíveis 24/7 para emergências.
-*   <strong>Requisitos Técnicos:</strong>
-    *   <strong>Resiliência:</strong> O sistema não pode parar; exige-se uma estratégia de <strong>Backup</strong> com RPO de 15 min e RTO de 1 hora.
-    *   <strong>Integração:</strong> Capacidade de processar dados vindos de wearables e armazená-los de forma segura.
-*   <strong>Conformidade:</strong> Seguir normas internacionais de saúde (como HIPAA) e nacionais (LGPD), garantindo criptografia em repouso e em trânsito.</p>
+<p><strong>Desafio Detalhado:</strong> Desenvolver o projeto para um sistema de monitoramento remoto de pacientes crônicos, integrando dados de dispositivos wearables com dashboards médicos.</p>
+<ul>
+<li>
+<p><strong>O Problema:</strong> Hospitais não conseguem monitorar pacientes em tempo real de forma confiável e os dados precisam estar disponíveis 24/7 para emergências.</p>
+</li>
+<li>
+<p><strong>Requisitos Técnicos:</strong></p>
+<ul>
+<li><strong>Resiliência:</strong> O sistema não pode parar; exige-se uma estratégia de <strong>Backup</strong> com RPO de 15 min e RTO de 1 hora.</li>
+<li><strong>Integração:</strong> Capacidade de processar dados vindos de wearables e armazená-los de forma segura.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conformidade:</strong> Seguir normas internacionais de saúde (como HIPAA) e nacionais (LGPD), garantindo criptografia em repouso e em trânsito.</p>
+</li>
+</ul>
 <h3 id="case-5-edtech-educastream-global"><strong>Case 5: EdTech – "EducaStream Global"</strong><a class="headerlink" href="#case-5-edtech-educastream-global" title="Permanent link">&para;</a></h3>
-<p><strong>Desafio Detalhado:</strong> O grupo atuará no planejamento da infraestrutura de uma startup de ensino a distância (EAD) em rápido crescimento que atende a milhões de alunos ativos. O principal foco do projeto é viabilizar a entrega eficiente de conteúdos de mídia e videoaulas.
-*   <strong>O Problema:</strong> A plataforma armazena e distribui milhares de videoaulas pesadas. A entrega de conteúdo sem uma rede de distribuição geográfica consome excessivamente os recursos computacionais dos servidores de aplicação, resultando em travamentos constantes nos horários de pico (como noites e finais de semana) e gerando cobranças exorbitantes de tráfego de saída de dados (Data Transfer Out).
-*   <strong>Requisitos Técnicos:</strong>
-    *   <strong>Performance:</strong> Baixa latência e carregamento rápido para o player de vídeo, independentemente da localização do usuário no país.
-    *   <strong>Escalabilidade:</strong> Capacidade de absorver picos massivos e sazonais de tráfego durante lançamentos de grandes cursos ou períodos de exames escolares.
-    *   <strong>Segurança:</strong> Mecanismos de controle de acesso aos recursos de mídia para impedir downloads piratas de cursos pagos.
-*   <strong>Restrição Financeira:</strong> Perfil de startup com orçamento altamente restrito e necessidade de <strong>custo otimizado</strong>, com limite de <strong>US\$ 1.000,00/mês</strong>.
-*   <strong>Serviços Sugeridos para o DAS:</strong> Utilização de buckets <strong>Amazon S3</strong> para hospedar os arquivos estáticos e de mídia, integrados com o <strong>Amazon CloudFront (CDN)</strong> para cache global de conteúdo. A API de gerenciamento acadêmico e controle de progresso deve rodar em instâncias <strong>EC2</strong> com <strong>Auto Scaling</strong> conectadas a um banco de dados relacional <strong>RDS (PostgreSQL)</strong> gerenciado.</p>
+<p><strong>Desafio Detalhado:</strong> O grupo atuará no planejamento da infraestrutura de uma startup de ensino a distância (EAD) em rápido crescimento que atende a milhões de alunos ativos. O principal foco do projeto é viabilizar a entrega eficiente de conteúdos de mídia e videoaulas.</p>
+<ul>
+<li>
+<p><strong>O Problema:</strong> A plataforma armazena e distribui milhares de videoaulas pesadas. A entrega de conteúdo sem uma rede de distribuição geográfica consome excessivamente os recursos computacionais dos servidores de aplicação, resultando em travamentos constantes nos horários de pico (como noites e finais de semana) e gerando cobranças exorbitantes de tráfego de saída de dados (Data Transfer Out).</p>
+</li>
+<li>
+<p><strong>Requisitos Técnicos:</strong></p>
+<ul>
+<li><strong>Performance:</strong> Baixa latência e carregamento rápido para o player de vídeo, independentemente da localização do usuário no país.</li>
+<li><strong>Escalabilidade:</strong> Capacidade de absorver picos massivos e sazonais de tráfego durante lançamentos de grandes cursos ou períodos de exames escolares.</li>
+<li><strong>Segurança:</strong> Mecanismos de controle de acesso aos recursos de mídia para impedir downloads piratas de cursos pagos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Restrição Financeira:</strong> Perfil de startup com orçamento altamente restrito e necessidade de <strong>custo otimizado</strong>, com limite de <strong>US\$ 1.000,00/mês</strong>.</p>
+</li>
+<li>
+<p><strong>Serviços Sugeridos para o DAS:</strong> Utilização de buckets <strong>Amazon S3</strong> para hospedar os arquivos estáticos e de mídia, integrados com o <strong>Amazon CloudFront (CDN)</strong> para cache global de conteúdo. A API de gerenciamento acadêmico e controle de progresso deve rodar em instâncias <strong>EC2</strong> com <strong>Auto Scaling</strong> conectadas a um banco de dados relacional <strong>RDS (PostgreSQL)</strong> gerenciado.</p>
+</li>
+</ul>
 <h3 id="case-6-agtech-lavoura-inteligente"><strong>Case 6: AgTech – "Lavoura Inteligente"</strong><a class="headerlink" href="#case-6-agtech-lavoura-inteligente" title="Permanent link">&para;</a></h3>
-<p><strong>Desafio Detalhado:</strong> O grupo projetará a arquitetura para uma plataforma de análise de dados agrícolas alimentada por sensores IoT (Internet das Coisas) distribuídos por lavouras conectadas de grande extensão.
-*   <strong>O Problema:</strong> Milhares de sensores enviam telemetria detalhada de umidade do solo, acidez, temperatura e clima de minuto em minuto. O banco de dados relacional tradicional atual não suporta a alta concorrência de escritas simultâneas de séries temporais, gerando lentidão extrema no banco e atrasos de até horas na emissão de alertas automáticos e críticos de irrigação aos produtores.
-*   <strong>Requisitos Técnicos:</strong>
-    *   <strong>Processamento e Ingestão:</strong> Ingestão massiva de dados com processamento analítico e geração de insights em <strong>tempo real</strong>.
-    *   <strong>Escalabilidade de Escrita:</strong> A estrutura de armazenamento precisa escalar horizontalmente para acomodar as leituras e gravações contínuas de bilhões de registros de sensores sem perda de dados.
-    *   <strong>Visualização:</strong> Fornecer dados limpos e consolidados para que a aplicação web renderize painéis interativos para agrônomos de campo.
-*   <strong>Restrição Financeira:</strong> Empresa consolidada no setor do agronegócio, com orçamento razoável de até <strong>US\$ 1.500,00/mês</strong>.
-*   <strong>Serviços Sugeridos para o DAS:</strong> Uso de banco de dados NoSQL <strong>Amazon DynamoDB</strong> para persistência altamente escalável dos dados brutos e de telemetria. Processamento serverless orientado a eventos usando <strong>AWS Lambda</strong> e <strong>API Gateway</strong> para coleta e sanitização de payloads de sensores, e o <strong>Amazon S3</strong> para guardar arquivos históricos e consolidados de safras passadas.</p>
-<hr />
-<p>Os grupos deverão iniciar a elaboração do <strong>Documento de Visão</strong>. Eles deverão identificar cuidadosamente cada uma das necessidades dos cases, detalhando os requisitos funcionais e não funcionais, além de justificar tecnicamente cada decisão arquitetural tomada. A documentação deve ser clara, objetiva e apresentar uma visão completa da solução proposta.</p>
+<p><strong>Desafio Detalhado:</strong> O grupo projetará a arquitetura para uma plataforma de análise de dados agrícolas alimentada por sensores IoT (Internet das Coisas) distribuídos por lavouras conectadas de grande extensão.</p>
+<ul>
+<li>
+<p><strong>O Problema:</strong> Milhares de sensores enviam telemetria detalhada de umidade do solo, acidez, temperatura e clima de minuto em minuto. O banco de dados relacional tradicional atual não suporta a alta concorrência de escritas simultâneas de séries temporais, gerando lentidão extrema no banco e atrasos de até horas na emissão de alertas automáticos e críticos de irrigação aos produtores.</p>
+</li>
+<li>
+<p><strong>Requisitos Técnicos:</strong></p>
+<ul>
+<li><strong>Processamento e Ingestão:</strong> Ingestão massiva de dados com processamento analítico e geração de insights em <strong>tempo real</strong>.</li>
+<li><strong>Escalabilidade de Escrita:</strong> A estrutura de armazenamento precisa escalar horizontalmente para acomodar as leituras e gravações contínuas de bilhões de registros de sensores sem perda de dados.</li>
+<li><strong>Visualização:</strong> Fornecer dados limpos e consolidados para que a aplicação web renderize painéis interativos para agrônomos de campo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Restrição Financeira:</strong> Empresa consolidada no setor do agronegócio, com orçamento razoável de até <strong>US\$ 1.500,00/mês</strong>.</p>
+</li>
+<li>
+<p><strong>Serviços Sugeridos para o DAS:</strong> Uso de banco de dados NoSQL <strong>Amazon DynamoDB</strong> para persistência altamente escalável dos dados brutos e de telemetria. Processamento serverless orientado a eventos usando <strong>AWS Lambda</strong> e <strong>API Gateway</strong> para coleta e sanitização de payloads de sensores, e o <strong>Amazon S3</strong> para guardar arquivos históricos e consolidados de safras passadas.</p>
+</li>
+</ul>
 
 
 
