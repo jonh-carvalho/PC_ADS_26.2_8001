@@ -3,8 +3,8 @@
 | Aula               | Conteúdo |
 |--------------------|----------|
 | Aula 01 - 06/08/2026 | :material-check: [Projeto de Cloud Computing](../Disciplina/docs/aula01/) |
-| Aula 02 - 13/08/2026 | :material-check: Operações Cloud <br> :material-check: AWS Educate  |
-| Aula 03 - 20/08/2026 | :material-check:  |
+| Aula 02 - 13/08/2026 | :material-check: [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  |
+| Aula 03 - 20/08/2026 | :material-check: :material-check: [AWS Educate](https://awseducate.instructure.com/courses/1160) |
 | Aula 04 - 27/08/2026 | :material-check:  |
 
 
