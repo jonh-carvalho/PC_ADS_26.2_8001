@@ -18,17 +18,6 @@ nav:
 #        - 07 - BE: Disciplina/roteiros/07 - eb.md
 #        - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
-#  - Avaliações:
-   #   - AC:
-    #    - Index: Avalia/index.md
-     #   - AC1: Avalia/AC01.md
-#        - AC2: Avalia/AC02.md
-#        - AC3: Avalia/AC03.md
-#        - AC4: Avalia/AC04.md
-#      - AP:
-#        - AP1: Avalia/ap1.md
-#        - AP2: Avalia/ap2.md
-#        - AS: Avalia/as.md
   - Iniciação: 
     - Index: Iniciacao/index.md
     - Desafios: Iniciacao/desafios.md
@@ -93,10 +82,9 @@ markdown_extensions:
 
 plugins:
   - search
-
-          
-  
-
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      puml_keyword: plantuml
 
 theme:
   favicon: assets/ibmec_icon.png
