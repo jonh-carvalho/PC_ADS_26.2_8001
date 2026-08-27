@@ -20,6 +20,8 @@
 
 * Documento de Visão
 
+* [Documento de Requisitos Suplementares - SwiftTrack IoT](requisitos_suplementares.md)
+
 * Lista de Riscos Iniciais
 
 * Casos de Uso Principais.
