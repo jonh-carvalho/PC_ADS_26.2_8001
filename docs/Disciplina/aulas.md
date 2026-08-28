@@ -5,7 +5,7 @@
 | Aula 01 - 06/08/2026 | :material-check: [Projeto de Cloud Computing](../Disciplina/docs/aula01/) |
 | Aula 02 - 13/08/2026 | :material-check: [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  |
 | Aula 03 - 20/08/2026 | :material-check: [AWS Educate](https://awseducate.instructure.com/courses/1160) <br> :material-check: [Avaliação de Custos](../Disciplina/docs/aula03/AWS_Financial_Blueprint.pdf) <br> :material-check: Fase de Iniciação |
-| Aula 04 - 27/08/2026 | :material-check: [Introdução ao AWS EC2](../Disciplina/docs/aula04/EC2_Introduction.pdf) <br> :material-check:  |
+| Aula 04 - 27/08/2026 | :material-check: [Requisitos Suplementares](../Disciplina/docs/aula04/Requisitos%20Suplementares.pdf)  |
 
 
 <!--
