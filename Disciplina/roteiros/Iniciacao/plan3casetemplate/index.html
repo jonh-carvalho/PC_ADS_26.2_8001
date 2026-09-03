@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>ROTEIRO DETALHADO - SEMANA 3 - PC_ADS_26.2_8001</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#roteiro-detalhado-semana-3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="PC_ADS_26.2_8001" class="md-header__button md-logo" aria-label="PC_ADS_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PC_ADS_26.2_8001
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ROTEIRO DETALHADO - SEMANA 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#193257" data-md-color-accent="#FAB90A"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="all" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PC_ADS_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="PC_ADS_26.2_8001" class="md-nav__button md-logo" aria-label="PC_ADS_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PC_ADS_26.2_8001
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PC_ADS_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dv_template_preenchido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos_suplementares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/dv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="roteiro-detalhado-semana-3">ROTEIRO DETALHADO - SEMANA 3<a class="headerlink" href="#roteiro-detalhado-semana-3" title="Permanent link">&para;</a></h1>
+<h3 id="workshop-1-projeto-de-vpc-e-rede">WORKSHOP 1: PROJETO DE VPC E REDE<a class="headerlink" href="#workshop-1-projeto-de-vpc-e-rede" title="Permanent link">&para;</a></h3>
+<h4 id="modelo-de-casos-de-uso-arquiteturais">MODELO DE CASOS DE USO ARQUITETURAIS<a class="headerlink" href="#modelo-de-casos-de-uso-arquiteturais" title="Permanent link">&para;</a></h4>
+<h5 id="case-swifttrack-iot-como-exemplo-central">CASE "SWIFTTRACK IOT" COMO EXEMPLO CENTRAL<a class="headerlink" href="#case-swifttrack-iot-como-exemplo-central" title="Permanent link">&para;</a></h5>
+<hr />
+<h2 id="1-objetivos-da-semana">1. OBJETIVOS DA SEMANA<a class="headerlink" href="#1-objetivos-da-semana" title="Permanent link">&para;</a></h2>
+<h3 id="11-objetivo-geral">1.1. Objetivo Geral<a class="headerlink" href="#11-objetivo-geral" title="Permanent link">&para;</a></h3>
+<p>Capacitar os alunos a projetar e documentar uma arquitetura de rede na AWS (VPC) para o case SwiftTrack IoT, utilizando a estrutura de Casos de Uso do RUP/UP como ferramenta de modelagem e traduzindo requisitos de segurança e disponibilidade em decisões arquiteturais.</p>
+<h3 id="12-objetivos-especificos">1.2. Objetivos Específicos<a class="headerlink" href="#12-objetivos-especificos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Compreender os componentes de uma VPC AWS e suas interações no contexto de uma arquitetura híbrida (serverless + IaaS).</li>
+<li>Modelar casos de uso arquiteturais para infraestrutura de rede da SwiftTrack.</li>
+<li>Projetar uma VPC com sub-redes públicas e privadas distribuídas em múltiplas Zonas de Disponibilidade, considerando a separação entre a API administrativa (EC2) e a ingestão serverless (Lambda).</li>
+<li>Definir tabelas de roteamento, Internet Gateway, NAT Gateway, VPC Endpoints e Security Groups.</li>
+<li>Documentar as decisões de projeto com justificativas técnicas e de custo, alinhadas ao Documento de Visão e Requisitos Suplementares.</li>
+</ul>
+<hr />
+<h2 id="2-estrutura-da-aula-4-horas">2. ESTRUTURA DA AULA (4 HORAS)<a class="headerlink" href="#2-estrutura-da-aula-4-horas" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Horário</strong></th>
+<th style="text-align: left;"><strong>Atividade</strong></th>
+<th style="text-align: left;"><strong>Duração</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">09:00 - 09:15</td>
+<td style="text-align: left;">Abertura: Conexão com a Semana Anterior</td>
+<td style="text-align: left;">15 min</td>
+<td style="text-align: left;">Expositiva/Interativa</td>
+</tr>
+<tr>
+<td style="text-align: left;">09:15 - 10:00</td>
+<td style="text-align: left;">Teoria: VPC AWS e Casos de Uso Arquiteturais</td>
+<td style="text-align: left;">45 min</td>
+<td style="text-align: left;">Expositiva com Exemplos</td>
+</tr>
+<tr>
+<td style="text-align: left;">10:00 - 10:45</td>
+<td style="text-align: left;">Estudo de Caso: Arquitetura de Rede para SwiftTrack</td>
+<td style="text-align: left;">45 min</td>
+<td style="text-align: left;">Análise em Grupo</td>
+</tr>
+<tr>
+<td style="text-align: left;">10:45 - 11:00</td>
+<td style="text-align: left;">Intervalo</td>
+<td style="text-align: left;">15 min</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">11:00 - 11:40</td>
+<td style="text-align: left;">Exercício Prático: Projeto de VPC para SwiftTrack</td>
+<td style="text-align: left;">40 min</td>
+<td style="text-align: left;">Hands-on em Grupo</td>
+</tr>
+<tr>
+<td style="text-align: left;">11:40 - 12:15</td>
+<td style="text-align: left;">Preenchimento do Modelo de Casos de Uso</td>
+<td style="text-align: left;">35 min</td>
+<td style="text-align: left;">Hands-on Guiado</td>
+</tr>
+<tr>
+<td style="text-align: left;">12:15 - 12:45</td>
+<td style="text-align: left;">Apresentação dos Resultados e Discussão</td>
+<td style="text-align: left;">30 min</td>
+<td style="text-align: left;">Pitch e Feedback</td>
+</tr>
+<tr>
+<td style="text-align: left;">12:45 - 13:00</td>
+<td style="text-align: left;">Encerramento, Dúvidas e Orientações para Entrega</td>
+<td style="text-align: left;">15 min</td>
+<td style="text-align: left;">Sessão Final</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-desenvolvimento-detalhado">3. DESENVOLVIMENTO DETALHADO<a class="headerlink" href="#3-desenvolvimento-detalhado" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="31-abertura-conexao-com-a-semana-anterior-15-min">3.1. ABERTURA: CONEXÃO COM A SEMANA ANTERIOR (15 min)<a class="headerlink" href="#31-abertura-conexao-com-a-semana-anterior-15-min" title="Permanent link">&para;</a></h3>
+<p><strong>Tema:</strong> "Dos Requisitos à Rede - O Desafio da SwiftTrack"</p>
+<h4 id="311-revisao-rapida-o-que-a-swifttrack-precisa-5-min">3.1.1. Revisão Rápida - "O que a SwiftTrack precisa?" (5 min)<a class="headerlink" href="#311-revisao-rapida-o-que-a-swifttrack-precisa-5-min" title="Permanent link">&para;</a></h4>
+<p><strong>Dinâmica:</strong> Os alunos recebem um <strong>quiz rápido</strong> com perguntas baseadas no Documento de Requisitos Suplementares da SwiftTrack:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Pergunta</strong></th>
+<th style="text-align: left;"><strong>Resposta Correta</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">"Qual a disponibilidade exigida para a API de faturamento?"</td>
+<td style="text-align: left;">99,95%</td>
+</tr>
+<tr>
+<td style="text-align: left;">"Qual a latência máxima para ingestão de telemetria?"</td>
+<td style="text-align: left;">80ms</td>
+</tr>
+<tr>
+<td style="text-align: left;">"Qual o RPO exigido para dados do DynamoDB?"</td>
+<td style="text-align: left;">15 minutos</td>
+</tr>
+<tr>
+<td style="text-align: left;">"Qual serviço AWS será usado para a ingestão serverless?"</td>
+<td style="text-align: left;">Lambda + API Gateway</td>
+</tr>
+<tr>
+<td style="text-align: left;">"Qual o orçamento mensal máximo?"</td>
+<td style="text-align: left;">US$ 1.500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Objetivo:</strong> Conectar os requisitos não-funcionais às decisões de arquitetura de rede.</p>
+<h4 id="312-contextualizacao-do-tema-por-que-a-vpc-e-critica-para-a-swifttrack-10-min">3.1.2. Contextualização do Tema - "Por que a VPC é crítica para a SwiftTrack?" (10 min)<a class="headerlink" href="#312-contextualizacao-do-tema-por-que-a-vpc-e-critica-para-a-swifttrack-10-min" title="Permanent link">&para;</a></h4>
+<p><strong>Slide de Abertura:</strong></p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:637px;height:549px;background:#FFFFFF;" width="637px" height="549px" viewBox="0 0 637 549" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="title" data-source-line="2"><text x="168.869" y="22.995" fill="#000" font-size="14" textLength="292.893" font-weight="700">Dos requisitos a VPC - SwiftTrack IoT</text></g><g class="cluster" data-qualified-name="requisitos" id="ent0001" data-source-line="7"><rect x="7" y="44.297" width="233.44" height="491" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="10" y="59.292" fill="#000" font-size="14" textLength="196.164" font-weight="700">Requisitos da SwiftTrack</text></g><g class="cluster" data-qualified-name="vpc" id="ent0007" data-source-line="15"><rect x="408.44" y="93.297" width="215.19" height="403" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="411.44" y="108.292" fill="#000" font-size="14" textLength="178.787" font-weight="700">VPC segura e eficiente</text></g><g class="entity" data-qualified-name="requisitos.api" id="ent0002" data-source-line="8"><rect x="49.86" y="106.997" width="147.716" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="59.86" y="129.992" fill="#000" font-size="14" textLength="127.716">API administrativa</text><text x="59.86" y="146.289" fill="#000" font-size="14" textLength="99.777">em EC2 (IaaS)</text></g><g class="entity" data-qualified-name="requisitos.ingestao" id="ent0003" data-source-line="9"><rect x="31" y="370.997" width="185.443" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="41" y="393.992" fill="#000" font-size="14" textLength="136.288">Ingestao serverless</text><text x="41" y="410.289" fill="#000" font-size="14" textLength="165.443">Lambda + API Gateway</text></g><g class="entity" data-qualified-name="requisitos.rds" id="ent0004" data-source-line="10"><rect x="42.76" y="194.997" width="161.914" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="52.76" y="217.992" fill="#000" font-size="14" textLength="92.285">RDS Multi-AZ</text><text x="52.76" y="234.289" fill="#000" font-size="14" textLength="141.914">Dados transacionais</text></g><g class="entity" data-qualified-name="requisitos.dynamo" id="ent0005" data-source-line="11"><rect x="42.18" y="282.997" width="163.076" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="52.18" y="305.992" fill="#000" font-size="14" textLength="79.105">DynamoDB</text><text x="52.18" y="322.289" fill="#000" font-size="14" textLength="143.076">Dados de telemetria</text></g><g class="entity" data-qualified-name="requisitos.s3" id="ent0006" data-source-line="12"><rect x="56.15" y="458.997" width="135.151" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="66.15" y="481.992" fill="#000" font-size="14" textLength="115.151">S3 + CloudFront</text><text x="66.15" y="498.289" fill="#000" font-size="14" textLength="111.993">Midias estaticas</text></g><g class="entity" data-qualified-name="vpc.isolamento" id="ent0008" data-source-line="16"><rect x="432.91" y="155.997" width="166.248" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="442.91" y="178.992" fill="#000" font-size="14" textLength="146.248">Isolamento de dados</text><text x="442.91" y="195.289" fill="#000" font-size="14" textLength="117.291">sensiveis (LGPD)</text></g><g class="entity" data-qualified-name="vpc.comunicacao" id="ent0009" data-source-line="17"><rect x="432.44" y="331.997" width="167.185" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="442.44" y="354.992" fill="#000" font-size="14" textLength="147.185">Comunicacao segura</text><text x="442.44" y="371.289" fill="#000" font-size="14" textLength="99.189">entre servicos</text></g><g class="entity" data-qualified-name="vpc.escala" id="ent0010" data-source-line="18"><rect x="450.76" y="243.997" width="130.544" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="460.76" y="266.992" fill="#000" font-size="14" textLength="100.406">Escalabilidade</text><text x="460.76" y="283.289" fill="#000" font-size="14" textLength="110.544">10.000 veiculos</text></g><g class="entity" data-qualified-name="vpc.custo" id="ent0011" data-source-line="19"><rect x="449.39" y="419.997" width="133.299" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="459.39" y="442.992" fill="#000" font-size="14" textLength="113.299">Custo otimizado</text><text x="459.39" y="459.289" fill="#000" font-size="14" textLength="106.832">US$ 1.500/mes</text></g><g class="link" data-entity-1="ent0002" data-entity-2="ent0008" id="lnk12" data-source-line="22" data-link-type="dependency"><path d="M197.68,142.457 C264.42,150.837 358.119,162.594 427.679,171.334" style="stroke:#181818;stroke-width:1;" fill="none" id="api-to-isolamento"/><polygon points="432.64,171.957,424.209,166.866,427.679,171.334,423.212,174.804,432.64,171.957" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0003" data-entity-2="ent0009" id="lnk13" data-source-line="23" data-link-type="dependency"><path d="M216.73,388.107 C281.97,381.587 363.835,373.404 426.985,367.094" style="stroke:#181818;stroke-width:1;" fill="none" id="ingestao-to-comunicacao"/><polygon points="431.96,366.597,422.607,363.512,426.985,367.094,423.402,371.472,431.96,366.597" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0004" data-entity-2="ent0008" id="lnk14" data-source-line="24" data-link-type="dependency"><path d="M205.12,213.267 C271.62,206.617 360.725,197.714 427.745,191.014" style="stroke:#181818;stroke-width:1;" fill="none" id="rds-to-isolamento"/><polygon points="432.72,190.517,423.367,187.432,427.745,191.014,424.163,195.392,432.72,190.517" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0005" data-entity-2="ent0009" id="lnk15" data-source-line="25" data-link-type="dependency"><path d="M205.59,319.447 C271.91,327.777 360.459,338.894 427.289,347.284" style="stroke:#181818;stroke-width:1;" fill="none" id="dynamo-to-comunicacao"/><polygon points="432.25,347.907,423.818,342.817,427.289,347.284,422.822,350.755,432.25,347.907" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0006" data-entity-2="ent0011" id="lnk16" data-source-line="26" data-link-type="dependency"><path d="M191.38,478.637 C263.34,471.447 372.285,460.564 444.005,453.394" style="stroke:#181818;stroke-width:1;" fill="none" id="s3-to-custo"/><polygon points="448.98,452.897,439.627,449.812,444.005,453.394,440.423,457.772,448.98,452.897" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0007" id="lnk17" data-source-line="27" data-link-type="dependency"><path d="M240.914,85.886 C243.686,86.234 246.483,86.585 249.304,86.939 C271.865,89.771 295.88,92.786 319.895,95.801 C343.91,98.815 367.925,101.83 390.485,104.662 C396.124,105.37 401.674,106.066 407.109,106.749 C407.449,106.791 402.827,106.211 403.166,106.254" style="stroke:#181818;stroke-width:1;" fill="none" id="requisitos-to-vpc"/><polygon points="408.127,106.876,399.695,101.787,403.166,106.254,398.699,109.724,408.127,106.876" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="265.44" y="86.364" fill="#000" font-size="13" textLength="118.466">traduzir requisitos</text></g><?plantuml-src PLFBRjim4BphAxP13oaAMqw3Nd8eaDffO3G6WZZjeH1GhAcrl315kjoL3QVelvUKyb2K6q7Dx0ndLk_O6TkK11lLdLpaUS33k6BTDAj6A1Zlb9oEZQ_p1MytoFPxm3sfvFMsz4P-xvhQvZMAKiXrGpL9Nj8Q6wkvvMgZumJ8bDKIpBn0e3yD2siy8loydS88bWTUwtr0iuMvlyyihHNKGqXqA3cGKVOkaosx7GQiGJPO-WEx2jPeXNfVTd48LhJKOvHBH7ILfInxFiB9tOk14dlQ9u2ltFtD0A37kxoT0vOrEnODgBp7mb4DLzDFS3f7N7ve1-2E1xovgqWKFSGuznGiYHJk1kjLLFy8QUerAXtmsFBv4JqOSZTRmY9cogFBNuMRnUSBH1TEqCHeaALpNyg0DpiwhFtiwnCd5graOqiQ65jEsI86jELvj3QrlYc_XRW1XLjmoH6Sh2aRxEJaFFltAjfKfr3L10G2MhFXk3lKOlSxyoRHkNYBTOJuvAjC1Widv8Jtn0AdDzUtiovLVaOEHanztRXeoBJv9kLOYjD0RTfiVEVKlC060wx4eCKLMuxwLBYpoNWocK0qO1hxoAOMCrHk9FhsoZK_HEU5-x5y3sVZpvD97l-1JZL1KaHnAM0q-j9_nbFFxNtVNknmYEqgUeEKy-wgLUajRhfCSL-a3IcR1mwzjVuF?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:637px;height:549px;background:#1B1B1B;" width="637px" height="549px" viewBox="0 0 637 549" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><rect x="0" y="0" width="637" height="549" fill="#1B1B1B" style="stroke:none;"/><g class="title" data-source-line="2"><text x="168.869" y="22.995" fill="#FFF" font-size="14" textLength="292.893" font-weight="700">Dos requisitos a VPC - SwiftTrack IoT</text></g><g class="cluster" data-qualified-name="requisitos" id="ent0001" data-source-line="7"><rect x="7" y="44.297" width="233.44" height="491" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="10" y="59.292" fill="#FFF" font-size="14" textLength="196.164" font-weight="700">Requisitos da SwiftTrack</text></g><g class="cluster" data-qualified-name="vpc" id="ent0007" data-source-line="15"><rect x="408.44" y="93.297" width="215.19" height="403" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="411.44" y="108.292" fill="#FFF" font-size="14" textLength="178.787" font-weight="700">VPC segura e eficiente</text></g><g class="entity" data-qualified-name="requisitos.api" id="ent0002" data-source-line="8"><rect x="49.86" y="106.997" width="147.716" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="59.86" y="129.992" fill="#FFF" font-size="14" textLength="127.716">API administrativa</text><text x="59.86" y="146.289" fill="#FFF" font-size="14" textLength="99.777">em EC2 (IaaS)</text></g><g class="entity" data-qualified-name="requisitos.ingestao" id="ent0003" data-source-line="9"><rect x="31" y="370.997" width="185.443" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="41" y="393.992" fill="#FFF" font-size="14" textLength="136.288">Ingestao serverless</text><text x="41" y="410.289" fill="#FFF" font-size="14" textLength="165.443">Lambda + API Gateway</text></g><g class="entity" data-qualified-name="requisitos.rds" id="ent0004" data-source-line="10"><rect x="42.76" y="194.997" width="161.914" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="52.76" y="217.992" fill="#FFF" font-size="14" textLength="92.285">RDS Multi-AZ</text><text x="52.76" y="234.289" fill="#FFF" font-size="14" textLength="141.914">Dados transacionais</text></g><g class="entity" data-qualified-name="requisitos.dynamo" id="ent0005" data-source-line="11"><rect x="42.18" y="282.997" width="163.076" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="52.18" y="305.992" fill="#FFF" font-size="14" textLength="79.105">DynamoDB</text><text x="52.18" y="322.289" fill="#FFF" font-size="14" textLength="143.076">Dados de telemetria</text></g><g class="entity" data-qualified-name="requisitos.s3" id="ent0006" data-source-line="12"><rect x="56.15" y="458.997" width="135.151" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="66.15" y="481.992" fill="#FFF" font-size="14" textLength="115.151">S3 + CloudFront</text><text x="66.15" y="498.289" fill="#FFF" font-size="14" textLength="111.993">Midias estaticas</text></g><g class="entity" data-qualified-name="vpc.isolamento" id="ent0008" data-source-line="16"><rect x="432.91" y="155.997" width="166.248" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="442.91" y="178.992" fill="#FFF" font-size="14" textLength="146.248">Isolamento de dados</text><text x="442.91" y="195.289" fill="#FFF" font-size="14" textLength="117.291">sensiveis (LGPD)</text></g><g class="entity" data-qualified-name="vpc.comunicacao" id="ent0009" data-source-line="17"><rect x="432.44" y="331.997" width="167.185" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="442.44" y="354.992" fill="#FFF" font-size="14" textLength="147.185">Comunicacao segura</text><text x="442.44" y="371.289" fill="#FFF" font-size="14" textLength="99.189">entre servicos</text></g><g class="entity" data-qualified-name="vpc.escala" id="ent0010" data-source-line="18"><rect x="450.76" y="243.997" width="130.544" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="460.76" y="266.992" fill="#FFF" font-size="14" textLength="100.406">Escalabilidade</text><text x="460.76" y="283.289" fill="#FFF" font-size="14" textLength="110.544">10.000 veiculos</text></g><g class="entity" data-qualified-name="vpc.custo" id="ent0011" data-source-line="19"><rect x="449.39" y="419.997" width="133.299" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="459.39" y="442.992" fill="#FFF" font-size="14" textLength="113.299">Custo otimizado</text><text x="459.39" y="459.289" fill="#FFF" font-size="14" textLength="106.832">US$ 1.500/mes</text></g><g class="link" data-entity-1="ent0002" data-entity-2="ent0008" id="lnk12" data-source-line="22" data-link-type="dependency"><path d="M197.68,142.457 C264.42,150.837 358.119,162.594 427.679,171.334" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="api-to-isolamento"/><polygon points="432.64,171.957,424.209,166.866,427.679,171.334,423.212,174.804,432.64,171.957" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0003" data-entity-2="ent0009" id="lnk13" data-source-line="23" data-link-type="dependency"><path d="M216.73,388.107 C281.97,381.587 363.835,373.404 426.985,367.094" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ingestao-to-comunicacao"/><polygon points="431.96,366.597,422.607,363.512,426.985,367.094,423.402,371.472,431.96,366.597" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0004" data-entity-2="ent0008" id="lnk14" data-source-line="24" data-link-type="dependency"><path d="M205.12,213.267 C271.62,206.617 360.725,197.714 427.745,191.014" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="rds-to-isolamento"/><polygon points="432.72,190.517,423.367,187.432,427.745,191.014,424.163,195.392,432.72,190.517" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0005" data-entity-2="ent0009" id="lnk15" data-source-line="25" data-link-type="dependency"><path d="M205.59,319.447 C271.91,327.777 360.459,338.894 427.289,347.284" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="dynamo-to-comunicacao"/><polygon points="432.25,347.907,423.818,342.817,427.289,347.284,422.822,350.755,432.25,347.907" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0006" data-entity-2="ent0011" id="lnk16" data-source-line="26" data-link-type="dependency"><path d="M191.38,478.637 C263.34,471.447 372.285,460.564 444.005,453.394" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="s3-to-custo"/><polygon points="448.98,452.897,439.627,449.812,444.005,453.394,440.423,457.772,448.98,452.897" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0007" id="lnk17" data-source-line="27" data-link-type="dependency"><path d="M240.914,85.886 C243.686,86.234 246.483,86.585 249.304,86.939 C271.865,89.771 295.88,92.786 319.895,95.801 C343.91,98.815 367.925,101.83 390.485,104.662 C396.124,105.37 401.674,106.066 407.109,106.749 C407.449,106.791 402.827,106.211 403.166,106.254" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="requisitos-to-vpc"/><polygon points="408.127,106.876,399.695,101.787,403.166,106.254,398.699,109.724,408.127,106.876" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="265.44" y="86.364" fill="#FFF" font-size="13" textLength="118.466">traduzir requisitos</text></g><?plantuml-src PLFBRjim4BphAxP13oaAMqw3Nd8eaDffO3G6WZZjeH1GhCcrl315kjoL3QVelvUIyb2Kcq3Ex0ndLk_O6rTRWetgJYxoFE9XNB9kwbKj54tmIbx79bJvWhSRPFSzufvKycfhWv7VkxfoUOMY57FTK4MIMrfZxJIt6BVZvZvJLaSm2mAH_jGihEaJuUVj54QmFF1QxoEQBSp3VUPehQ018fSR1SkHZ7BmcMpPxp1Y1R916mxiIrYZ4-hTxD8GB6cfnoJN4D6NZhBi-HDExbuCMEnfdm2-SlSt0u0Ux_9s3cWhzYmQKNcFXQSAhgQVu7IEkFpG3i0T3tXpNv8e1aXfxYaw4Ydy3LQhfFuHcgdNg7J0OyldH_HWoDri2OiKAOykVnL-bfula5nuGPEYGPRElPK1RtRqM8NProTEwbd9fP8qChOSso86jELviZPreRRVObg0mY_OSW8trfGDTd9odlrx5MrJfr1PHmG2MhFXj3hKOlSxyoRHkGI7LOA4nfTj31PUo0llYGLERwvlPrsg_8mSZ9Y6glR9a6dpRPHJALuZjMcp2PrJym8R3BWIWmvNx3ZfK-7F9kF9P0B9WAdT8vjQp52vbkGxA5Vya9mN_iVoFPoDFqycUVe5EjK6qaIKbW96eo_zPpprt9xtxQKEXzYkeZT8EU-EMfNUuZQ7JTmNpORO-e5ZRwt_0m00?></g></svg></div></div>
+
+<p><strong>Momento Interativo:</strong></p>
+<blockquote>
+<p><em>"Observem os serviços AWS da SwiftTrack. Quais vocês acham que devem ficar em sub-redes públicas e quais em sub-redes privadas? Por quê?"</em></p>
+</blockquote>
+<p><strong>Respostas Esperadas:</strong>
+- <strong>EC2 (API):</strong> Pode ficar em sub-rede privada, com acesso via Load Balancer público.
+- <strong>RDS (PostgreSQL):</strong> Deve ficar em sub-rede privada (dados sensíveis).
+- <strong>Lambda:</strong> Não fica em VPC (serverless), mas pode acessar recursos via VPC.
+- <strong>S3:</strong> Serviço público, mas com políticas de acesso restritas.</p>
+<hr />
+<h3 id="32-teoria-vpc-aws-e-casos-de-uso-arquiteturais-45-min">3.2. TEORIA: VPC AWS E CASOS DE USO ARQUITETURAIS (45 min)<a class="headerlink" href="#32-teoria-vpc-aws-e-casos-de-uso-arquiteturais-45-min" title="Permanent link">&para;</a></h3>
+<p><strong>Tema:</strong> "O que é uma VPC e como modelamos suas decisões?"</p>
+<h4 id="321-componentes-de-uma-vpc-aplicados-a-swifttrack-20-min">3.2.1. Componentes de uma VPC - Aplicados à SwiftTrack (20 min)<a class="headerlink" href="#321-componentes-de-uma-vpc-aplicados-a-swifttrack-20-min" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>O que é?</strong></th>
+<th style="text-align: left;"><strong>Como se aplica à SwiftTrack?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>VPC</strong></td>
+<td style="text-align: left;">Rede virtual privada na AWS, logicamente isolada.</td>
+<td style="text-align: left;">CIDR: 10.0.0.0/16 (espaço para crescimento).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Públicas</strong></td>
+<td style="text-align: left;">Sub-redes com rota para Internet Gateway.</td>
+<td style="text-align: left;">Para Load Balancer (ALB) que expõe a API.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Privadas</strong></td>
+<td style="text-align: left;">Sub-redes sem rota direta para Internet.</td>
+<td style="text-align: left;">Para EC2 (API), RDS (banco), instâncias de processamento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Internet Gateway (IGW)</strong></td>
+<td style="text-align: left;">Permite comunicação da VPC com a Internet.</td>
+<td style="text-align: left;">Anexado à VPC para acesso público ao ALB.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NAT Gateway</strong></td>
+<td style="text-align: left;">Permite que instâncias privadas acessem a Internet (atualizações, patches).</td>
+<td style="text-align: left;">Para EC2 em sub-rede privada fazer downloads.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VPC Endpoints</strong></td>
+<td style="text-align: left;">Conexão privada entre VPC e serviços AWS (sem Internet).</td>
+<td style="text-align: left;"><strong>Critical para SwiftTrack:</strong> DynamoDB, S3 e Secrets Manager acessados sem sair da VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Route Tables</strong></td>
+<td style="text-align: left;">Tabelas de roteamento que definem o tráfego.</td>
+<td style="text-align: left;">Pública: 0.0.0.0/0 → IGW. Privada: 0.0.0.0/0 → NAT.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Security Groups</strong></td>
+<td style="text-align: left;">Firewall a nível de instância (regras de entrada/saída).</td>
+<td style="text-align: left;">SG-Web (portas 80, 443), SG-API (porta 8000), SG-DB (porta 5432).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Network ACLs (NACLs)</strong></td>
+<td style="text-align: left;">Firewall a nível de sub-rede (regras numeradas).</td>
+<td style="text-align: left;">Camada extra de segurança para sub-redes privadas.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Slide Ilustrativo - Arquitetura de Rede SwiftTrack:</strong></p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:1274px;height:1015px;background:#FFFFFF;" width="1274px" height="1015px" viewBox="0 0 1274 1015" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="title" data-source-line="2"><text x="440.113" y="22.995" fill="#000" font-size="14" textLength="386.948" font-weight="700">Arquitetura de rede SwiftTrack - VPC 10.0.0.0/16</text></g><g class="cluster" data-qualified-name="aws" id="ent0002" data-source-line="8"><path d="M1099.563,422.375 C1103.46,414.731 1111.016,412.059 1116.881,420.219 C1120.696,411.58 1127.832,409.775 1133.666,418.238 C1138.317,411.139 1144.742,409.705 1150.454,417.001 C1154.5,408.356 1160.889,406.413 1168.135,413.376 C1174.589,404.628 1182.667,406.446 1186.964,415.639 C1192.829,409.481 1200.683,410.642 1203.39,419.171 C1210.014,410.919 1216.296,413.203 1221.152,421.114 C1232.354,411.273 1240.188,416.207 1244.72,428.286 C1246.238,427.369 1247.304,427.936 1247.476,429.68 C1256.163,434.842 1254.275,442.106 1247.007,446.833 C1255.095,452.411 1254.395,459.157 1246.513,464.282 C1254.378,469.13 1254.937,473.944 1247.469,479.74 C1254.957,485.998 1254.36,491.219 1247.023,497.097 C1254.766,501.307 1255.692,508.396 1247.567,513.145 C1255.928,515.993 1256.061,523.245 1249.856,528.294 C1259.173,534.662 1258.235,541.808 1248.778,547.1 C1255.092,551.495 1254.889,557.535 1248.578,561.758 C1256.695,567.344 1255.913,574.452 1246.661,577.987 C1256.355,583.31 1256.473,588.986 1247.558,595.274 C1255.064,601.557 1255.863,607.692 1246.125,612.545 C1254.259,623.847 1251.687,631.529 1237.72,634.286 C1238.677,633.309 1239.748,633.761 1240.023,634.996 C1235.224,644.497 1226.454,643.369 1221.554,635.101 C1217.91,644.355 1210.544,644.767 1204.451,637.661 C1199.069,645.227 1191.985,646.04 1186.194,638.145 C1181.691,646.706 1175.059,646.162 1169.345,639.484 C1163.82,646.691 1156.437,646.151 1152.715,637.583 C1147.313,645.333 1139.293,645.825 1134.275,637.151 C1127.831,645.022 1121.751,646.763 1115.601,636.842 C1104.094,647.007 1093.237,640.261 1090.56,627.286 C1091.143,627.305 1091.415,627.726 1091.163,628.261 C1083.351,623.614 1082.739,617.67 1090.174,612.091 C1082.946,606.758 1081.51,601.043 1089.557,595.155 C1082.705,590.517 1082.434,584.995 1088.819,579.724 C1080.178,575.037 1077.187,569.938 1085.716,562.209 C1079.048,558.157 1077.626,551.684 1085.164,547.112 C1075.585,542.202 1076.258,536.197 1083.978,530.083 C1076.266,523.501 1077.199,517.179 1085.147,511.587 C1079.158,507.112 1079.093,500.66 1086.404,497.361 C1079.158,492.585 1080.446,484.548 1087.664,480.878 C1079.944,474.355 1081.418,467.218 1089.879,462.662 C1083.579,458.423 1081.474,452.067 1089.644,447.602 C1080.301,436.395 1081.004,424.702 1097.56,421.286 C1098.532,420.706 1099.581,421.133 1099.563,422.375" style="stroke:#181818;stroke-width:1;" fill="none"/><text x="1113.694" y="439.281" fill="#000" font-size="14" textLength="107.892" font-weight="700">Servicos AWS</text></g><g class="cluster" data-qualified-name="vpc" id="ent0006" data-source-line="14"><rect x="7" y="105.286" width="1051.56" height="826" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="10" y="120.281" fill="#000" font-size="14" textLength="125.501" font-weight="700">VPC 10.0.0.0/16</text></g><g class="cluster" data-qualified-name="vpc.azA" id="ent0008" data-source-line="17"><path d="M466.74,666.286 L550.817,666.286 A3.75,3.75 0 0 1 553.317,668.786 L560.317,688.583 L1007.5,688.583 A2.5,2.5 0 0 1 1010,691.083 L1010,904.786 A2.5,2.5 0 0 1 1007.5,907.286 L466.74,907.286 A2.5,2.5 0 0 1 464.24,904.786 L464.24,668.786 A2.5,2.5 0 0 1 466.74,666.286" style="stroke:#000;stroke-width:1.5;" fill="none"/><line x1="464.24" y1="688.583" x2="560.317" y2="688.583" style="stroke:#000;stroke-width:1.5;"/><text x="468.24" y="681.281" fill="#000" font-size="14" textLength="83.077" font-weight="700">us-east-1a</text></g><g class="cluster" data-qualified-name="vpc.azA.publicA" id="ent0009" data-source-line="18"><rect x="488.24" y="709.286" width="146.89" height="174" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="491.24" y="724.281" fill="#000" font-size="14" textLength="118.453" font-weight="700">Subnet publica</text><text x="491.24" y="740.578" fill="#000" font-size="14" textLength="89.257" font-weight="700">10.0.1.0/24</text></g><g class="cluster" data-qualified-name="vpc.azA.privateA" id="ent0012" data-source-line="22"><rect x="663.13" y="709.286" width="322.87" height="103" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="666.13" y="724.281" fill="#000" font-size="14" textLength="120.866" font-weight="700">Subnet privada</text><text x="666.13" y="740.578" fill="#000" font-size="14" textLength="89.257" font-weight="700">10.0.3.0/24</text></g><g class="cluster" data-qualified-name="vpc.azB" id="ent0015" data-source-line="28"><path d="M466.74,148.286 L551.391,148.286 A3.75,3.75 0 0 1 553.891,150.786 L560.891,170.583 L1009.27,170.583 A2.5,2.5 0 0 1 1011.77,173.083 L1011.77,386.786 A2.5,2.5 0 0 1 1009.27,389.286 L466.74,389.286 A2.5,2.5 0 0 1 464.24,386.786 L464.24,150.786 A2.5,2.5 0 0 1 466.74,148.286" style="stroke:#000;stroke-width:1.5;" fill="none"/><line x1="464.24" y1="170.583" x2="560.891" y2="170.583" style="stroke:#000;stroke-width:1.5;"/><text x="468.24" y="163.281" fill="#000" font-size="14" textLength="83.651" font-weight="700">us-east-1b</text></g><g class="cluster" data-qualified-name="vpc.azB.publicB" id="ent0016" data-source-line="29"><rect x="488.24" y="191.286" width="146.89" height="174" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="491.24" y="206.281" fill="#000" font-size="14" textLength="118.453" font-weight="700">Subnet publica</text><text x="491.24" y="222.578" fill="#000" font-size="14" textLength="89.257" font-weight="700">10.0.2.0/24</text></g><g class="cluster" data-qualified-name="vpc.azB.privateB" id="ent0019" data-source-line="33"><rect x="663.13" y="262.286" width="324.64" height="103" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="666.13" y="277.281" fill="#000" font-size="14" textLength="120.866" font-weight="700">Subnet privada</text><text x="666.13" y="293.578" fill="#000" font-size="14" textLength="89.257" font-weight="700">10.0.4.0/24</text></g><g class="cluster" data-qualified-name="vpc.endpoints" id="ent0022" data-source-line="39"><rect x="797.26" y="413.286" width="237.3" height="229" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="800.26" y="428.281" fill="#000" font-size="14" textLength="115.227" font-weight="700">VPC Endpoints</text></g><g class="cluster" data-qualified-name="vpc.routes" id="ent0026" data-source-line="45"><rect x="31" y="532.286" width="169.11" height="191" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="34" y="547.281" fill="#000" font-size="14" textLength="103.072" font-weight="700">Route Tables</text></g><g class="cluster" data-qualified-name="vpc.security" id="ent0029" data-source-line="50"><rect x="273.41" y="277.286" width="141.52" height="279" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="276.41" y="292.281" fill="#000" font-size="14" textLength="126.574" font-weight="700">Security Groups</text></g><g class="entity" data-qualified-name="aws.dynamodb" id="ent0003" data-source-line="9"><rect x="1118.09" y="448.136" width="99.105" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1128.09" y="471.131" fill="#000" font-size="14" textLength="79.105">DynamoDB</text></g><g class="entity" data-qualified-name="aws.s3" id="ent0004" data-source-line="10"><rect x="1148.74" y="590.136" width="37.794" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1158.74" y="613.131" fill="#000" font-size="14" textLength="17.794">S3</text></g><g class="entity" data-qualified-name="aws.secrets" id="ent0005" data-source-line="11"><rect x="1098.56" y="519.136" width="138.166" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1108.56" y="542.131" fill="#000" font-size="14" textLength="118.166">Secrets Manager</text></g><g class="entity" data-qualified-name="vpc.igw" id="ent0007" data-source-line="15"><rect x="273.11" y="575.136" width="142.131" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="283.11" y="598.131" fill="#000" font-size="14" textLength="122.131">Internet Gateway</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.albA" id="ent0010" data-source-line="19"><rect x="538.19" y="760.136" width="46.981" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="548.19" y="783.131" fill="#000" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.natA" id="ent0011" data-source-line="20"><rect x="504.24" y="831.136" width="114.896" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="514.24" y="854.131" fill="#000" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.ec2A" id="ent0013" data-source-line="23"><rect x="679.13" y="760.136" width="74.127" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="689.13" y="783.131" fill="#000" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.rdsA" id="ent0014" data-source-line="24"><rect x="861.81" y="760.136" width="108.19" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="871.81" y="783.131" fill="#000" font-size="14" textLength="88.19">RDS Primary</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.albB" id="ent0017" data-source-line="30"><rect x="538.19" y="313.136" width="46.981" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="548.19" y="336.131" fill="#000" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.natB" id="ent0018" data-source-line="31"><rect x="504.24" y="242.136" width="114.896" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="514.24" y="265.131" fill="#000" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.ec2B" id="ent0020" data-source-line="34"><rect x="679.13" y="313.136" width="74.127" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="689.13" y="336.131" fill="#000" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.rdsB" id="ent0021" data-source-line="35"><rect x="860.04" y="313.136" width="111.731" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="870.04" y="336.131" fill="#000" font-size="14" textLength="91.731">RDS Standby</text></g><g class="entity" data-qualified-name="vpc.endpoints.dynamodbEndpoint" id="ent0023" data-source-line="40"><rect x="833.21" y="448.136" width="165.4" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="843.21" y="471.131" fill="#000" font-size="14" textLength="145.4">DynamoDB Gateway</text></g><g class="entity" data-qualified-name="vpc.endpoints.s3Endpoint" id="ent0024" data-source-line="41"><rect x="863.45" y="590.136" width="104.923" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="873.45" y="613.131" fill="#000" font-size="14" textLength="84.923">S3 Interface</text></g><g class="entity" data-qualified-name="vpc.endpoints.secretsEndpoint" id="ent0025" data-source-line="42"><rect x="813.26" y="519.136" width="205.295" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="823.26" y="542.131" fill="#000" font-size="14" textLength="185.295">Secrets Manager Interface</text></g><g class="entity" data-qualified-name="vpc.routes.publicRoute" id="ent0027" data-source-line="46"><rect x="47" y="566.986" width="137.106" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="57" y="589.981" fill="#000" font-size="14" textLength="50.258">Publica</text><text x="57" y="606.278" fill="#000" font-size="14" textLength="117.106">0.0.0.0/0 -&gt; IGW</text></g><g class="entity" data-qualified-name="vpc.routes.privateRoute" id="ent0028" data-source-line="47"><rect x="47.11" y="654.986" width="136.888" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="57.11" y="677.981" fill="#000" font-size="14" textLength="52.418">Privada</text><text x="57.11" y="694.278" fill="#000" font-size="14" textLength="116.888">0.0.0.0/0 -&gt; NAT</text></g><g class="entity" data-qualified-name="vpc.security.sgAlb" id="ent0030" data-source-line="51"><rect x="307.45" y="311.986" width="73.437" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="317.45" y="334.981" fill="#000" font-size="14" textLength="51.769">SG-ALB</text><text x="317.45" y="351.278" fill="#000" font-size="14" textLength="53.437">80, 443</text></g><g class="entity" data-qualified-name="vpc.security.sgApi" id="ent0031" data-source-line="52"><rect x="294.41" y="487.986" width="99.516" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="304.41" y="510.981" fill="#000" font-size="14" textLength="79.516">SG-EC2-API</text><text x="304.41" y="527.278" fill="#000" font-size="14" textLength="35.629">8000</text></g><g class="entity" data-qualified-name="vpc.security.sgRds" id="ent0032" data-source-line="53"><rect x="307.08" y="399.986" width="74.182" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="317.08" y="422.981" fill="#000" font-size="14" textLength="54.182">SG-RDS</text><text x="317.08" y="439.278" fill="#000" font-size="14" textLength="35.629">5432</text></g><g class="entity" data-qualified-name="internet" id="ent0001" data-source-line="7"><path d="M82.412,52.017 C85.507,46.982 89.436,46.717 93.243,51.207 C96.352,45.035 100.696,45.136 104.937,50.007 C107.854,44.684 112.121,44.207 115.701,49.322 C119.45,44.398 123.307,43.297 127.294,49.063 C132.337,43.8 136.568,43.948 139.411,51.195 C143.468,46.027 148.126,46.302 151.812,51.633 C159.15,54.472 160.888,61.829 154.573,67.104 C160.377,73.506 160.223,78.589 152.227,82.947 C150.273,89.108 144.739,89.516 140.99,84.802 C138.05,93.075 133.583,94.117 127.459,87.743 C126.527,93.46 121.833,95.642 116.945,92.37 C112.347,96.568 107.064,96.028 105.102,89.468 C98.582,94.304 95.357,91.67 93.15,84.991 C88.942,89.447 83.874,88.979 81.203,83.198 C71.545,82.225 68.324,75.002 74.92,67.517 C68.803,58.534 71.896,52.959 82.412,52.017" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="87.64" y="71.131" fill="#000" font-size="14" textLength="55.836">Internet</text></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0007" id="lnk33" data-source-line="57" data-link-type="dependency"><path d="M117.23,89.886 C120.66,166.566 141.28,412.096 265.41,556.286 C271.85,563.766 275.78,567.399 284.53,572.309" style="stroke:#181818;stroke-width:1;" fill="none" id="internet-to-igw"/><polygon points="288.89,574.756,282.999,566.863,284.53,572.309,279.084,573.84,288.89,574.756" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0007" data-entity-2="ent0010" id="lnk34" data-source-line="58" data-link-type="dependency"><path d="M366.62,611.696 C407.83,647.066 493.816,720.889 535.206,756.419" style="stroke:#181818;stroke-width:1;" fill="none" id="igw-to-albA"/><polygon points="539,759.676,534.776,750.779,535.206,756.419,529.566,756.849,539,759.676" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0007" data-entity-2="ent0017" id="lnk35" data-source-line="59" data-link-type="dependency"><path d="M395.13,574.786 C405.01,569.736 414.82,563.586 422.93,556.286 C491.19,494.856 535.181,396.282 551.841,354.412" style="stroke:#181818;stroke-width:1;" fill="none" id="igw-to-albB"/><polygon points="553.69,349.766,546.646,356.649,551.841,354.412,554.079,359.607,553.69,349.766" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0010" data-entity-2="ent0013" id="lnk36" data-source-line="60" data-link-type="dependency"><path d="M585.52,778.286 C610.2,778.286 644.88,778.286 673.86,778.286" style="stroke:#181818;stroke-width:1;" fill="none" id="albA-to-ec2A"/><polygon points="678.86,778.286,669.86,774.286,673.86,778.286,669.86,782.286,678.86,778.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0017" data-entity-2="ent0020" id="lnk37" data-source-line="61" data-link-type="dependency"><path d="M585.52,331.286 C610.2,331.286 644.88,331.286 673.86,331.286" style="stroke:#181818;stroke-width:1;" fill="none" id="albB-to-ec2B"/><polygon points="678.86,331.286,669.86,327.286,673.86,331.286,669.86,335.286,678.86,331.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0014" id="lnk38" data-source-line="62" data-link-type="dependency"><path d="M753.46,778.286 C783.67,778.286 822.13,778.286 856.35,778.286" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2A-to-rdsA"/><polygon points="861.35,778.286,852.35,774.286,856.35,778.286,852.35,782.286,861.35,778.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0021" id="lnk39" data-source-line="63" data-link-type="dependency"><path d="M753.46,331.286 C783.23,331.286 820.85,331.286 854.83,331.286" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2B-to-rdsB"/><polygon points="859.83,331.286,850.83,327.286,854.83,331.286,850.83,335.286,859.83,331.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0011" id="lnk40" data-source-line="64" data-link-type="dependency"><path d="M679.09,796.796 C667.65,802.526 654.92,808.786 643.13,814.286 C631.26,819.826 622.874,823.6 610.884,828.82" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2A-to-natA"/><polygon points="606.3,830.816,616.149,830.891,610.884,828.82,612.955,823.556,606.3,830.816" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0018" id="lnk41" data-source-line="65" data-link-type="dependency"><path d="M679.09,312.776 C667.65,307.046 654.92,300.786 643.13,295.286 C631.26,289.746 622.874,285.972 610.884,280.752" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2B-to-natB"/><polygon points="606.3,278.756,612.955,286.016,610.884,280.752,616.149,278.681,606.3,278.756" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0023" id="lnk42" data-source-line="66" data-link-type="dependency"><path d="M719.58,759.876 C727.15,704.166 752.34,538.846 789.26,501.286 C801.09,489.256 811.918,482.822 828.068,477.532" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2A-to-dynamodbEndpoint"/><polygon points="832.82,475.976,823.022,474.976,828.068,477.532,825.512,482.579,832.82,475.976" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0024" id="lnk43" data-source-line="67" data-link-type="dependency"><path d="M738.73,759.766 C776.76,727.066 851.599,662.726 889.609,630.036" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2A-to-s3Endpoint"/><polygon points="893.4,626.776,883.968,629.612,889.609,630.036,889.185,635.677,893.4,626.776" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0025" id="lnk44" data-source-line="68" data-link-type="dependency"><path d="M718.14,759.866 C721.22,719.726 734.25,623.846 789.26,572.286 C796.37,565.626 800.153,562.442 808.983,558.052" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2A-to-secretsEndpoint"/><polygon points="813.46,555.826,803.62,556.251,808.983,558.052,807.182,563.414,813.46,555.826" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0023" id="lnk45" data-source-line="69" data-link-type="dependency"><path d="M744.27,349.776 C782.03,375.556 845.961,419.206 883.711,444.986" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2B-to-dynamodbEndpoint"/><polygon points="887.84,447.806,882.664,439.427,883.711,444.986,878.152,446.034,887.84,447.806" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0024" id="lnk46" data-source-line="70" data-link-type="dependency"><path d="M717.02,349.756 C717.62,394.726 725.62,510.766 789.26,573.286 C808.81,592.486 833.012,600.571 858.302,604.591" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2B-to-s3Endpoint"/><polygon points="863.24,605.376,854.98,600.013,858.302,604.591,853.724,607.913,863.24,605.376" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0025" id="lnk47" data-source-line="71" data-link-type="dependency"><path d="M719.66,349.796 C725.33,384.876 742.59,461.206 789.26,502.286 C796.82,508.946 801.04,512.208 810.3,516.588" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2B-to-secretsEndpoint"/><polygon points="814.82,518.726,808.395,511.262,810.3,516.588,804.974,518.494,814.82,518.726" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0023" data-entity-2="ent0003" id="lnk48" data-source-line="72" data-link-type="dependency"><path d="M999.03,466.286 C1038.26,466.286 1078.9,466.286 1112.64,466.286" style="stroke:#181818;stroke-width:1;" fill="none" id="dynamodbEndpoint-to-dynamodb"/><polygon points="1117.64,466.286,1108.64,462.286,1112.64,466.286,1108.64,470.286,1117.64,466.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0024" data-entity-2="ent0004" id="lnk49" data-source-line="73" data-link-type="dependency"><path d="M968.65,608.286 C1024.66,608.286 1105.96,608.286 1143.34,608.286" style="stroke:#181818;stroke-width:1;" fill="none" id="s3Endpoint-to-s3"/><polygon points="1148.34,608.286,1139.34,604.286,1143.34,608.286,1139.34,612.286,1148.34,608.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0025" data-entity-2="ent0005" id="lnk50" data-source-line="74" data-link-type="dependency"><path d="M1018.84,537.286 C1045.55,537.286 1068.7,537.286 1093.19,537.286" style="stroke:#181818;stroke-width:1;" fill="none" id="secretsEndpoint-to-secrets"/><polygon points="1098.19,537.286,1089.19,533.286,1093.19,537.286,1089.19,541.286,1098.19,537.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0027" data-entity-2="ent0007" id="lnk51" data-source-line="75" data-link-type="dependency"><path d="M184.55,593.286 C212.45,593.286 239.74,593.286 267.87,593.286" style="stroke:#181818;stroke-width:1;" fill="none" id="publicRoute-to-igw"/><polygon points="272.87,593.286,263.87,589.286,267.87,593.286,263.87,597.286,272.87,593.286" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0028" data-entity-2="ent0011" id="lnk52" data-source-line="76" data-link-type="dependency"><path d="M161.38,708.036 C190.36,724.576 229.29,745.426 265.41,760.286 C346,793.446 438.613,819.18 498.923,834.43" style="stroke:#181818;stroke-width:1;" fill="none" id="privateRoute-to-natA"/><polygon points="503.77,835.656,496.025,829.572,498.923,834.43,494.064,837.328,503.77,835.656" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0028" data-entity-2="ent0018" id="lnk53" data-source-line="77" data-link-type="dependency"><path d="M184.2,658.276 C193.34,652.656 201.75,645.746 208.11,637.286 C300.46,514.446 154.32,402.476 265.41,296.286 C328.69,235.806 432.67,238.928 499.06,248.418" style="stroke:#181818;stroke-width:1;" fill="none" id="privateRoute-to-natB"/><polygon points="504.01,249.126,495.667,243.893,499.06,248.418,494.535,251.812,504.01,249.126" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0030" data-entity-2="ent0010" id="lnk54" data-source-line="78" data-link-type="dependency"><path d="M381.13,351.916 C395.82,359.036 411.9,369.066 422.93,382.286 C522.96,502.176 551.513,694.207 558.323,754.927" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albA"/><polygon points="558.88,759.896,561.852,750.506,558.323,754.927,553.902,751.398,558.88,759.896" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0030" data-entity-2="ent0017" id="lnk55" data-source-line="79" data-link-type="dependency"><path d="M381.24,337.116 C425.82,335.666 495.353,333.409 532.773,332.189" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albB"/><polygon points="537.77,332.026,528.644,328.321,532.773,332.189,528.905,336.317,537.77,332.026" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0031" data-entity-2="ent0013" id="lnk56" data-source-line="80" data-link-type="dependency"><path d="M394.35,530.626 C404.08,534.576 414.02,539.166 422.93,544.286 C536.48,609.556 648.759,713.567 692.949,756.377" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2A"/><polygon points="696.54,759.856,692.859,750.721,692.949,756.377,687.293,756.467,696.54,759.856" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0031" data-entity-2="ent0020" id="lnk57" data-source-line="81" data-link-type="dependency"><path d="M394.31,489.986 C469.6,452.746 607.328,384.633 674.208,351.553" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2B"/><polygon points="678.69,349.336,668.849,349.741,674.208,351.553,672.396,356.911,678.69,349.336" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0032" data-entity-2="ent0014" id="lnk58" data-source-line="82" data-link-type="dependency"><path d="M381.62,438.126 C396.95,445.026 413.41,455.386 422.93,470.286 C472.47,547.896 388.56,820.846 456.24,883.286 C583.52,1000.716 810.488,854.576 886.148,799.866" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsA"/><polygon points="890.2,796.936,880.563,798.968,886.148,799.866,885.251,805.451,890.2,796.936" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0032" data-entity-2="ent0021" id="lnk59" data-source-line="83" data-link-type="dependency"><path d="M381.55,413.476 C396.48,406.466 412.65,396.296 422.93,382.286 C464.88,325.126 401.12,270.876 456.24,226.286 C590.24,117.876 810.863,256.611 885.713,309.751" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsB"/><polygon points="889.79,312.646,884.767,304.174,885.713,309.751,880.136,310.697,889.79,312.646" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><?plantuml-src bLJRRjim37tNLt1vNkBSDWnx662tHL3iWg0krfS2WomhZX1PzYGvGJRqtoVBbkDRjYv5Wf8yf0wFIBrXWl0Yfh3NEbSVFK_YqonXUbz4XQAIP49JeMSaIxslxB37Z7-M-4Yryj93d17r8ozIxgLOQIezlQSfLLvCTxZWskCisUjP2K2QQKx1bpyBfgak90PpfAJc9pondNwKc1nW2j-tDx2Op-oVjtYFEDrfq1d8iXB4J5AYMIQGEZ2HOubJK7iSPoSc4jXXhcWhOYZdcJ3aGttcvM54Ov5mYX3XMH73vDwq9WNL4y0AM6suO4ZbaP5CWVyKMW0-AVYD02vrON9x5ZZDRWCBYAqHHprCkB9HjUhxAP56HlYA1Kweh42L3xqWrD25IKyKYppcPC36zGCRhEa9dwk-aXCgSRaHs9m3aq9DgRcjwG9NRVtogqBcqpepBAAoKbv4d17yBEpv2tF-SctJgi0bjSl4_r99WddaZmA--OyTbW9h1tovJaQo8uuTcLMBJ1dGz1gRkvib-Djx2wLaESxeuJQ4hMGfbXKZ6QiEevShAaQrYi6hLLpsLGp-hMBmMXM3_rHnFL0nU9sAmLKLGtDW73Kg1aCLUxDz9-8yC_kdgjhEQdYCB5odRRTuhiumBLo1NOuT9hJUnh-0kulPpwoYxVH1KmzPeIayueZJgYTPEaORshhHSFizX-adkDyyjUR3bXj9THVPIJKpqRxD9dT0qhHPIARFi37iSkMQgtmZJCFDr0pai_WmVmlhTVse9JwFHg5cMgPcMahuVEwmEHl5cg5v5k_MgsMDUuXLnTXmTiyoJ4rlvLjcllP_-xIqZ02L7clP7IzTpWfGwRAMNUlIvQnMp3v2JSmkKnCRp5WJQOtInTSRagReM9bWf4mmMgQVtIc9BXNgWgYNtww9MgFLQDkUcOiYOzu0sQk7sQo-YOvfepcpfhsCZbb6pHLRqrv7nmp-0000?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:1274px;height:1015px;background:#1B1B1B;" width="1274px" height="1015px" viewBox="0 0 1274 1015" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><rect x="0" y="0" width="1274" height="1015" fill="#1B1B1B" style="stroke:none;"/><g class="title" data-source-line="2"><text x="440.113" y="22.995" fill="#FFF" font-size="14" textLength="386.948" font-weight="700">Arquitetura de rede SwiftTrack - VPC 10.0.0.0/16</text></g><g class="cluster" data-qualified-name="aws" id="ent0002" data-source-line="8"><path d="M1099.563,422.375 C1103.46,414.731 1111.016,412.059 1116.881,420.219 C1120.696,411.58 1127.832,409.775 1133.666,418.238 C1138.317,411.139 1144.742,409.705 1150.454,417.001 C1154.5,408.356 1160.889,406.413 1168.135,413.376 C1174.589,404.628 1182.667,406.446 1186.964,415.639 C1192.829,409.481 1200.683,410.642 1203.39,419.171 C1210.014,410.919 1216.296,413.203 1221.152,421.114 C1232.354,411.273 1240.188,416.207 1244.72,428.286 C1246.238,427.369 1247.304,427.936 1247.476,429.68 C1256.163,434.842 1254.275,442.106 1247.007,446.833 C1255.095,452.411 1254.395,459.157 1246.513,464.282 C1254.378,469.13 1254.937,473.944 1247.469,479.74 C1254.957,485.998 1254.36,491.219 1247.023,497.097 C1254.766,501.307 1255.692,508.396 1247.567,513.145 C1255.928,515.993 1256.061,523.245 1249.856,528.294 C1259.173,534.662 1258.235,541.808 1248.778,547.1 C1255.092,551.495 1254.889,557.535 1248.578,561.758 C1256.695,567.344 1255.913,574.452 1246.661,577.987 C1256.355,583.31 1256.473,588.986 1247.558,595.274 C1255.064,601.557 1255.863,607.692 1246.125,612.545 C1254.259,623.847 1251.687,631.529 1237.72,634.286 C1238.677,633.309 1239.748,633.761 1240.023,634.996 C1235.224,644.497 1226.454,643.369 1221.554,635.101 C1217.91,644.355 1210.544,644.767 1204.451,637.661 C1199.069,645.227 1191.985,646.04 1186.194,638.145 C1181.691,646.706 1175.059,646.162 1169.345,639.484 C1163.82,646.691 1156.437,646.151 1152.715,637.583 C1147.313,645.333 1139.293,645.825 1134.275,637.151 C1127.831,645.022 1121.751,646.763 1115.601,636.842 C1104.094,647.007 1093.237,640.261 1090.56,627.286 C1091.143,627.305 1091.415,627.726 1091.163,628.261 C1083.351,623.614 1082.739,617.67 1090.174,612.091 C1082.946,606.758 1081.51,601.043 1089.557,595.155 C1082.705,590.517 1082.434,584.995 1088.819,579.724 C1080.178,575.037 1077.187,569.938 1085.716,562.209 C1079.048,558.157 1077.626,551.684 1085.164,547.112 C1075.585,542.202 1076.258,536.197 1083.978,530.083 C1076.266,523.501 1077.199,517.179 1085.147,511.587 C1079.158,507.112 1079.093,500.66 1086.404,497.361 C1079.158,492.585 1080.446,484.548 1087.664,480.878 C1079.944,474.355 1081.418,467.218 1089.879,462.662 C1083.579,458.423 1081.474,452.067 1089.644,447.602 C1080.301,436.395 1081.004,424.702 1097.56,421.286 C1098.532,420.706 1099.581,421.133 1099.563,422.375" style="stroke:#E7E7E7;stroke-width:1;" fill="none"/><text x="1113.694" y="439.281" fill="#FFF" font-size="14" textLength="107.892" font-weight="700">Servicos AWS</text></g><g class="cluster" data-qualified-name="vpc" id="ent0006" data-source-line="14"><rect x="7" y="105.286" width="1051.56" height="826" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="10" y="120.281" fill="#FFF" font-size="14" textLength="125.501" font-weight="700">VPC 10.0.0.0/16</text></g><g class="cluster" data-qualified-name="vpc.azA" id="ent0008" data-source-line="17"><path d="M466.74,666.286 L550.817,666.286 A3.75,3.75 0 0 1 553.317,668.786 L560.317,688.583 L1007.5,688.583 A2.5,2.5 0 0 1 1010,691.083 L1010,904.786 A2.5,2.5 0 0 1 1007.5,907.286 L466.74,907.286 A2.5,2.5 0 0 1 464.24,904.786 L464.24,668.786 A2.5,2.5 0 0 1 466.74,666.286" style="stroke:#FFF;stroke-width:1.5;" fill="none"/><line x1="464.24" y1="688.583" x2="560.317" y2="688.583" style="stroke:#FFF;stroke-width:1.5;"/><text x="468.24" y="681.281" fill="#FFF" font-size="14" textLength="83.077" font-weight="700">us-east-1a</text></g><g class="cluster" data-qualified-name="vpc.azA.publicA" id="ent0009" data-source-line="18"><rect x="488.24" y="709.286" width="146.89" height="174" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="491.24" y="724.281" fill="#FFF" font-size="14" textLength="118.453" font-weight="700">Subnet publica</text><text x="491.24" y="740.578" fill="#FFF" font-size="14" textLength="89.257" font-weight="700">10.0.1.0/24</text></g><g class="cluster" data-qualified-name="vpc.azA.privateA" id="ent0012" data-source-line="22"><rect x="663.13" y="709.286" width="322.87" height="103" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="666.13" y="724.281" fill="#FFF" font-size="14" textLength="120.866" font-weight="700">Subnet privada</text><text x="666.13" y="740.578" fill="#FFF" font-size="14" textLength="89.257" font-weight="700">10.0.3.0/24</text></g><g class="cluster" data-qualified-name="vpc.azB" id="ent0015" data-source-line="28"><path d="M466.74,148.286 L551.391,148.286 A3.75,3.75 0 0 1 553.891,150.786 L560.891,170.583 L1009.27,170.583 A2.5,2.5 0 0 1 1011.77,173.083 L1011.77,386.786 A2.5,2.5 0 0 1 1009.27,389.286 L466.74,389.286 A2.5,2.5 0 0 1 464.24,386.786 L464.24,150.786 A2.5,2.5 0 0 1 466.74,148.286" style="stroke:#FFF;stroke-width:1.5;" fill="none"/><line x1="464.24" y1="170.583" x2="560.891" y2="170.583" style="stroke:#FFF;stroke-width:1.5;"/><text x="468.24" y="163.281" fill="#FFF" font-size="14" textLength="83.651" font-weight="700">us-east-1b</text></g><g class="cluster" data-qualified-name="vpc.azB.publicB" id="ent0016" data-source-line="29"><rect x="488.24" y="191.286" width="146.89" height="174" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="491.24" y="206.281" fill="#FFF" font-size="14" textLength="118.453" font-weight="700">Subnet publica</text><text x="491.24" y="222.578" fill="#FFF" font-size="14" textLength="89.257" font-weight="700">10.0.2.0/24</text></g><g class="cluster" data-qualified-name="vpc.azB.privateB" id="ent0019" data-source-line="33"><rect x="663.13" y="262.286" width="324.64" height="103" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="666.13" y="277.281" fill="#FFF" font-size="14" textLength="120.866" font-weight="700">Subnet privada</text><text x="666.13" y="293.578" fill="#FFF" font-size="14" textLength="89.257" font-weight="700">10.0.4.0/24</text></g><g class="cluster" data-qualified-name="vpc.endpoints" id="ent0022" data-source-line="39"><rect x="797.26" y="413.286" width="237.3" height="229" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="800.26" y="428.281" fill="#FFF" font-size="14" textLength="115.227" font-weight="700">VPC Endpoints</text></g><g class="cluster" data-qualified-name="vpc.routes" id="ent0026" data-source-line="45"><rect x="31" y="532.286" width="169.11" height="191" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="34" y="547.281" fill="#FFF" font-size="14" textLength="103.072" font-weight="700">Route Tables</text></g><g class="cluster" data-qualified-name="vpc.security" id="ent0029" data-source-line="50"><rect x="273.41" y="277.286" width="141.52" height="279" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="276.41" y="292.281" fill="#FFF" font-size="14" textLength="126.574" font-weight="700">Security Groups</text></g><g class="entity" data-qualified-name="aws.dynamodb" id="ent0003" data-source-line="9"><rect x="1118.09" y="448.136" width="99.105" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1128.09" y="471.131" fill="#FFF" font-size="14" textLength="79.105">DynamoDB</text></g><g class="entity" data-qualified-name="aws.s3" id="ent0004" data-source-line="10"><rect x="1148.74" y="590.136" width="37.794" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1158.74" y="613.131" fill="#FFF" font-size="14" textLength="17.794">S3</text></g><g class="entity" data-qualified-name="aws.secrets" id="ent0005" data-source-line="11"><rect x="1098.56" y="519.136" width="138.166" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1108.56" y="542.131" fill="#FFF" font-size="14" textLength="118.166">Secrets Manager</text></g><g class="entity" data-qualified-name="vpc.igw" id="ent0007" data-source-line="15"><rect x="273.11" y="575.136" width="142.131" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="283.11" y="598.131" fill="#FFF" font-size="14" textLength="122.131">Internet Gateway</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.albA" id="ent0010" data-source-line="19"><rect x="538.19" y="760.136" width="46.981" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="548.19" y="783.131" fill="#FFF" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.natA" id="ent0011" data-source-line="20"><rect x="504.24" y="831.136" width="114.896" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="514.24" y="854.131" fill="#FFF" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.ec2A" id="ent0013" data-source-line="23"><rect x="679.13" y="760.136" width="74.127" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="689.13" y="783.131" fill="#FFF" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.rdsA" id="ent0014" data-source-line="24"><rect x="861.81" y="760.136" width="108.19" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="871.81" y="783.131" fill="#FFF" font-size="14" textLength="88.19">RDS Primary</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.albB" id="ent0017" data-source-line="30"><rect x="538.19" y="313.136" width="46.981" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="548.19" y="336.131" fill="#FFF" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.natB" id="ent0018" data-source-line="31"><rect x="504.24" y="242.136" width="114.896" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="514.24" y="265.131" fill="#FFF" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.ec2B" id="ent0020" data-source-line="34"><rect x="679.13" y="313.136" width="74.127" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="689.13" y="336.131" fill="#FFF" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.rdsB" id="ent0021" data-source-line="35"><rect x="860.04" y="313.136" width="111.731" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="870.04" y="336.131" fill="#FFF" font-size="14" textLength="91.731">RDS Standby</text></g><g class="entity" data-qualified-name="vpc.endpoints.dynamodbEndpoint" id="ent0023" data-source-line="40"><rect x="833.21" y="448.136" width="165.4" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="843.21" y="471.131" fill="#FFF" font-size="14" textLength="145.4">DynamoDB Gateway</text></g><g class="entity" data-qualified-name="vpc.endpoints.s3Endpoint" id="ent0024" data-source-line="41"><rect x="863.45" y="590.136" width="104.923" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="873.45" y="613.131" fill="#FFF" font-size="14" textLength="84.923">S3 Interface</text></g><g class="entity" data-qualified-name="vpc.endpoints.secretsEndpoint" id="ent0025" data-source-line="42"><rect x="813.26" y="519.136" width="205.295" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="823.26" y="542.131" fill="#FFF" font-size="14" textLength="185.295">Secrets Manager Interface</text></g><g class="entity" data-qualified-name="vpc.routes.publicRoute" id="ent0027" data-source-line="46"><rect x="47" y="566.986" width="137.106" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="57" y="589.981" fill="#FFF" font-size="14" textLength="50.258">Publica</text><text x="57" y="606.278" fill="#FFF" font-size="14" textLength="117.106">0.0.0.0/0 -&gt; IGW</text></g><g class="entity" data-qualified-name="vpc.routes.privateRoute" id="ent0028" data-source-line="47"><rect x="47.11" y="654.986" width="136.888" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="57.11" y="677.981" fill="#FFF" font-size="14" textLength="52.418">Privada</text><text x="57.11" y="694.278" fill="#FFF" font-size="14" textLength="116.888">0.0.0.0/0 -&gt; NAT</text></g><g class="entity" data-qualified-name="vpc.security.sgAlb" id="ent0030" data-source-line="51"><rect x="307.45" y="311.986" width="73.437" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="317.45" y="334.981" fill="#FFF" font-size="14" textLength="51.769">SG-ALB</text><text x="317.45" y="351.278" fill="#FFF" font-size="14" textLength="53.437">80, 443</text></g><g class="entity" data-qualified-name="vpc.security.sgApi" id="ent0031" data-source-line="52"><rect x="294.41" y="487.986" width="99.516" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="304.41" y="510.981" fill="#FFF" font-size="14" textLength="79.516">SG-EC2-API</text><text x="304.41" y="527.278" fill="#FFF" font-size="14" textLength="35.629">8000</text></g><g class="entity" data-qualified-name="vpc.security.sgRds" id="ent0032" data-source-line="53"><rect x="307.08" y="399.986" width="74.182" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="317.08" y="422.981" fill="#FFF" font-size="14" textLength="54.182">SG-RDS</text><text x="317.08" y="439.278" fill="#FFF" font-size="14" textLength="35.629">5432</text></g><g class="entity" data-qualified-name="internet" id="ent0001" data-source-line="7"><path d="M82.412,52.017 C85.507,46.982 89.436,46.717 93.243,51.207 C96.352,45.035 100.696,45.136 104.937,50.007 C107.854,44.684 112.121,44.207 115.701,49.322 C119.45,44.398 123.307,43.297 127.294,49.063 C132.337,43.8 136.568,43.948 139.411,51.195 C143.468,46.027 148.126,46.302 151.812,51.633 C159.15,54.472 160.888,61.829 154.573,67.104 C160.377,73.506 160.223,78.589 152.227,82.947 C150.273,89.108 144.739,89.516 140.99,84.802 C138.05,93.075 133.583,94.117 127.459,87.743 C126.527,93.46 121.833,95.642 116.945,92.37 C112.347,96.568 107.064,96.028 105.102,89.468 C98.582,94.304 95.357,91.67 93.15,84.991 C88.942,89.447 83.874,88.979 81.203,83.198 C71.545,82.225 68.324,75.002 74.92,67.517 C68.803,58.534 71.896,52.959 82.412,52.017" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="87.64" y="71.131" fill="#FFF" font-size="14" textLength="55.836">Internet</text></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0007" id="lnk33" data-source-line="57" data-link-type="dependency"><path d="M117.23,89.886 C120.66,166.566 141.28,412.096 265.41,556.286 C271.85,563.766 275.78,567.399 284.53,572.309" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="internet-to-igw"/><polygon points="288.89,574.756,282.999,566.863,284.53,572.309,279.084,573.84,288.89,574.756" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0007" data-entity-2="ent0010" id="lnk34" data-source-line="58" data-link-type="dependency"><path d="M366.62,611.696 C407.83,647.066 493.816,720.889 535.206,756.419" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="igw-to-albA"/><polygon points="539,759.676,534.776,750.779,535.206,756.419,529.566,756.849,539,759.676" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0007" data-entity-2="ent0017" id="lnk35" data-source-line="59" data-link-type="dependency"><path d="M395.13,574.786 C405.01,569.736 414.82,563.586 422.93,556.286 C491.19,494.856 535.181,396.282 551.841,354.412" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="igw-to-albB"/><polygon points="553.69,349.766,546.646,356.649,551.841,354.412,554.079,359.607,553.69,349.766" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0010" data-entity-2="ent0013" id="lnk36" data-source-line="60" data-link-type="dependency"><path d="M585.52,778.286 C610.2,778.286 644.88,778.286 673.86,778.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="albA-to-ec2A"/><polygon points="678.86,778.286,669.86,774.286,673.86,778.286,669.86,782.286,678.86,778.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0017" data-entity-2="ent0020" id="lnk37" data-source-line="61" data-link-type="dependency"><path d="M585.52,331.286 C610.2,331.286 644.88,331.286 673.86,331.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="albB-to-ec2B"/><polygon points="678.86,331.286,669.86,327.286,673.86,331.286,669.86,335.286,678.86,331.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0014" id="lnk38" data-source-line="62" data-link-type="dependency"><path d="M753.46,778.286 C783.67,778.286 822.13,778.286 856.35,778.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2A-to-rdsA"/><polygon points="861.35,778.286,852.35,774.286,856.35,778.286,852.35,782.286,861.35,778.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0021" id="lnk39" data-source-line="63" data-link-type="dependency"><path d="M753.46,331.286 C783.23,331.286 820.85,331.286 854.83,331.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2B-to-rdsB"/><polygon points="859.83,331.286,850.83,327.286,854.83,331.286,850.83,335.286,859.83,331.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0011" id="lnk40" data-source-line="64" data-link-type="dependency"><path d="M679.09,796.796 C667.65,802.526 654.92,808.786 643.13,814.286 C631.26,819.826 622.874,823.6 610.884,828.82" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2A-to-natA"/><polygon points="606.3,830.816,616.149,830.891,610.884,828.82,612.955,823.556,606.3,830.816" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0018" id="lnk41" data-source-line="65" data-link-type="dependency"><path d="M679.09,312.776 C667.65,307.046 654.92,300.786 643.13,295.286 C631.26,289.746 622.874,285.972 610.884,280.752" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2B-to-natB"/><polygon points="606.3,278.756,612.955,286.016,610.884,280.752,616.149,278.681,606.3,278.756" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0023" id="lnk42" data-source-line="66" data-link-type="dependency"><path d="M719.58,759.876 C727.15,704.166 752.34,538.846 789.26,501.286 C801.09,489.256 811.918,482.822 828.068,477.532" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2A-to-dynamodbEndpoint"/><polygon points="832.82,475.976,823.022,474.976,828.068,477.532,825.512,482.579,832.82,475.976" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0024" id="lnk43" data-source-line="67" data-link-type="dependency"><path d="M738.73,759.766 C776.76,727.066 851.599,662.726 889.609,630.036" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2A-to-s3Endpoint"/><polygon points="893.4,626.776,883.968,629.612,889.609,630.036,889.185,635.677,893.4,626.776" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0013" data-entity-2="ent0025" id="lnk44" data-source-line="68" data-link-type="dependency"><path d="M718.14,759.866 C721.22,719.726 734.25,623.846 789.26,572.286 C796.37,565.626 800.153,562.442 808.983,558.052" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2A-to-secretsEndpoint"/><polygon points="813.46,555.826,803.62,556.251,808.983,558.052,807.182,563.414,813.46,555.826" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0023" id="lnk45" data-source-line="69" data-link-type="dependency"><path d="M744.27,349.776 C782.03,375.556 845.961,419.206 883.711,444.986" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2B-to-dynamodbEndpoint"/><polygon points="887.84,447.806,882.664,439.427,883.711,444.986,878.152,446.034,887.84,447.806" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0024" id="lnk46" data-source-line="70" data-link-type="dependency"><path d="M717.02,349.756 C717.62,394.726 725.62,510.766 789.26,573.286 C808.81,592.486 833.012,600.571 858.302,604.591" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2B-to-s3Endpoint"/><polygon points="863.24,605.376,854.98,600.013,858.302,604.591,853.724,607.913,863.24,605.376" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0020" data-entity-2="ent0025" id="lnk47" data-source-line="71" data-link-type="dependency"><path d="M719.66,349.796 C725.33,384.876 742.59,461.206 789.26,502.286 C796.82,508.946 801.04,512.208 810.3,516.588" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2B-to-secretsEndpoint"/><polygon points="814.82,518.726,808.395,511.262,810.3,516.588,804.974,518.494,814.82,518.726" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0023" data-entity-2="ent0003" id="lnk48" data-source-line="72" data-link-type="dependency"><path d="M999.03,466.286 C1038.26,466.286 1078.9,466.286 1112.64,466.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="dynamodbEndpoint-to-dynamodb"/><polygon points="1117.64,466.286,1108.64,462.286,1112.64,466.286,1108.64,470.286,1117.64,466.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0024" data-entity-2="ent0004" id="lnk49" data-source-line="73" data-link-type="dependency"><path d="M968.65,608.286 C1024.66,608.286 1105.96,608.286 1143.34,608.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="s3Endpoint-to-s3"/><polygon points="1148.34,608.286,1139.34,604.286,1143.34,608.286,1139.34,612.286,1148.34,608.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0025" data-entity-2="ent0005" id="lnk50" data-source-line="74" data-link-type="dependency"><path d="M1018.84,537.286 C1045.55,537.286 1068.7,537.286 1093.19,537.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="secretsEndpoint-to-secrets"/><polygon points="1098.19,537.286,1089.19,533.286,1093.19,537.286,1089.19,541.286,1098.19,537.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0027" data-entity-2="ent0007" id="lnk51" data-source-line="75" data-link-type="dependency"><path d="M184.55,593.286 C212.45,593.286 239.74,593.286 267.87,593.286" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="publicRoute-to-igw"/><polygon points="272.87,593.286,263.87,589.286,267.87,593.286,263.87,597.286,272.87,593.286" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0028" data-entity-2="ent0011" id="lnk52" data-source-line="76" data-link-type="dependency"><path d="M161.38,708.036 C190.36,724.576 229.29,745.426 265.41,760.286 C346,793.446 438.613,819.18 498.923,834.43" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="privateRoute-to-natA"/><polygon points="503.77,835.656,496.025,829.572,498.923,834.43,494.064,837.328,503.77,835.656" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0028" data-entity-2="ent0018" id="lnk53" data-source-line="77" data-link-type="dependency"><path d="M184.2,658.276 C193.34,652.656 201.75,645.746 208.11,637.286 C300.46,514.446 154.32,402.476 265.41,296.286 C328.69,235.806 432.67,238.928 499.06,248.418" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="privateRoute-to-natB"/><polygon points="504.01,249.126,495.667,243.893,499.06,248.418,494.535,251.812,504.01,249.126" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0030" data-entity-2="ent0010" id="lnk54" data-source-line="78" data-link-type="dependency"><path d="M381.13,351.916 C395.82,359.036 411.9,369.066 422.93,382.286 C522.96,502.176 551.513,694.207 558.323,754.927" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albA"/><polygon points="558.88,759.896,561.852,750.506,558.323,754.927,553.902,751.398,558.88,759.896" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0030" data-entity-2="ent0017" id="lnk55" data-source-line="79" data-link-type="dependency"><path d="M381.24,337.116 C425.82,335.666 495.353,333.409 532.773,332.189" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albB"/><polygon points="537.77,332.026,528.644,328.321,532.773,332.189,528.905,336.317,537.77,332.026" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0031" data-entity-2="ent0013" id="lnk56" data-source-line="80" data-link-type="dependency"><path d="M394.35,530.626 C404.08,534.576 414.02,539.166 422.93,544.286 C536.48,609.556 648.759,713.567 692.949,756.377" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2A"/><polygon points="696.54,759.856,692.859,750.721,692.949,756.377,687.293,756.467,696.54,759.856" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0031" data-entity-2="ent0020" id="lnk57" data-source-line="81" data-link-type="dependency"><path d="M394.31,489.986 C469.6,452.746 607.328,384.633 674.208,351.553" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2B"/><polygon points="678.69,349.336,668.849,349.741,674.208,351.553,672.396,356.911,678.69,349.336" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0032" data-entity-2="ent0014" id="lnk58" data-source-line="82" data-link-type="dependency"><path d="M381.62,438.126 C396.95,445.026 413.41,455.386 422.93,470.286 C472.47,547.896 388.56,820.846 456.24,883.286 C583.52,1000.716 810.488,854.576 886.148,799.866" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsA"/><polygon points="890.2,796.936,880.563,798.968,886.148,799.866,885.251,805.451,890.2,796.936" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0032" data-entity-2="ent0021" id="lnk59" data-source-line="83" data-link-type="dependency"><path d="M381.55,413.476 C396.48,406.466 412.65,396.296 422.93,382.286 C464.88,325.126 401.12,270.876 456.24,226.286 C590.24,117.876 810.863,256.611 885.713,309.751" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsB"/><polygon points="889.79,312.646,884.767,304.174,885.713,309.751,880.136,310.697,889.79,312.646" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><?plantuml-src bLJ9Rjim4BtpAwO-rvQt5aKF1QGaC88kCAAWkGGeA9AM2KkKIb8st2B_NeeIPMrkKmSsClkRDpDymmL92ifWhtMkFdgUnATPpFM-Y0h59Cc4PaBFI9PwN_bXZtdoMU8ZqyfB3pGZwaTUf8cNOgMPzFIUfKnvbErmaMYFOdcObNQakKuO-F9dmJNJXSHWAafcVi8Jt-b7YSa1fl1zUmEB-Sp-UOltA64x3Je3oUEz1ieb8vfd0ga35pcME0MrnpGxSH733YUAjIm6SPu9WptKvwGiHZGMSS8G8abMK9ZScywaO7e2M06l1MSCcJnoaYdmdqBhW4yAVYE0IrwOt9u5JhFRm3fGAz2evnEkh5Mj-df6f64HlcA1OoOhfqg7NX1guCAaHuhrFEPaWCRr0nkisGcVgxxY4ohzSaEmgGEJGasP6TPqWQksVlbL8lDfrGoBgCoK5r722NuMjlx2r5-kRLXbk8HsaVXVAafm4lcZ3j_ynmvAWRLpVBaEHl8ZfWxCgWMcD6Xs3StTpHByxRrrPMGvZkZXDeIjv2cM5I99LGVHonKMevh5uDKiBlii1lzcCNWjYy5_ihWUi1YyZiNWAekXAKYZXiLWo69lj-y4pJDpVwhAxQG6nyZ1TTfsX-Vo3CF25TZZs672wclyYtFtCFkHbRKTFcZg8IiqWqSS9QpgIPQAqOQsRZNSVSzX-WdkDq-j_R3fHaBT83kXPYVQqsnY1o1DcuNa-WmRWovNhhbADu8qt4pDGZwB3_Eti5xNZrhi9z6egzcMgTcMqdq-Txuv7_KrI_CitgrNozhlWQeAiS7idcMOcjxAjynyxV_sQMa90IerLh8tNggS5A1IPILxrgNAIIsRVOGQcpscnZROiSRIMgMBhhSaJTAnDC58cc0qJJ-wan9TCjG9KI--dHErLglXjhqp5qR6j06oeuVPh9v4HxJMd5lH3gCZbbOpOYlQSNJ4u0y0?></g></svg></div></div>
+
+<h4 id="322-casos-de-uso-arquiteturais-o-que-sao-e-como-modelar-15-min">3.2.2. Casos de Uso Arquiteturais - O que são e como modelar? (15 min)<a class="headerlink" href="#322-casos-de-uso-arquiteturais-o-que-sao-e-como-modelar-15-min" title="Permanent link">&para;</a></h4>
+<p><strong>Definição:</strong>
+Casos de uso arquiteturais descrevem interações de alto nível entre atores (humanos ou sistemas) e o sistema de infraestrutura. Diferentemente de casos de uso funcionais (foco em funcionalidades de software), os casos de uso arquiteturais focam em <strong>requisitos de infraestrutura, segurança e operações</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Aspecto</strong></th>
+<th style="text-align: left;"><strong>Caso de Uso Funcional</strong></th>
+<th style="text-align: left;"><strong>Caso de Uso Arquitetural</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Foco</strong></td>
+<td style="text-align: left;">"O que o sistema faz?"</td>
+<td style="text-align: left;">"Como o sistema é implantado/operado?"</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exemplo (SwiftTrack)</strong></td>
+<td style="text-align: left;">"Motorista envia dados de GPS"</td>
+<td style="text-align: left;">"Administrador configura VPC para telemetria"</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Atores</strong></td>
+<td style="text-align: left;">Motoristas, Operadores</td>
+<td style="text-align: left;">Administradores de Infraestrutura, DevOps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Artefatos</strong></td>
+<td style="text-align: left;">Diagrama de Casos de Uso UML</td>
+<td style="text-align: left;">Diagrama de Casos de Uso + Especificações de Infraestrutura</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Estrutura de um Caso de Uso Arquitetural (SwiftTrack):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Exemplo (Configurar VPC SwiftTrack)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">ID único do caso de uso.</td>
+<td style="text-align: left;">UC-ARQ-001</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Nome descritivo.</td>
+<td style="text-align: left;">Configurar VPC e Rede para SwiftTrack.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ator(es)</strong></td>
+<td style="text-align: left;">Quem interage com o sistema.</td>
+<td style="text-align: left;">Administrador de Infraestrutura.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pré-condição</strong></td>
+<td style="text-align: left;">O que deve estar disponível.</td>
+<td style="text-align: left;">Conta AWS ativa, permissões IAM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pós-condição</strong></td>
+<td style="text-align: left;">Estado após a execução.</td>
+<td style="text-align: left;">VPC criada, sub-redes configuradas, endpoints configurados.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxo Principal</strong></td>
+<td style="text-align: left;">Passos normais.</td>
+<td style="text-align: left;">1. Criar VPC. 2. Criar sub-redes. 3. Configurar endpoints.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxos Alternativos</strong></td>
+<td style="text-align: left;">Exceções e variações.</td>
+<td style="text-align: left;">Falha na criação da VPC, falta de permissões.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></td>
+<td style="text-align: left;">Métricas de sucesso.</td>
+<td style="text-align: left;">VPC criada em &lt; 5 min, isolamento de dados sensíveis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Riscos</strong></td>
+<td style="text-align: left;">O que pode dar errado.</td>
+<td style="text-align: left;">Endereçamento IP conflitante, VPC Endpoint mal configurado.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-casos-de-uso-arquiteturais-da-swifttrack-10-min">3.2.3. Casos de Uso Arquiteturais da SwiftTrack (10 min)<a class="headerlink" href="#323-casos-de-uso-arquiteturais-da-swifttrack-10-min" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Caso de Uso</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviços AWS Envolvidos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>UC-ARQ-001</strong></td>
+<td style="text-align: left;">Configurar VPC e Rede</td>
+<td style="text-align: left;">VPC, Sub-redes, IGW, NAT, Route Tables</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UC-ARQ-002</strong></td>
+<td style="text-align: left;">Configurar Segurança de Rede</td>
+<td style="text-align: left;">Security Groups, NACLs, IAM</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UC-ARQ-003</strong></td>
+<td style="text-align: left;">Configurar VPC Endpoints</td>
+<td style="text-align: left;">DynamoDB, S3, Secrets Manager endpoints</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UC-ARQ-004</strong></td>
+<td style="text-align: left;">Configurar Conectividade entre Camadas</td>
+<td style="text-align: left;">ALB, EC2, RDS, Lambda (VPC)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo Completo - UC-ARQ-003 (VPC Endpoints):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-003</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar VPC Endpoints para Serviços AWS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ator Principal</strong></td>
+<td style="text-align: left;">Administrador de Infraestrutura</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ator Secundário</strong></td>
+<td style="text-align: left;">Sistema AWS (DynamoDB, S3, Secrets Manager)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pré-condição</strong></td>
+<td style="text-align: left;">VPC criada, sub-redes privadas configuradas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pós-condição</strong></td>
+<td style="text-align: left;">EC2 e Lambda podem acessar DynamoDB, S3 e Secrets Manager via rede privada.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Passo 1</strong></td>
+<td style="text-align: left;">Administrador identifica os serviços AWS que precisam ser acessados pela VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 2</strong></td>
+<td style="text-align: left;">Cria VPC Endpoint para DynamoDB (Gateway Endpoint).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 3</strong></td>
+<td style="text-align: left;">Cria VPC Endpoints para S3 e Secrets Manager (Interface Endpoints).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 4</strong></td>
+<td style="text-align: left;">Associa endpoints às sub-redes privadas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 5</strong></td>
+<td style="text-align: left;">Atualiza políticas de endpoint para restringir acesso.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 6</strong></td>
+<td style="text-align: left;">Valida conectividade: EC2 → DynamoDB, Lambda → S3.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Alt 1</strong></td>
+<td style="text-align: left;">Serviço não suporta Gateway Endpoint (ex: Secrets Manager) → usar Interface Endpoint.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Alt 2</strong></td>
+<td style="text-align: left;">Política de endpoint bloqueia acesso → revisar e ajustar.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Tráfego não sai da VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo</strong></td>
+<td style="text-align: left;">Interface Endpoints: $0.01/hora cada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">Latência reduzida vs acesso via Internet.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Custo elevado</strong></td>
+<td style="text-align: left;">Usar Gateway Endpoint para serviços suportados (DynamoDB, S3).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Políticas restritivas</strong></td>
+<td style="text-align: left;">Testar políticas com usuários específicos antes de aplicar.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33-estudo-de-caso-arquitetura-de-rede-para-swifttrack-45-min">3.3. ESTUDO DE CASO: ARQUITETURA DE REDE PARA SWIFTTRACK (45 min)<a class="headerlink" href="#33-estudo-de-caso-arquitetura-de-rede-para-swifttrack-45-min" title="Permanent link">&para;</a></h3>
+<p><strong>Tema:</strong> "Como a SwiftTrack organizaria sua rede?"</p>
+<h4 id="331-apresentacao-do-cenario-o-desafio-da-swifttrack-10-min">3.3.1. Apresentação do Cenário - "O Desafio da SwiftTrack" (10 min)<a class="headerlink" href="#331-apresentacao-do-cenario-o-desafio-da-swifttrack-10-min" title="Permanent link">&para;</a></h4>
+<p><strong>Cenário:</strong></p>
+<blockquote>
+<p><em>A SwiftTrack precisa projetar sua VPC para suportar:</em>
+- <strong>API administrativa:</strong> Django REST Framework em EC2, acessada por operadores via internet.
+- <strong>Ingestão de telemetria:</strong> Lambda + API Gateway (serverless), que escreve em DynamoDB.
+- <strong>Banco de dados relacional:</strong> RDS PostgreSQL em Multi-AZ, acessado apenas pela API.
+- <strong>Armazenamento de arquivos:</strong> S3 para comprovantes, integrado com CloudFront.
+- <strong>Segredos:</strong> Secrets Manager para credenciais do banco.</p>
+</blockquote>
+<p><strong>Pergunta para a Turma:</strong></p>
+<blockquote>
+<p><em>"Como vocês organizariam essa arquitetura em termos de sub-redes e segurança?"</em></p>
+</blockquote>
+<h4 id="332-atividade-em-grupo-projetando-a-vpc-da-swifttrack-25-min">3.3.2. Atividade em Grupo - "Projetando a VPC da SwiftTrack" (25 min)<a class="headerlink" href="#332-atividade-em-grupo-projetando-a-vpc-da-swifttrack-25-min" title="Permanent link">&para;</a></h4>
+<p><strong>Template Entregue aos Alunos:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Decisão de Projeto</strong></th>
+<th style="text-align: left;"><strong>Justificativa Técnica</strong></th>
+<th style="text-align: left;"><strong>Justificativa de Custo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>VPC CIDR</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de AZs</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Públicas</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Privadas</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NAT Gateway</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VPC Endpoints</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Security Groups</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NACLs</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Instruções:</strong>
+1. Cada grupo recebe o Documento de Visão e Requisitos Suplementares da SwiftTrack.
+2. Com base nos requisitos, projetam a VPC e preenchem o template.
+3. Devem justificar <strong>cada decisão</strong> com base em requisitos técnicos e de custo.</p>
+<p><strong>Exemplo de Preenchimento:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Decisão</strong></th>
+<th style="text-align: left;"><strong>Justificativa Técnica</strong></th>
+<th style="text-align: left;"><strong>Justificativa de Custo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>VPC CIDR</strong></td>
+<td style="text-align: left;">10.0.0.0/16</td>
+<td style="text-align: left;">Espaço para 65.536 IPs, suficiente para crescimento.</td>
+<td style="text-align: left;">$0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de AZs</strong></td>
+<td style="text-align: left;">2 AZs (us-east-1a, us-east-1b)</td>
+<td style="text-align: left;">RDS Multi-AZ exige 2 AZs para failover.</td>
+<td style="text-align: left;">$0 (AZs são gratuitas)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Públicas</strong></td>
+<td style="text-align: left;">2 sub-redes (10.0.1.0/24, 10.0.2.0/24)</td>
+<td style="text-align: left;">Para ALB e NAT Gateway.</td>
+<td style="text-align: left;">$0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Privadas</strong></td>
+<td style="text-align: left;">2 sub-redes (10.0.3.0/24, 10.0.4.0/24)</td>
+<td style="text-align: left;">Para EC2 (API) e RDS (banco).</td>
+<td style="text-align: left;">$0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NAT Gateway</strong></td>
+<td style="text-align: left;">1 NAT Gateway por AZ (2 total)</td>
+<td style="text-align: left;">EC2 em sub-rede privada precisa atualizar pacotes.</td>
+<td style="text-align: left;">~$0.045/hora cada (~$64/mês)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VPC Endpoints</strong></td>
+<td style="text-align: left;">DynamoDB (Gateway), S3 (Interface), Secrets Manager (Interface)</td>
+<td style="text-align: left;">Evita tráfego via Internet; mais seguro e barato.</td>
+<td style="text-align: left;">Interface: $0.01/hora cada (~$14/mês)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Security Groups</strong></td>
+<td style="text-align: left;">SG-ALB (80,443), SG-EC2 (8000), SG-RDS (5432)</td>
+<td style="text-align: left;">Isolamento por camada: ALB → EC2 → RDS.</td>
+<td style="text-align: left;">$0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="333-discussao-e-comparacao-de-decisoes-10-min">3.3.3. Discussão e Comparação de Decisões (10 min)<a class="headerlink" href="#333-discussao-e-comparacao-de-decisoes-10-min" title="Permanent link">&para;</a></h4>
+<p><strong>Perguntas para Estimular Debate:</strong></p>
+<ol>
+<li><em>"Alguém escolheu 3 AZs? Por quê?"</em></li>
+<li><em>"Alguém optou por NAT Instance em vez de NAT Gateway? Por quê?"</em></li>
+<li><em>"VPC Endpoints valem o custo adicional?"</em></li>
+<li><em>"O que vocês fariam para reduzir o custo da VPC?"</em></li>
+</ol>
+<p><strong>Trade-offs Identificados:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Decisão</strong></th>
+<th style="text-align: left;"><strong>Prós</strong></th>
+<th style="text-align: left;"><strong>Contras</strong></th>
+<th style="text-align: left;"><strong>Custo Impacto</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>NAT Gateway</strong></td>
+<td style="text-align: left;">Gerenciado, alta disponibilidade, escalável.</td>
+<td style="text-align: left;">Mais caro que NAT Instance.</td>
+<td style="text-align: left;">$64/mês (2 AZs)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NAT Instance</strong></td>
+<td style="text-align: left;">Mais barato (~$10/mês).</td>
+<td style="text-align: left;">Precisa gerenciar, failover manual.</td>
+<td style="text-align: left;">$10/mês</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VPC Endpoints</strong></td>
+<td style="text-align: left;">Mais seguro, menor latência.</td>
+<td style="text-align: left;">Custo adicional (~$14/mês).</td>
+<td style="text-align: left;">$14/mês</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sem Endpoints</strong></td>
+<td style="text-align: left;">Sem custo adicional.</td>
+<td style="text-align: left;">Tráfego via Internet, menos seguro.</td>
+<td style="text-align: left;">$0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusão:</strong> Para a SwiftTrack, o custo adicional de NAT Gateway e VPC Endpoints é justificado pela <strong>segurança (LGPD)</strong> e <strong>disponibilidade (99,95%)</strong>.</p>
+<hr />
+<h3 id="34-exercicio-pratico-projeto-de-vpc-para-swifttrack-40-min">3.4. EXERCÍCIO PRÁTICO: PROJETO DE VPC PARA SWIFTTRACK (40 min)<a class="headerlink" href="#34-exercicio-pratico-projeto-de-vpc-para-swifttrack-40-min" title="Permanent link">&para;</a></h3>
+<p><strong>Tema:</strong> "Mãos à Obra - Diagrama e Casos de Uso"</p>
+<h4 id="341-instrucoes-e-template-5-min">3.4.1. Instruções e Template (5 min)<a class="headerlink" href="#341-instrucoes-e-template-5-min" title="Permanent link">&para;</a></h4>
+<p><strong>Instruções:</strong>
+1. Baseado no Documento de Visão e Requisitos Suplementares da SwiftTrack, cada grupo projeta a VPC.
+2. Deve incluir:
+   - <strong>Diagrama de VPC</strong> (Draw.io/Lucidchart) com todos os componentes.
+   - <strong>3 Casos de Uso Arquiteturais</strong> (UC-ARQ-001, UC-ARQ-002, UC-ARQ-003).
+   - <strong>Justificativas detalhadas</strong> para cada decisão.</p>
+<p><strong>Template do Diagrama de VPC (Entregue aos Alunos):</strong></p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:1402px;height:935px;background:#FFFFFF;" width="1402px" height="935px" viewBox="0 0 1402 935" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="title" data-source-line="2"><text x="485.801" y="22.995" fill="#000" font-size="14" textLength="423.958" font-weight="700">Template de VPC SwiftTrack - preencher pelos alunos</text></g><g class="cluster" data-qualified-name="vpc" id="ent0002" data-source-line="8"><rect x="7" y="44.297" width="1381.56" height="807" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="10" y="59.292" fill="#000" font-size="14" textLength="86.926" font-weight="700">VPC [CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azA" id="ent0003" data-source-line="9"><path d="M474.44,87.297 L575.224,87.297 A3.75,3.75 0 0 1 577.724,89.797 L584.724,109.594 L1147.04,109.594 A2.5,2.5 0 0 1 1149.54,112.094 L1149.54,325.797 A2.5,2.5 0 0 1 1147.04,328.297 L474.44,328.297 A2.5,2.5 0 0 1 471.94,325.797 L471.94,89.797 A2.5,2.5 0 0 1 474.44,87.297" style="stroke:#000;stroke-width:1.5;" fill="none"/><line x1="471.94" y1="109.594" x2="584.724" y2="109.594" style="stroke:#000;stroke-width:1.5;"/><text x="475.94" y="102.292" fill="#000" font-size="14" textLength="99.784" font-weight="700">AZ [Nome A]</text></g><g class="cluster" data-qualified-name="vpc.azA.publicA" id="ent0004" data-source-line="10"><rect x="495.94" y="130.297" width="172.9" height="174" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="498.94" y="145.292" fill="#000" font-size="14" textLength="157.11" font-weight="700">Subnet publica [AZ]</text><text x="498.94" y="161.589" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azA.privateA" id="ent0007" data-source-line="14"><rect x="839" y="201.297" width="286.54" height="103" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="842" y="216.292" fill="#000" font-size="14" textLength="159.523" font-weight="700">Subnet privada [AZ]</text><text x="842" y="232.589" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azB" id="ent0010" data-source-line="20"><path d="M474.44,586.297 L575.06,586.297 A3.75,3.75 0 0 1 577.56,588.797 L584.56,608.594 L1147.04,608.594 A2.5,2.5 0 0 1 1149.54,611.094 L1149.54,824.797 A2.5,2.5 0 0 1 1147.04,827.297 L474.44,827.297 A2.5,2.5 0 0 1 471.94,824.797 L471.94,588.797 A2.5,2.5 0 0 1 474.44,586.297" style="stroke:#000;stroke-width:1.5;" fill="none"/><line x1="471.94" y1="608.594" x2="584.56" y2="608.594" style="stroke:#000;stroke-width:1.5;"/><text x="475.94" y="601.292" fill="#000" font-size="14" textLength="99.62" font-weight="700">AZ [Nome B]</text></g><g class="cluster" data-qualified-name="vpc.azB.publicB" id="ent0011" data-source-line="21"><rect x="495.94" y="629.297" width="172.9" height="174" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="498.94" y="644.292" fill="#000" font-size="14" textLength="157.11" font-weight="700">Subnet publica [AZ]</text><text x="498.94" y="660.589" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azB.privateB" id="ent0014" data-source-line="25"><rect x="839" y="629.297" width="286.54" height="103" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="842" y="644.292" fill="#000" font-size="14" textLength="159.523" font-weight="700">Subnet privada [AZ]</text><text x="842" y="660.589" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.endpoints" id="ent0017" data-source-line="31"><rect x="1011.29" y="360.297" width="345.27" height="194" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="1014.29" y="375.292" fill="#000" font-size="14" textLength="115.227" font-weight="700">VPC Endpoints</text></g><g class="entity" data-qualified-name="vpc.igw" id="ent0021" data-source-line="37"><rect x="252.1" y="576.147" width="142.131" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="262.1" y="599.142" fill="#000" font-size="14" textLength="122.131">Internet Gateway</text></g><g class="entity" data-qualified-name="vpc.publicRoute" id="ent0022" data-source-line="38"><rect x="23" y="559.857" width="159.392" height="68.891" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="33" y="582.852" fill="#000" font-size="14" textLength="139.392">Route Table publica</text><text x="33" y="599.149" fill="#000" font-size="14" textLength="103.64">[CIDR] -&gt; local</text><text x="33" y="615.446" fill="#000" font-size="14" textLength="117.106">0.0.0.0/0 -&gt; IGW</text></g><g class="entity" data-qualified-name="vpc.privateRoute" id="ent0023" data-source-line="39"><rect x="242.39" y="734.857" width="161.552" height="68.891" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="252.39" y="757.852" fill="#000" font-size="14" textLength="141.552">Route Table privada</text><text x="252.39" y="774.149" fill="#000" font-size="14" textLength="103.64">[CIDR] -&gt; local</text><text x="252.39" y="790.446" fill="#000" font-size="14" textLength="116.888">0.0.0.0/0 -&gt; NAT</text></g><g class="entity" data-qualified-name="vpc.sgAlb" id="ent0024" data-source-line="40"><rect x="286.45" y="646.997" width="73.437" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="296.45" y="669.992" fill="#000" font-size="14" textLength="51.769">SG-ALB</text><text x="296.45" y="686.289" fill="#000" font-size="14" textLength="53.437">80, 443</text></g><g class="entity" data-qualified-name="vpc.sgApi" id="ent0025" data-source-line="41"><rect x="532.63" y="430.997" width="99.516" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="542.63" y="453.992" fill="#000" font-size="14" textLength="79.516">SG-EC2-API</text><text x="542.63" y="470.289" fill="#000" font-size="14" textLength="35.629">8000</text></g><g class="entity" data-qualified-name="vpc.sgRds" id="ent0026" data-source-line="42"><rect x="854.97" y="343.997" width="74.182" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="864.97" y="366.992" fill="#000" font-size="14" textLength="54.182">SG-RDS</text><text x="864.97" y="383.289" fill="#000" font-size="14" textLength="35.629">5432</text></g><g class="entity" data-qualified-name="vpc.endpointPolicies" id="ent0027" data-source-line="43"><rect x="808.84" y="431.997" width="166.446" height="52.594" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="818.84" y="454.992" fill="#000" font-size="14" textLength="146.446">Politicas de Endpoint</text><text x="818.84" y="471.289" fill="#000" font-size="14" textLength="104.344">Acesso restrito</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.albA" id="ent0005" data-source-line="11"><rect x="558.9" y="181.147" width="46.981" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="568.9" y="204.142" fill="#000" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.natA" id="ent0006" data-source-line="12"><rect x="524.94" y="252.147" width="114.896" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="534.94" y="275.142" fill="#000" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.ec2A" id="ent0008" data-source-line="15"><rect x="855" y="252.147" width="74.127" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="865" y="275.142" fill="#000" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.rdsA" id="ent0009" data-source-line="16"><rect x="1060.14" y="252.147" width="49.395" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1070.14" y="275.142" fill="#000" font-size="14" textLength="29.395">RDS</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.albB" id="ent0012" data-source-line="22"><rect x="558.9" y="680.147" width="46.981" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="568.9" y="703.142" fill="#000" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.natB" id="ent0013" data-source-line="23"><rect x="524.94" y="751.147" width="114.896" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="534.94" y="774.142" fill="#000" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.ec2B" id="ent0015" data-source-line="26"><rect x="855" y="680.147" width="74.127" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="865" y="703.142" fill="#000" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.rdsB" id="ent0016" data-source-line="27"><rect x="1060.14" y="680.147" width="49.395" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1070.14" y="703.142" fill="#000" font-size="14" textLength="29.395">RDS</text></g><g class="entity" data-qualified-name="vpc.endpoints.dynamodb" id="ent0018" data-source-line="32"><rect x="1035.29" y="494.147" width="99.105" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1045.29" y="517.142" fill="#000" font-size="14" textLength="79.105">DynamoDB</text></g><g class="entity" data-qualified-name="vpc.endpoints.s3" id="ent0019" data-source-line="33"><rect x="1065.94" y="423.147" width="37.794" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1075.94" y="446.142" fill="#000" font-size="14" textLength="17.794">S3</text></g><g class="entity" data-qualified-name="vpc.endpoints.secrets" id="ent0020" data-source-line="34"><rect x="1194.39" y="494.147" width="138.166" height="36.297" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1204.39" y="517.142" fill="#000" font-size="14" textLength="118.166">Secrets Manager</text></g><g class="entity" data-qualified-name="internet" id="ent0001" data-source-line="7"><path d="M69.552,876.027 C72.647,870.993 76.576,870.728 80.383,875.218 C83.492,869.046 87.836,869.147 92.077,874.018 C94.994,868.695 99.261,868.218 102.841,873.333 C106.59,868.409 110.447,867.308 114.434,873.074 C119.477,867.811 123.708,867.959 126.551,875.205 C130.608,870.038 135.266,870.312 138.952,875.644 C146.29,878.483 148.028,885.84 141.713,891.115 C147.517,897.517 147.363,902.6 139.367,906.958 C137.413,913.119 131.879,913.527 128.13,908.813 C125.19,917.086 120.723,918.128 114.599,911.754 C113.667,917.47 108.973,919.653 104.085,916.381 C99.487,920.579 94.204,920.039 92.242,913.479 C85.722,918.315 82.497,915.681 80.29,909.002 C76.082,913.458 71.014,912.99 68.343,907.209 C58.685,906.236 55.464,899.013 62.06,891.528 C55.943,882.545 59.036,876.97 69.552,876.027" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="74.78" y="895.142" fill="#000" font-size="14" textLength="55.836">Internet</text></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0021" id="lnk28" data-source-line="46" data-link-type="dependency"><path d="M145.79,877.267 C159.16,871.267 172.91,862.847 182.39,851.297 C247.24,772.297 175.72,706.767 242.39,629.297 C248.11,622.647 250.999,619.698 258.749,615.268" style="stroke:#181818;stroke-width:1;" fill="none" id="internet-to-igw"/><polygon points="263.09,612.787,253.291,613.781,258.749,615.268,257.261,620.726,263.09,612.787" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0021" data-entity-2="ent0005" id="lnk29" data-source-line="47" data-link-type="dependency"><path d="M325.75,575.847 C331.79,516.917 358.72,331.347 463.94,234.297 C490.22,210.067 527.609,203.007 553.629,200.707" style="stroke:#181818;stroke-width:1;" fill="none" id="igw-to-albA"/><polygon points="558.61,200.267,549.293,197.075,553.629,200.707,549.997,205.044,558.61,200.267" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0021" data-entity-2="ent0012" id="lnk30" data-source-line="48" data-link-type="dependency"><path d="M371.97,612.937 C382.75,617.777 393.95,623.317 403.94,629.297 C433.02,646.687 433.08,662.337 463.94,676.297 C494.94,690.317 529.434,695.031 553.814,696.871" style="stroke:#181818;stroke-width:1;" fill="none" id="igw-to-albB"/><polygon points="558.8,697.247,550.127,692.581,553.814,696.871,549.524,700.558,558.8,697.247" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0005" data-entity-2="ent0008" id="lnk31" data-source-line="49" data-link-type="dependency"><path d="M606.27,204.577 C659.19,216.787 785.558,245.953 849.718,260.753" style="stroke:#181818;stroke-width:1;" fill="none" id="albA-to-ec2A"/><polygon points="854.59,261.877,846.719,255.956,849.718,260.753,844.921,263.752,854.59,261.877" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0012" data-entity-2="ent0015" id="lnk32" data-source-line="50" data-link-type="dependency"><path d="M606.27,698.297 C659.19,698.297 785.43,698.297 849.59,698.297" style="stroke:#181818;stroke-width:1;" fill="none" id="albB-to-ec2B"/><polygon points="854.59,698.297,845.59,694.297,849.59,698.297,845.59,702.297,854.59,698.297" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0008" data-entity-2="ent0009" id="lnk33" data-source-line="51" data-link-type="dependency"><path d="M929.4,270.297 C967.67,270.297 1021.85,270.297 1054.73,270.297" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2A-to-rdsA"/><polygon points="1059.73,270.297,1050.73,266.297,1054.73,270.297,1050.73,274.297,1059.73,270.297" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0015" data-entity-2="ent0016" id="lnk34" data-source-line="52" data-link-type="dependency"><path d="M929.4,698.297 C967.67,698.297 1021.85,698.297 1054.73,698.297" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2B-to-rdsB"/><polygon points="1059.73,698.297,1050.73,694.297,1054.73,698.297,1050.73,702.297,1059.73,698.297" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0008" data-entity-2="ent0017" id="lnk35" data-source-line="53" data-link-type="dependency"><path d="M929.61,276.327 C944.37,279.697 961.21,284.787 975.29,292.297 C1003.13,307.152 1029.86,330.397 1049.829,350.174 C1052.325,352.647 1054.715,355.065 1056.989,357.405 C1057.558,357.99 1058.119,358.571 1058.672,359.146 C1058.949,359.433 1055.764,356.11 1056.037,356.395" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2A-to-endpoints"/><polygon points="1059.497,360.005,1056.157,350.739,1056.037,356.395,1050.382,356.275,1059.497,360.005" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0015" data-entity-2="ent0017" id="lnk36" data-source-line="54" data-link-type="dependency"><path d="M929.29,697.717 C945.82,695.447 964.16,689.727 975.29,676.297 C1013.52,630.137 956.15,452.697 995.29,407.297 C998.531,403.537 1002.315,400.399 1006.46,397.788 C1007.496,397.135 1008.555,396.515 1009.633,395.927 C1010.172,395.633 1006.259,397.611 1006.807,397.332" style="stroke:#181818;stroke-width:1;" fill="none" id="ec2B-to-endpoints"/><polygon points="1011.265,395.067,1001.429,395.578,1006.807,397.332,1005.053,402.71,1011.265,395.067" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0022" data-entity-2="ent0021" id="lnk37" data-source-line="55" data-link-type="dependency"><path d="M182.88,594.297 C205.47,594.297 224.92,594.297 246.94,594.297" style="stroke:#181818;stroke-width:1;" fill="none" id="publicRoute-to-igw"/><polygon points="251.94,594.297,242.94,590.297,246.94,594.297,242.94,598.297,251.94,594.297" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0023" data-entity-2="ent0006" id="lnk38" data-source-line="56" data-link-type="dependency"><path d="M388.9,734.687 C394.67,729.507 399.86,723.717 403.94,717.297 C506.35,556.357 332.12,430.187 463.94,292.297 C479.43,276.107 497.772,270.123 519.562,268.083" style="stroke:#181818;stroke-width:1;" fill="none" id="privateRoute-to-natA"/><polygon points="524.54,267.617,515.206,264.473,519.562,268.083,515.952,272.438,524.54,267.617" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0023" data-entity-2="ent0013" id="lnk39" data-source-line="57" data-link-type="dependency"><path d="M404.14,769.297 C443.23,769.297 484.33,769.297 519.73,769.297" style="stroke:#181818;stroke-width:1;" fill="none" id="privateRoute-to-natB"/><polygon points="524.73,769.297,515.73,765.297,519.73,769.297,515.73,773.297,524.73,769.297" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0024" data-entity-2="ent0005" id="lnk40" data-source-line="58" data-link-type="dependency"><path d="M360.22,662.177 C376.07,655.447 393.44,645.227 403.94,630.297 C506.41,484.737 347.13,368.617 463.94,234.297 C487.68,207.007 526.686,200.763 553.576,199.493" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albA"/><polygon points="558.57,199.257,549.391,195.686,553.576,199.493,549.769,203.677,558.57,199.257" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0024" data-entity-2="ent0012" id="lnk41" data-source-line="59" data-link-type="dependency"><path d="M360.2,676.797 C413.99,682.027 508.754,691.233 553.564,695.593" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albB"/><polygon points="558.54,696.077,549.97,691.224,553.564,695.593,549.195,699.186,558.54,696.077" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0025" data-entity-2="ent0008" id="lnk42" data-source-line="60" data-link-type="dependency"><path d="M612.08,430.757 C652.84,394.427 731.19,329.487 808.84,292.297 C823.23,285.407 835.254,281.565 849.964,278.095" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2A"/><polygon points="854.83,276.947,845.152,275.12,849.964,278.095,846.989,282.906,854.83,276.947" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0025" data-entity-2="ent0015" id="lnk43" data-source-line="61" data-link-type="dependency"><path d="M603.2,483.987 C639.01,530.287 719.14,625.397 808.84,676.297 C822.85,684.247 834.949,688.332 849.839,691.642" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2B"/><polygon points="854.72,692.727,846.802,686.869,849.839,691.642,845.066,694.679,854.72,692.727" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0026" data-entity-2="ent0009" id="lnk44" data-source-line="62" data-link-type="dependency"><path d="M929.4,351.257 C967.67,331.197 1022.422,302.499 1055.302,285.259" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsA"/><polygon points="1059.73,282.937,1049.902,283.574,1055.302,285.259,1053.617,290.659,1059.73,282.937" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0026" data-entity-2="ent0016" id="lnk45" data-source-line="63" data-link-type="dependency"><path d="M929.37,381.267 C945.93,388.127 964.27,398.697 975.29,414.297 C1009.52,462.767 975.56,490.337 995.29,546.297 C1013.56,598.147 1046.985,648.179 1066.955,675.719" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsB"/><polygon points="1069.89,679.767,1067.845,670.133,1066.955,675.719,1061.368,674.829,1069.89,679.767" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0027" data-entity-2="ent0017" id="lnk46" data-source-line="64" data-link-type="dependency"><path d="M940.64,431.587 C957.51,422.917 976.88,413.857 995.29,407.297 C999.891,405.657 1004.677,404.121 1009.534,402.687 C1009.837,402.598 1010.141,402.509 1010.445,402.42 C1010.598,402.376 1005.948,403.726 1006.1,403.681" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="endpointPolicies-to-endpoints"/><polygon points="1010.902,402.287,1001.143,400.955,1006.1,403.681,1003.374,408.638,1010.902,402.287" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><?plantuml-src fLHXQzim4FtkNt7hvoKERGTZ7mPsKqhOMaeIDcXJXYmhjeWi2Kbkw4R_Uqzod3Y9kvRD8U1tztHwVYVT1owfg7C6fNFQVebZGzR3WhkopchB35NICUc6L5NnDL-LX8jlXZmoP-DgbIjgV-cw4d55h6CcTYMhc8rpjYIrSB7WHUc6dX0vxWI3EQkq88u1xlVZzW9cQxvqSqFe2WQW3MEIbio0Pa9P8AAMoaQ2BHqu1SONWvmRHXrNCh8hBZKnf09RabojkInWIOHbdGogragY_fbxmktzKY8BmQA82bNdS3B1hpEIkHCW5lW6H5iUd7YLznUJyVGXK1urXJyH06ZKJ0ea97TmVwCg1ad38B-JXe5Ffywiph0ow3eJd1AuJ-uU5h9Jk4dibkAp5O-RV4-RuY9BUWatoHokqDWrUGf4ILnBV7vTZE6F9EyJunEElQRcyk8Kajj9e39wsgzeEfu5WidjdfBdgD--jBKl_NVxqhVjIzzhN_hVzgNliozzoxxqsBw30tefSwtmzDgcPeks-tVgZfyagTIuyICF8C-EQREpGB1dFIb63Lv_k2OIEsWQNXFR2UpmsoksPp0lrWUqgQfnBin9XX-rQNDhAWo-Wb2KY8KS3SCl7ldOvEfdf_cXmD-ADkrwgoWUXMuJ-whEhWPueXRoy-WZd9zld2eIaHtpiDS3xBNdZaOjKVDZ8lPx8J-TdvrkIDFS7f1kbU0ENR5-UBOTNyY4CcjnEZBh37TgxmJu9PGp6s5Jsk460_n8Rp_-mtkOAHsGHZuIKBZSFjIYDFAXWCAzzg4MTNBR4xWZx4ATRcsrTCqEmJ2_-g9f59o6uN2ZV0-6hEO11l5xq6VHrm23_3s8-WziQzQrmby0?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:1402px;height:935px;background:#1B1B1B;" width="1402px" height="935px" viewBox="0 0 1402 935" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><rect x="0" y="0" width="1402" height="935" fill="#1B1B1B" style="stroke:none;"/><g class="title" data-source-line="2"><text x="485.801" y="22.995" fill="#FFF" font-size="14" textLength="423.958" font-weight="700">Template de VPC SwiftTrack - preencher pelos alunos</text></g><g class="cluster" data-qualified-name="vpc" id="ent0002" data-source-line="8"><rect x="7" y="44.297" width="1381.56" height="807" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="10" y="59.292" fill="#FFF" font-size="14" textLength="86.926" font-weight="700">VPC [CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azA" id="ent0003" data-source-line="9"><path d="M474.44,87.297 L575.224,87.297 A3.75,3.75 0 0 1 577.724,89.797 L584.724,109.594 L1147.04,109.594 A2.5,2.5 0 0 1 1149.54,112.094 L1149.54,325.797 A2.5,2.5 0 0 1 1147.04,328.297 L474.44,328.297 A2.5,2.5 0 0 1 471.94,325.797 L471.94,89.797 A2.5,2.5 0 0 1 474.44,87.297" style="stroke:#FFF;stroke-width:1.5;" fill="none"/><line x1="471.94" y1="109.594" x2="584.724" y2="109.594" style="stroke:#FFF;stroke-width:1.5;"/><text x="475.94" y="102.292" fill="#FFF" font-size="14" textLength="99.784" font-weight="700">AZ [Nome A]</text></g><g class="cluster" data-qualified-name="vpc.azA.publicA" id="ent0004" data-source-line="10"><rect x="495.94" y="130.297" width="172.9" height="174" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="498.94" y="145.292" fill="#FFF" font-size="14" textLength="157.11" font-weight="700">Subnet publica [AZ]</text><text x="498.94" y="161.589" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azA.privateA" id="ent0007" data-source-line="14"><rect x="839" y="201.297" width="286.54" height="103" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="842" y="216.292" fill="#FFF" font-size="14" textLength="159.523" font-weight="700">Subnet privada [AZ]</text><text x="842" y="232.589" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azB" id="ent0010" data-source-line="20"><path d="M474.44,586.297 L575.06,586.297 A3.75,3.75 0 0 1 577.56,588.797 L584.56,608.594 L1147.04,608.594 A2.5,2.5 0 0 1 1149.54,611.094 L1149.54,824.797 A2.5,2.5 0 0 1 1147.04,827.297 L474.44,827.297 A2.5,2.5 0 0 1 471.94,824.797 L471.94,588.797 A2.5,2.5 0 0 1 474.44,586.297" style="stroke:#FFF;stroke-width:1.5;" fill="none"/><line x1="471.94" y1="608.594" x2="584.56" y2="608.594" style="stroke:#FFF;stroke-width:1.5;"/><text x="475.94" y="601.292" fill="#FFF" font-size="14" textLength="99.62" font-weight="700">AZ [Nome B]</text></g><g class="cluster" data-qualified-name="vpc.azB.publicB" id="ent0011" data-source-line="21"><rect x="495.94" y="629.297" width="172.9" height="174" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="498.94" y="644.292" fill="#FFF" font-size="14" textLength="157.11" font-weight="700">Subnet publica [AZ]</text><text x="498.94" y="660.589" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.azB.privateB" id="ent0014" data-source-line="25"><rect x="839" y="629.297" width="286.54" height="103" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="842" y="644.292" fill="#FFF" font-size="14" textLength="159.523" font-weight="700">Subnet privada [AZ]</text><text x="842" y="660.589" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="vpc.endpoints" id="ent0017" data-source-line="31"><rect x="1011.29" y="360.297" width="345.27" height="194" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="1014.29" y="375.292" fill="#FFF" font-size="14" textLength="115.227" font-weight="700">VPC Endpoints</text></g><g class="entity" data-qualified-name="vpc.igw" id="ent0021" data-source-line="37"><rect x="252.1" y="576.147" width="142.131" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="262.1" y="599.142" fill="#FFF" font-size="14" textLength="122.131">Internet Gateway</text></g><g class="entity" data-qualified-name="vpc.publicRoute" id="ent0022" data-source-line="38"><rect x="23" y="559.857" width="159.392" height="68.891" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="33" y="582.852" fill="#FFF" font-size="14" textLength="139.392">Route Table publica</text><text x="33" y="599.149" fill="#FFF" font-size="14" textLength="103.64">[CIDR] -&gt; local</text><text x="33" y="615.446" fill="#FFF" font-size="14" textLength="117.106">0.0.0.0/0 -&gt; IGW</text></g><g class="entity" data-qualified-name="vpc.privateRoute" id="ent0023" data-source-line="39"><rect x="242.39" y="734.857" width="161.552" height="68.891" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="252.39" y="757.852" fill="#FFF" font-size="14" textLength="141.552">Route Table privada</text><text x="252.39" y="774.149" fill="#FFF" font-size="14" textLength="103.64">[CIDR] -&gt; local</text><text x="252.39" y="790.446" fill="#FFF" font-size="14" textLength="116.888">0.0.0.0/0 -&gt; NAT</text></g><g class="entity" data-qualified-name="vpc.sgAlb" id="ent0024" data-source-line="40"><rect x="286.45" y="646.997" width="73.437" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="296.45" y="669.992" fill="#FFF" font-size="14" textLength="51.769">SG-ALB</text><text x="296.45" y="686.289" fill="#FFF" font-size="14" textLength="53.437">80, 443</text></g><g class="entity" data-qualified-name="vpc.sgApi" id="ent0025" data-source-line="41"><rect x="532.63" y="430.997" width="99.516" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="542.63" y="453.992" fill="#FFF" font-size="14" textLength="79.516">SG-EC2-API</text><text x="542.63" y="470.289" fill="#FFF" font-size="14" textLength="35.629">8000</text></g><g class="entity" data-qualified-name="vpc.sgRds" id="ent0026" data-source-line="42"><rect x="854.97" y="343.997" width="74.182" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="864.97" y="366.992" fill="#FFF" font-size="14" textLength="54.182">SG-RDS</text><text x="864.97" y="383.289" fill="#FFF" font-size="14" textLength="35.629">5432</text></g><g class="entity" data-qualified-name="vpc.endpointPolicies" id="ent0027" data-source-line="43"><rect x="808.84" y="431.997" width="166.446" height="52.594" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="818.84" y="454.992" fill="#FFF" font-size="14" textLength="146.446">Politicas de Endpoint</text><text x="818.84" y="471.289" fill="#FFF" font-size="14" textLength="104.344">Acesso restrito</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.albA" id="ent0005" data-source-line="11"><rect x="558.9" y="181.147" width="46.981" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="568.9" y="204.142" fill="#FFF" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azA.publicA.natA" id="ent0006" data-source-line="12"><rect x="524.94" y="252.147" width="114.896" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="534.94" y="275.142" fill="#FFF" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.ec2A" id="ent0008" data-source-line="15"><rect x="855" y="252.147" width="74.127" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="865" y="275.142" fill="#FFF" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azA.privateA.rdsA" id="ent0009" data-source-line="16"><rect x="1060.14" y="252.147" width="49.395" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1070.14" y="275.142" fill="#FFF" font-size="14" textLength="29.395">RDS</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.albB" id="ent0012" data-source-line="22"><rect x="558.9" y="680.147" width="46.981" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="568.9" y="703.142" fill="#FFF" font-size="14" textLength="26.981">ALB</text></g><g class="entity" data-qualified-name="vpc.azB.publicB.natB" id="ent0013" data-source-line="23"><rect x="524.94" y="751.147" width="114.896" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="534.94" y="774.142" fill="#FFF" font-size="14" textLength="94.896">NAT Gateway</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.ec2B" id="ent0015" data-source-line="26"><rect x="855" y="680.147" width="74.127" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="865" y="703.142" fill="#FFF" font-size="14" textLength="54.127">EC2 API</text></g><g class="entity" data-qualified-name="vpc.azB.privateB.rdsB" id="ent0016" data-source-line="27"><rect x="1060.14" y="680.147" width="49.395" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1070.14" y="703.142" fill="#FFF" font-size="14" textLength="29.395">RDS</text></g><g class="entity" data-qualified-name="vpc.endpoints.dynamodb" id="ent0018" data-source-line="32"><rect x="1035.29" y="494.147" width="99.105" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1045.29" y="517.142" fill="#FFF" font-size="14" textLength="79.105">DynamoDB</text></g><g class="entity" data-qualified-name="vpc.endpoints.s3" id="ent0019" data-source-line="33"><rect x="1065.94" y="423.147" width="37.794" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1075.94" y="446.142" fill="#FFF" font-size="14" textLength="17.794">S3</text></g><g class="entity" data-qualified-name="vpc.endpoints.secrets" id="ent0020" data-source-line="34"><rect x="1194.39" y="494.147" width="138.166" height="36.297" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><text x="1204.39" y="517.142" fill="#FFF" font-size="14" textLength="118.166">Secrets Manager</text></g><g class="entity" data-qualified-name="internet" id="ent0001" data-source-line="7"><path d="M69.552,876.027 C72.647,870.993 76.576,870.728 80.383,875.218 C83.492,869.046 87.836,869.147 92.077,874.018 C94.994,868.695 99.261,868.218 102.841,873.333 C106.59,868.409 110.447,867.308 114.434,873.074 C119.477,867.811 123.708,867.959 126.551,875.205 C130.608,870.038 135.266,870.312 138.952,875.644 C146.29,878.483 148.028,885.84 141.713,891.115 C147.517,897.517 147.363,902.6 139.367,906.958 C137.413,913.119 131.879,913.527 128.13,908.813 C125.19,917.086 120.723,918.128 114.599,911.754 C113.667,917.47 108.973,919.653 104.085,916.381 C99.487,920.579 94.204,920.039 92.242,913.479 C85.722,918.315 82.497,915.681 80.29,909.002 C76.082,913.458 71.014,912.99 68.343,907.209 C58.685,906.236 55.464,899.013 62.06,891.528 C55.943,882.545 59.036,876.97 69.552,876.027" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="74.78" y="895.142" fill="#FFF" font-size="14" textLength="55.836">Internet</text></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0021" id="lnk28" data-source-line="46" data-link-type="dependency"><path d="M145.79,877.267 C159.16,871.267 172.91,862.847 182.39,851.297 C247.24,772.297 175.72,706.767 242.39,629.297 C248.11,622.647 250.999,619.698 258.749,615.268" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="internet-to-igw"/><polygon points="263.09,612.787,253.291,613.781,258.749,615.268,257.261,620.726,263.09,612.787" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0021" data-entity-2="ent0005" id="lnk29" data-source-line="47" data-link-type="dependency"><path d="M325.75,575.847 C331.79,516.917 358.72,331.347 463.94,234.297 C490.22,210.067 527.609,203.007 553.629,200.707" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="igw-to-albA"/><polygon points="558.61,200.267,549.293,197.075,553.629,200.707,549.997,205.044,558.61,200.267" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0021" data-entity-2="ent0012" id="lnk30" data-source-line="48" data-link-type="dependency"><path d="M371.97,612.937 C382.75,617.777 393.95,623.317 403.94,629.297 C433.02,646.687 433.08,662.337 463.94,676.297 C494.94,690.317 529.434,695.031 553.814,696.871" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="igw-to-albB"/><polygon points="558.8,697.247,550.127,692.581,553.814,696.871,549.524,700.558,558.8,697.247" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0005" data-entity-2="ent0008" id="lnk31" data-source-line="49" data-link-type="dependency"><path d="M606.27,204.577 C659.19,216.787 785.558,245.953 849.718,260.753" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="albA-to-ec2A"/><polygon points="854.59,261.877,846.719,255.956,849.718,260.753,844.921,263.752,854.59,261.877" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0012" data-entity-2="ent0015" id="lnk32" data-source-line="50" data-link-type="dependency"><path d="M606.27,698.297 C659.19,698.297 785.43,698.297 849.59,698.297" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="albB-to-ec2B"/><polygon points="854.59,698.297,845.59,694.297,849.59,698.297,845.59,702.297,854.59,698.297" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0008" data-entity-2="ent0009" id="lnk33" data-source-line="51" data-link-type="dependency"><path d="M929.4,270.297 C967.67,270.297 1021.85,270.297 1054.73,270.297" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2A-to-rdsA"/><polygon points="1059.73,270.297,1050.73,266.297,1054.73,270.297,1050.73,274.297,1059.73,270.297" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0015" data-entity-2="ent0016" id="lnk34" data-source-line="52" data-link-type="dependency"><path d="M929.4,698.297 C967.67,698.297 1021.85,698.297 1054.73,698.297" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2B-to-rdsB"/><polygon points="1059.73,698.297,1050.73,694.297,1054.73,698.297,1050.73,702.297,1059.73,698.297" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0008" data-entity-2="ent0017" id="lnk35" data-source-line="53" data-link-type="dependency"><path d="M929.61,276.327 C944.37,279.697 961.21,284.787 975.29,292.297 C1003.13,307.152 1029.86,330.397 1049.829,350.174 C1052.325,352.647 1054.715,355.065 1056.989,357.405 C1057.558,357.99 1058.119,358.571 1058.672,359.146 C1058.949,359.433 1055.764,356.11 1056.037,356.395" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2A-to-endpoints"/><polygon points="1059.497,360.005,1056.157,350.739,1056.037,356.395,1050.382,356.275,1059.497,360.005" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0015" data-entity-2="ent0017" id="lnk36" data-source-line="54" data-link-type="dependency"><path d="M929.29,697.717 C945.82,695.447 964.16,689.727 975.29,676.297 C1013.52,630.137 956.15,452.697 995.29,407.297 C998.531,403.537 1002.315,400.399 1006.46,397.788 C1007.496,397.135 1008.555,396.515 1009.633,395.927 C1010.172,395.633 1006.259,397.611 1006.807,397.332" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ec2B-to-endpoints"/><polygon points="1011.265,395.067,1001.429,395.578,1006.807,397.332,1005.053,402.71,1011.265,395.067" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0022" data-entity-2="ent0021" id="lnk37" data-source-line="55" data-link-type="dependency"><path d="M182.88,594.297 C205.47,594.297 224.92,594.297 246.94,594.297" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="publicRoute-to-igw"/><polygon points="251.94,594.297,242.94,590.297,246.94,594.297,242.94,598.297,251.94,594.297" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0023" data-entity-2="ent0006" id="lnk38" data-source-line="56" data-link-type="dependency"><path d="M388.9,734.687 C394.67,729.507 399.86,723.717 403.94,717.297 C506.35,556.357 332.12,430.187 463.94,292.297 C479.43,276.107 497.772,270.123 519.562,268.083" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="privateRoute-to-natA"/><polygon points="524.54,267.617,515.206,264.473,519.562,268.083,515.952,272.438,524.54,267.617" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0023" data-entity-2="ent0013" id="lnk39" data-source-line="57" data-link-type="dependency"><path d="M404.14,769.297 C443.23,769.297 484.33,769.297 519.73,769.297" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="privateRoute-to-natB"/><polygon points="524.73,769.297,515.73,765.297,519.73,769.297,515.73,773.297,524.73,769.297" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0024" data-entity-2="ent0005" id="lnk40" data-source-line="58" data-link-type="dependency"><path d="M360.22,662.177 C376.07,655.447 393.44,645.227 403.94,630.297 C506.41,484.737 347.13,368.617 463.94,234.297 C487.68,207.007 526.686,200.763 553.576,199.493" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albA"/><polygon points="558.57,199.257,549.391,195.686,553.576,199.493,549.769,203.677,558.57,199.257" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0024" data-entity-2="ent0012" id="lnk41" data-source-line="59" data-link-type="dependency"><path d="M360.2,676.797 C413.99,682.027 508.754,691.233 553.564,695.593" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgAlb-to-albB"/><polygon points="558.54,696.077,549.97,691.224,553.564,695.593,549.195,699.186,558.54,696.077" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0025" data-entity-2="ent0008" id="lnk42" data-source-line="60" data-link-type="dependency"><path d="M612.08,430.757 C652.84,394.427 731.19,329.487 808.84,292.297 C823.23,285.407 835.254,281.565 849.964,278.095" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2A"/><polygon points="854.83,276.947,845.152,275.12,849.964,278.095,846.989,282.906,854.83,276.947" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0025" data-entity-2="ent0015" id="lnk43" data-source-line="61" data-link-type="dependency"><path d="M603.2,483.987 C639.01,530.287 719.14,625.397 808.84,676.297 C822.85,684.247 834.949,688.332 849.839,691.642" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgApi-to-ec2B"/><polygon points="854.72,692.727,846.802,686.869,849.839,691.642,845.066,694.679,854.72,692.727" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0026" data-entity-2="ent0009" id="lnk44" data-source-line="62" data-link-type="dependency"><path d="M929.4,351.257 C967.67,331.197 1022.422,302.499 1055.302,285.259" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsA"/><polygon points="1059.73,282.937,1049.902,283.574,1055.302,285.259,1053.617,290.659,1059.73,282.937" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0026" data-entity-2="ent0016" id="lnk45" data-source-line="63" data-link-type="dependency"><path d="M929.37,381.267 C945.93,388.127 964.27,398.697 975.29,414.297 C1009.52,462.767 975.56,490.337 995.29,546.297 C1013.56,598.147 1046.985,648.179 1066.955,675.719" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="sgRds-to-rdsB"/><polygon points="1069.89,679.767,1067.845,670.133,1066.955,675.719,1061.368,674.829,1069.89,679.767" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0027" data-entity-2="ent0017" id="lnk46" data-source-line="64" data-link-type="dependency"><path d="M940.64,431.587 C957.51,422.917 976.88,413.857 995.29,407.297 C999.891,405.657 1004.677,404.121 1009.534,402.687 C1009.837,402.598 1010.141,402.509 1010.445,402.42 C1010.598,402.376 1005.948,403.726 1006.1,403.681" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="endpointPolicies-to-endpoints"/><polygon points="1010.902,402.287,1001.143,400.955,1006.1,403.681,1003.374,408.638,1010.902,402.287" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><?plantuml-src fLHXQzim4FtkNt7hvoKERGTZ7mPsKqhOMaeIDcXJXYmfjeWi6Kbkw4R_Uqzod3Y9kvRD8U1tztHwVYVT1w6eh1c7mhdAVebZGzR3NBYYpchB3TNASUM6L9VnjLWLHCXlXZnoP-DonJIrlwgwb759hECcTWKlkOqPNv9QkfWHinhwVEI4anpclAmaSHnmkn-t5p1RYwMR6q9NC83ASAvemGrKN6eBHDPAsqZofGEdmOYySC24uTG9hIAx4geYXfHW2yBqMgWSbaHQticWw4ehb3zpJxYzNqfKBdaKKQbh1YSJ_3YZk3i1Oa5iGBJbmObNUNyn6KyV0kMnel0d0e0ADPCS2SaTtD_eaaFICCZlf67WqwapgpEi35MTIK49t2Tt3mlLATmaTalnsOh7JRwdJN6P9Rs4csGELsZicZm5eYAk9Jw_BiQ8HyBwnFY4uw-fkRmuXUHs4gYSdlOhcevdWM2OtLFo7FNRbxRsfVzkN_gsVUbxxKl_sxxqVVQbRzcN7jjtS40l5QiqdbxRr6pHTlzEtV6J8gKUDtwm05XsJ9kT1O8zwqbnQl3smpLHs47Jy9hOJc27trwnFOD5lZwWJNMDSs5ECloeJPjRKs7m5QIcH2xKQ1X-ySZ79bS_EyqF1VvMj6dNMqNnA7IRs5TrTZN04xLGdqSVuVnyurIUoEoOXxqUOAyzTpHgYPKu9cA_5-hJ-TdfXZHbze1qgwLmw8hrmxFj-48bb5kBqv5RPuJJUoV0Bw62smYRqWut6E17Ulln7zx3JEc0DFAHWCBbzg4MfP4F1HJkjG-rg9FRdi0TOHVgT6khfMjs28RvrHTDe-0q38SRvNimP2iHO12_1tqMVGqmoD-3gF_0jcPTA_m5?></g></svg></div></div>
+
+<h4 id="342-atividade-em-grupo-criacao-do-projeto-25-min">3.4.2. Atividade em Grupo - Criação do Projeto (25 min)<a class="headerlink" href="#342-atividade-em-grupo-criacao-do-projeto-25-min" title="Permanent link">&para;</a></h4>
+<p><strong>Passo 1: Definição da VPC (5 min)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Decisão</strong></th>
+<th style="text-align: left;"><strong>SwiftTrack</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>VPC CIDR</strong></td>
+<td style="text-align: left;">10.0.0.0/16</td>
+<td style="text-align: left;">Espaço para crescimento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de AZs</strong></td>
+<td style="text-align: left;">2 (us-east-1a, us-east-1b)</td>
+<td style="text-align: left;">RDS Multi-AZ exige 2 AZs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Públicas</strong></td>
+<td style="text-align: left;">10.0.1.0/24, 10.0.2.0/24</td>
+<td style="text-align: left;">Para ALB e NAT Gateway.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-redes Privadas</strong></td>
+<td style="text-align: left;">10.0.3.0/24, 10.0.4.0/24</td>
+<td style="text-align: left;">Para EC2 (API) e RDS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NAT Gateway</strong></td>
+<td style="text-align: left;">1 por AZ (2 total)</td>
+<td style="text-align: left;">EC2 precisa de acesso à Internet para atualizações.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VPC Endpoints</strong></td>
+<td style="text-align: left;">DynamoDB, S3, Secrets Manager</td>
+<td style="text-align: left;">Segurança e custo otimizado.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passo 2: Definição de Security Groups (5 min)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Security Group</strong></th>
+<th style="text-align: left;"><strong>Regras de Entrada</strong></th>
+<th style="text-align: left;"><strong>Regras de Saída</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SG-ALB</strong></td>
+<td style="text-align: left;">0.0.0.0/0 (80, 443)</td>
+<td style="text-align: left;">0.0.0.0/0 (80, 443)</td>
+<td style="text-align: left;">Acesso público via HTTP/HTTPS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG-EC2-API</strong></td>
+<td style="text-align: left;">SG-ALB (8000)</td>
+<td style="text-align: left;">SG-RDS (5432), DynamoDB, S3</td>
+<td style="text-align: left;">Apenas ALB acessa a API; API acessa banco e serviços.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG-RDS</strong></td>
+<td style="text-align: left;">SG-EC2-API (5432)</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Apenas API acessa banco.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passo 3: Definição de Endpoints (5 min)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Serviço</strong></th>
+<th style="text-align: left;"><strong>Tipo de Endpoint</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DynamoDB</strong></td>
+<td style="text-align: left;">Gateway Endpoint</td>
+<td style="text-align: left;">Não cobra por hora, mais barato.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S3</strong></td>
+<td style="text-align: left;">Interface Endpoint</td>
+<td style="text-align: left;">Interface endpoint para acesso privado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Secrets Manager</strong></td>
+<td style="text-align: left;">Interface Endpoint</td>
+<td style="text-align: left;">Não suporta Gateway Endpoint.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passo 4: Definição de Casos de Uso (10 min)</strong></p>
+<p><strong>UC-ARQ-001 - Configurar VPC e Rede SwiftTrack</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-001</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar VPC e Rede SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ator Principal</strong></td>
+<td style="text-align: left;">Administrador de Infraestrutura</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pré-condição</strong></td>
+<td style="text-align: left;">Conta AWS ativa, permissões IAM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pós-condição</strong></td>
+<td style="text-align: left;">VPC com CIDR 10.0.0.0/16, 4 sub-redes (2 públicas, 2 privadas - Multi-AZ), IGW, NAT Gateways, endpoints configurados.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Passo 1</strong></td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 2</strong></td>
+<td style="text-align: left;">Cria VPC com CIDR 10.0.0.0/16 e habilita DNS hostnames.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 3</strong></td>
+<td style="text-align: left;">Cria 2 sub-redes públicas (uma por AZ) com CIDR 10.0.1.0/24, 10.0.2.0/24.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 4</strong></td>
+<td style="text-align: left;">Cria 2 sub-redes privadas (uma por AZ) com CIDR 10.0.3.0/24, 10.0.4.0/24.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 5</strong></td>
+<td style="text-align: left;">Cria e anexa Internet Gateway à VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 6</strong></td>
+<td style="text-align: left;">Cria NAT Gateways (um por AZ) nas sub-redes públicas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 7</strong></td>
+<td style="text-align: left;">Configura Route Table pública: 10.0.0.0/16 → local, 0.0.0.0/0 → IGW.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 8</strong></td>
+<td style="text-align: left;">Configura Route Table privada: 10.0.0.0/16 → local, 0.0.0.0/0 → NAT Gateway.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 9</strong></td>
+<td style="text-align: left;">Cria VPC Endpoints para DynamoDB (Gateway), S3 e Secrets Manager (Interface).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 10</strong></td>
+<td style="text-align: left;">Associa sub-redes públicas à Route Table pública e privadas à Route Table privada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Passo 11</strong></td>
+<td style="text-align: left;">Valida conectividade: ALB → EC2 → RDS, EC2 → DynamoDB via endpoint.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Disponibilidade</strong></td>
+<td style="text-align: left;">Multi-AZ com 2 AZs (redundância).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Sub-redes privadas sem rota direta para Internet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo</strong></td>
+<td style="text-align: left;">NAT Gateway: ~$64/mês; VPC Endpoints: ~$14/mês.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Custo elevado do NAT Gateway</strong></td>
+<td style="text-align: left;">Avaliar uso de NAT Instance (mais barato, menos gerenciado).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Erro de roteamento</strong></td>
+<td style="text-align: left;">Testar conectividade com <code>ping</code> ou <code>traceroute</code> após configuração.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="35-preenchimento-do-modelo-de-casos-de-uso-35-min">3.5. PREENCHIMENTO DO MODELO DE CASOS DE USO (35 min)<a class="headerlink" href="#35-preenchimento-do-modelo-de-casos-de-uso-35-min" title="Permanent link">&para;</a></h3>
+<p><strong>Tema:</strong> "Documentando Decisões Arquiteturais"</p>
+<h4 id="351-template-do-modelo-de-casos-de-uso-5-min">3.5.1. Template do Modelo de Casos de Uso (5 min)<a class="headerlink" href="#351-template-do-modelo-de-casos-de-uso-5-min" title="Permanent link">&para;</a></h4>
+<p><strong>Template Entregue aos Alunos:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>| **Elemento** | **Especificação** |
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>| :--- | :--- |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>| **Identificador** | UC-ARQ-[NNN] |
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>| **Nome** | [Nome do Caso de Uso] |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>| **Versão** | 1.0 |
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>| **Data** | [DD/MM/AAAA] |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>| **Status** | [Draft / Revisado / Aprovado] |
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>| **Ator Principal** | [Quem executa a ação principal?] |
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>| **Ator Secundário** | [Sistemas ou pessoas que auxiliam?] |
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>| **Pré-condição** | 1. [Condição 1] 2. [Condição 2] |
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>| **Pós-condição** | 1. [Estado final 1] 2. [Estado final 2] |
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>| **Fluxo Principal** | **Passos** |
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>| :--- | :--- |
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>| 1. | [Descrição do passo 1] |
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>| 2. | [Descrição do passo 2] |
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>| ... | ... |
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>| N. | [Descrição do passo N] |
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>| **Fluxos Alternativos** | **Descrição** |
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>| :--- | :--- |
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>| Alt 1 | [Exceção 1] |
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>| Alt 2 | [Exceção 2] |
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>| ... | ... |
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>| **Requisitos Não-Funcionais** | **Métrica** |
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>| :--- | :--- |
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>| Desempenho | [Tempo, throughput, etc.] |
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>| Disponibilidade | [SLA, RPO, RTO] |
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>| Segurança | [Requisitos de segurança] |
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>| Custo | [Estimativa de custo] |
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>| **Riscos** | **Mitigação** |
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>| :--- | :--- |
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>| [Risco 1] | [Mitigação 1] |
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>| [Risco 2] | [Mitigação 2] |
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>| ... | ... |
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>| **Referências** | 1. [AWS VPC Documentation] 2. [AWS Well-Architected] |
+</span></code></pre></div>
+<h4 id="352-preenchimento-guiado-uc-arq-002-seguranca-de-rede-10-min">3.5.2. Preenchimento Guiado - UC-ARQ-002 (Segurança de Rede) (10 min)<a class="headerlink" href="#352-preenchimento-guiado-uc-arq-002-seguranca-de-rede-10-min" title="Permanent link">&para;</a></h4>
+<p><strong>UC-ARQ-002 - Configurar Segurança de Rede SwiftTrack</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-002</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar Segurança de Rede para</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+        <script src="../../../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
