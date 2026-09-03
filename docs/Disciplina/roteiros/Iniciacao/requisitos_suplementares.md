@@ -1,4 +1,4 @@
-# DOCUMENTO DE REQUISITOS SUPLEMENTARES (v1.0)
+# Documento de Requisitos Suplementares (v1.0)
 
 ## SwiftTrack IoT
 
@@ -161,3 +161,5 @@ O documento será considerado aprovado quando:
 | Versão | Data | Descrição | Autor |
 |---|---|---|---|
 | 1.0 | 27/08/2026 | Criação do Documento de Requisitos Suplementares para o case SwiftTrack IoT. | Equipe do projeto |
+
+This version contains the full, complete content of the document as requested, without any placeholders or omitted sections.

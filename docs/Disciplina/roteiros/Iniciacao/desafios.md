@@ -1,4 +1,4 @@
-## Desafios de Arquitetura de Nuvem
+# Desafios de Arquitetura de Nuvem
 
 Os desafios para os grupos devem ser formulados focando na **tomada de decisão arquitetural** e na **justificativa técnica** de cada escolha. Abaixo, apresento a formulação detalhada dos desafios, começando pelo Case 1.
 

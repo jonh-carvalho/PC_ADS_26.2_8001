@@ -8,6 +8,11 @@ nav:
   - Home: index.md
   - Disciplina:
       - Aulas: Disciplina/aulas.md
+      - Iniciação: 
+        - Desafios: Disciplina/roteiros/Iniciacao/desafios.md
+        - Case Template: Disciplina/roteiros/Iniciacao/case_template.md
+        - Documento de Visão Preenchido: Disciplina/roteiros/Iniciacao/dv_template_preenchido.md
+        - Requisitos Suplementares: Disciplina/roteiros/Iniciacao/requisitos_suplementares.md
 #      - Ambiente: Disciplina/ambiente.md
 #      - Roteiro:
 #        - 01- AWS: Disciplina/roteiros/02 - aws.md
@@ -20,10 +25,8 @@ nav:
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
   - Iniciação: 
     - Index: Iniciacao/index.md
-    - Desafios: Iniciacao/desafios.md
-    - Case Template: Iniciacao/case_template.md
-    - Documento de Visão Preenchido: Iniciacao/dv_template_preenchido.md
-    - Requisitos Suplementares: Iniciacao/requisitos_suplementares.md
+    - Documento de Visão Preenchido: Iniciacao/dv.md
+    - Requisitos Suplementares: Iniciacao/rs.md
 
   - Bibliografia: Disciplina/bibliografia.md
 

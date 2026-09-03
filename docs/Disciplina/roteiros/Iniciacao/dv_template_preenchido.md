@@ -1,8 +1,8 @@
-# DOCUMENTO DE VISÃO (v1.0) - CASO EXEMPLO: SWIFTTRACK IoT
+# Documento de Visão (v1.0) 
+## Case de Exemplo: SwiftTrack IoT
+### Projeto de Cloud - Fase de Inception
 
-## PROJETO DE CLOUD - FASE DE INCEPTION
-
-### 1. INTRODUÇÃO
+### 1. Introdução
 Este documento descreve as necessidades de negócio, restrições e requisitos de infraestrutura da plataforma SwiftTrack IoT, além de guiar o planejamento arquitetural da solução na nuvem AWS.
 
 #### 1.1. Propósito
@@ -34,7 +34,7 @@ O escopo deste projeto de cloud engloba os seguintes componentes e serviços AWS
 
 ---
 
-### 2. POSICIONAMENTO
+### 2. Posicionamento
 
 #### 2.1. Oportunidade de Negócio
 O mercado de logística e e-commerce de última milha (last-mile) exige precisão cirúrgica na previsão de entrega. Startups e médias empresas de transporte não possuem capital para investir em pesados datacenters físicos locais capazes de lidar com a volumetria e a oscilação de dados gerada por rastreadores GPS de frotas em movimento. Oferecer uma plataforma escalável em modelo SaaS, que pague apenas pelo uso e forneça dashboards em tempo real para as transportadoras, representa uma oportunidade de capturar um mercado logístico em expansão anual de 18%.
@@ -52,7 +52,7 @@ Para transportadoras brasileiras de médio e grande porte, a **SwiftTrack IoT** 
 
 ---
 
-### 3. DESCRIÇÃO DOS STAKEHOLDERS E USUÁRIOS
+### 3. Descrição dos Stakeholders e Usuários
 
 | **Stakeholder (Perfil)** | **Necessidade Primária** | **Expectativa na Nuvem (AWS)** |
 | :--- | :--- | :--- |
@@ -63,7 +63,7 @@ Para transportadoras brasileiras de médio e grande porte, a **SwiftTrack IoT** 
 
 ---
 
-### 4. VISÃO GERAL DO PRODUTO/SOLUÇÃO
+### 4. Visão Geral do Produto/Solução
 
 #### 4.1. Perspectiva do Produto
 A SwiftTrack IoT operará como um ecossistema nativo na nuvem AWS de formato híbrido. A aplicação principal em Django REST Framework servirá os canais web e mobile administrativos (via protocolo HTTPS). Em paralelo, um fluxo de ingestão Serverless autônomo receberá dados de sensores de IoT via chamadas de baixo payload enviadas pelos rastreadores embarcados nos veículos logísticos.
@@ -80,7 +80,7 @@ A SwiftTrack IoT operará como um ecossistema nativo na nuvem AWS de formato hí
 
 ---
 
-### 5. RECURSOS DO PRODUTO (ARQUITETURA AWS)
+### 5. Recursos do Produto (Arquitetura AWS)
 
 Para implementar a visão proposta de forma ideal e cobrindo os módulos do roteiro de ensino, a arquitetura AWS foi desenhada com as seguintes ferramentas fundamentais:
 
@@ -98,7 +98,7 @@ Para implementar a visão proposta de forma ideal e cobrindo os módulos do rote
 
 ---
 
-### 6. RESTRIÇÕES DO PROJETO
+### 6. Restrições do Projeto
 
 * **Orçamentária:** O orçamento operacional total para hospedagem do protótipo funcional e simulação está fixado em no máximo **US$ 1.500,00 por mês**.
 * **Prazo:** O cronograma acadêmico impõe uma restrição de **20 semanas** para conclusão de todas as fases, desde a Incepção, Elaboração, até a Construção e Defesa Oral final na transição.
@@ -108,7 +108,7 @@ Para implementar a visão proposta de forma ideal e cobrindo os módulos do rote
 
 ---
 
-### 7. ATRIBUTOS DE QUALIDADE (SLAs E SLOs)
+### 7. Atributos de Qualidade (SLAs E SLOs)
 
 * **Disponibilidade:** A plataforma administrativa e o endpoint de ingestão devem manter um SLA global de uptime de **99,95% de disponibilidade** (aproximadamente 4,3 horas de indisponibilidade permitidas por ano). Isso é alcançado usando sub-redes distribuídas em pelo menos 2 Zonas de Disponibilidade (Multi-AZ), instâncias EC2 sob Auto Scaling e RDS Multi-AZ.
 * **Performance (Latência):** O endpoint de ingestão Serverless deve responder com latência inferior a **80ms para 95% das escritas** (p95). A leitura de dashboards do portal operacional pelo usuário deve carregar em menos de 150ms usando o caching eficiente do Amazon S3, DynamoDB Query e CloudFront.
@@ -120,7 +120,7 @@ Para implementar a visão proposta de forma ideal e cobrindo os módulos do rote
 
 ---
 
-### 8. APROVAÇÃO E HISTÓRICO DE VERSÕES
+### 8. Aprovação e Histórico de Versões
 
 | **Versão** | **Data** | **Descrição da Alteração** | **Autor(es)** |
 | :--- | :--- | :--- | :--- |

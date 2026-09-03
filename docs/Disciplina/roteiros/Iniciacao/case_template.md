@@ -1,4 +1,4 @@
-### **Case de Exemplo: Logística & IoT – "SwiftTrack IoT"**
+# **Case de Exemplo: Logística & IoT – "SwiftTrack IoT"**
 
 **Desafio Detalhado:** O grupo atuará no planejamento da infraestrutura de nuvem híbrida (IaaS e Serverless) para uma empresa de logística expressa (*last-mile*) que realiza o monitoramento e rastreamento de entregas urbanas em tempo real. A equipe de arquitetura deve estruturar o ecossistema para suportar tanto a plataforma de telemetria dos veículos quanto o sistema administrativo de faturamento e rotas.
 
