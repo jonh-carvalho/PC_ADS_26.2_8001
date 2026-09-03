@@ -1,0 +1,1921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Casos de Uso Arquequiterais - PC_ADS_26.2_8001</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#casos-de-uso-arquequiterais" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="PC_ADS_26.2_8001" class="md-header__button md-logo" aria-label="PC_ADS_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PC_ADS_26.2_8001
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Casos de Uso Arquequiterais
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#193257" data-md-color-accent="#FAB90A"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="all" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PC_ADS_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="PC_ADS_26.2_8001" class="md-nav__button md-logo" aria-label="PC_ADS_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PC_ADS_26.2_8001
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PC_ADS_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dv_template_preenchido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos_suplementares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/dv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="casos-de-uso-arquequiterais">Casos de Uso Arquequiterais<a class="headerlink" href="#casos-de-uso-arquequiterais" title="Permanent link">&para;</a></h1>
+<h2 id="swifttrack-iot-infraestrutura-em-nuvem-aws">SWIFTTRACK IOT - INFRAESTRUTURA EM NUVEM AWS<a class="headerlink" href="#swifttrack-iot-infraestrutura-em-nuvem-aws" title="Permanent link">&para;</a></h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Informação do Documento</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Projeto</strong></td>
+<td style="text-align: left;">SwiftTrack IoT - Plataforma de Telemetria e Gestão Logística</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Documento</strong></td>
+<td style="text-align: left;">Modelo de Casos de Uso Arquiteturais</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Responsável</strong></td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disciplina</strong></td>
+<td style="text-align: left;">Projeto de Cloud - Semana 3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-introducao">1. INTRODUÇÃO<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<h3 id="11-proposito">1.1. Propósito<a class="headerlink" href="#11-proposito" title="Permanent link">&para;</a></h3>
+<p>Este documento descreve os Casos de Uso Arquiteturais para a infraestrutura em nuvem AWS da plataforma <strong>SwiftTrack IoT</strong>. Os casos de uso arquiteturais focam em requisitos de infraestrutura, segurança, operações e governança, diferentemente dos casos de uso funcionais que descrevem interações de usuários finais com o sistema.</p>
+<h3 id="12-escopo">1.2. Escopo<a class="headerlink" href="#12-escopo" title="Permanent link">&para;</a></h3>
+<p>Os casos de uso arquiteturais abrangem a configuração, operação e manutenção da infraestrutura AWS, incluindo:</p>
+<ul>
+<li>Rede (VPC, sub-redes, rotas, endpoints)</li>
+<li>Segurança (Security Groups, NACLs, IAM)</li>
+<li>Conectividade entre camadas (ALB, EC2, RDS, Lambda)</li>
+<li>Integração com serviços gerenciados (DynamoDB, S3, Secrets Manager)</li>
+<li>Automação e deploy (CI/CD)</li>
+</ul>
+<h3 id="13-referencias">1.3. Referências<a class="headerlink" href="#13-referencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Documento de Visão - SwiftTrack IoT (v1.0)</li>
+<li>Documento de Requisitos Suplementares - SwiftTrack IoT (v1.0)</li>
+<li>AWS Well-Architected Framework</li>
+<li>Amazon VPC Documentation</li>
+</ul>
+<hr />
+<h2 id="2-visao-geral-dos-casos-de-uso">2. VISÃO GERAL DOS CASOS DE USO<a class="headerlink" href="#2-visao-geral-dos-casos-de-uso" title="Permanent link">&para;</a></h2>
+<h3 id="21-atores">2.1. Atores<a class="headerlink" href="#21-atores" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Ator</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Responsabilidades</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Administrador de Infraestrutura</strong></td>
+<td style="text-align: left;">Profissional responsável por configurar e gerenciar a infraestrutura AWS.</td>
+<td style="text-align: left;">Criar VPC, sub-redes, security groups, endpoints.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Engenheiro de DevOps</strong></td>
+<td style="text-align: left;">Profissional responsável por automação e CI/CD.</td>
+<td style="text-align: left;">Configurar pipelines, deploys, rollbacks.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sistema AWS</strong></td>
+<td style="text-align: left;">Serviços gerenciados da AWS (DynamoDB, S3, etc.).</td>
+<td style="text-align: left;">Prover serviços, endpoints, logs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arquiteto de Segurança</strong></td>
+<td style="text-align: left;">Profissional responsável por políticas de segurança e compliance.</td>
+<td style="text-align: left;">Definir políticas IAM, criptografia, auditoria.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-diagrama-de-casos-de-uso">2.2. Diagrama de Casos de Uso<a class="headerlink" href="#22-diagrama-de-casos-de-uso" title="Permanent link">&para;</a></h3>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:621px;height:648px;background:#FFFFFF;" width="621px" height="648px" viewBox="0 0 621 648" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="cluster" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS" id="ent0005" data-source-line="9"><rect x="171.03" y="7" width="297.9" height="627" fill="none" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><text x="174.03" y="21.995" fill="#000" font-size="14" textLength="282.174" font-weight="700">SwiftTrack IoT - Infraestrutura AWS</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC1" id="ent0006" data-source-line="10"><ellipse cx="319.48" cy="236.004" rx="106.36" ry="24.124" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text x="275.894" y="229.647" fill="#000" font-size="14" textLength="87.172">UC-ARQ-001</text><text x="239.739" y="245.944" fill="#000" font-size="14" textLength="159.482">Configurar VPC e Rede</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC2" id="ent0007" data-source-line="11"><ellipse cx="319.482" cy="322" rx="122.452" ry="26.89" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text x="275.896" y="312.554" fill="#000" font-size="14" textLength="87.172">UC-ARQ-002</text><text x="211.823" y="328.851" fill="#000" font-size="14" textLength="215.318">Configurar Segurança de Rede</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC3" id="ent0008" data-source-line="12"><ellipse cx="319.477" cy="151.999" rx="112.597" ry="24.919" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text x="275.891" y="144.685" fill="#000" font-size="14" textLength="87.172">UC-ARQ-003</text><text x="229.386" y="160.982" fill="#000" font-size="14" textLength="180.182">Configurar VPC Endpoints</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC4" id="ent0009" data-source-line="13"><ellipse cx="319.477" cy="501.999" rx="104.717" ry="30.879" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text x="275.891" y="489.606" fill="#000" font-size="14" textLength="87.172">UC-ARQ-004</text><text x="230.288" y="505.903" fill="#000" font-size="14" textLength="178.377">Configurar Conectividade</text><text x="265.914" y="522.2" fill="#000" font-size="14" textLength="107.126">entre Camadas</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC5" id="ent0010" data-source-line="14"><ellipse cx="319.477" cy="67.003" rx="113.917" ry="25.183" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text x="275.891" y="59.401" fill="#000" font-size="14" textLength="87.172">UC-ARQ-005</text><text x="226.823" y="75.698" fill="#000" font-size="14" textLength="185.309">Configurar Monitoramento</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC6" id="ent0011" data-source-line="15"><ellipse cx="319.482" cy="593.002" rx="111.812" ry="24.762" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text x="275.896" y="585.859" fill="#000" font-size="14" textLength="87.172">UC-ARQ-006</text><text x="230.953" y="602.156" fill="#000" font-size="14" textLength="177.058">Configurar CI/CD Pipeline</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC7" id="ent0012" data-source-line="16"><ellipse cx="319.477" cy="410.001" rx="120.857" ry="26.571" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text x="275.891" y="400.898" fill="#000" font-size="14" textLength="87.172">UC-ARQ-007</text><text x="214.446" y="417.195" fill="#000" font-size="14" textLength="210.062">Definir Políticas de Segurança</text></g><g class="entity" data-qualified-name="Admin" id="ent0001" data-source-line="4"><ellipse cx="66.515" cy="198.2" rx="8" ry="8" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M66.515,206.2 L66.515,233.2 M53.515,214.2 L79.515,214.2 M66.515,233.2 L53.515,248.2 M66.515,233.2 L79.515,248.2" style="stroke:#181818;stroke-width:0.5;" fill="none"/><text x="6" y="262.695" fill="#000" font-size="14" textLength="121.03">Administrador de</text><text x="6" y="278.992" fill="#000" font-size="14" textLength="96.988">Infraestrutura</text></g><g class="entity" data-qualified-name="DevOps" id="ent0002" data-source-line="5"><ellipse cx="66.52" cy="504.2" rx="8" ry="8" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M66.52,512.2 L66.52,539.2 M53.52,520.2 L79.52,520.2 M66.52,539.2 L53.52,554.2 M66.52,539.2 L79.52,554.2" style="stroke:#181818;stroke-width:0.5;" fill="none"/><text x="15.65" y="568.695" fill="#000" font-size="14" textLength="101.739">Engenheiro de</text><text x="15.65" y="584.992" fill="#000" font-size="14" textLength="54.879">DevOps</text></g><g class="entity" data-qualified-name="SecArch" id="ent0003" data-source-line="6"><ellipse cx="66.515" cy="349.2" rx="8" ry="8" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M66.515,357.2 L66.515,384.2 M53.515,365.2 L79.515,365.2 M66.515,384.2 L53.515,399.2 M66.515,384.2 L79.515,399.2" style="stroke:#181818;stroke-width:0.5;" fill="none"/><text x="22.97" y="413.695" fill="#000" font-size="14" textLength="87.09">Arquiteto de</text><text x="22.97" y="429.992" fill="#000" font-size="14" textLength="74.744">Segurança</text></g><g class="entity" data-qualified-name="AWS" id="ent0004" data-source-line="7"><ellipse cx="559.503" cy="292.35" rx="8" ry="8" fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M559.503,300.35 L559.503,327.35 M546.503,308.35 L572.503,308.35 M559.503,327.35 L546.503,342.35 M559.503,327.35 L572.503,342.35" style="stroke:#181818;stroke-width:0.5;" fill="none"/><text x="512.93" y="356.845" fill="#000" font-size="14" textLength="93.146">Sistema AWS</text></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0006" id="lnk13" data-source-line="19" data-link-type="dependency"><path d="M127.31,236 C152.97,236 178.74,236 208.01,236" style="stroke:#181818;stroke-width:1;" fill="none" id="Admin-to-UC1"/><polygon points="213.01,236,204.01,232,208.01,236,204.01,240,213.01,236" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0007" id="lnk14" data-source-line="20" data-link-type="dependency"><path d="M127.38,263.83 C139.09,268.84 151.35,273.8 163.03,278 C187.18,286.68 209.115,293.434 233.515,300.254" style="stroke:#181818;stroke-width:1;" fill="none" id="Admin-to-UC2"/><polygon points="238.33,301.6,230.739,295.325,233.515,300.254,228.585,303.03,238.33,301.6" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0008" id="lnk15" data-source-line="21" data-link-type="dependency"><path d="M127.34,208.05 C139.05,203.05 151.33,198.13 163.03,194 C188.21,185.12 211.396,178.297 236.646,171.627" style="stroke:#181818;stroke-width:1;" fill="none" id="Admin-to-UC3"/><polygon points="241.48,170.35,231.757,168.781,236.646,171.627,233.8,176.516,241.48,170.35" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0009" id="lnk16" data-source-line="22" data-link-type="dependency"><path d="M103.57,282.61 C112.14,295.23 120.64,309.22 127.03,323 C152.42,377.78 121.01,410.64 163.03,454 C179.44,470.94 196.923,480.421 219.443,487.551" style="stroke:#181818;stroke-width:1;" fill="none" id="Admin-to-UC4"/><polygon points="224.21,489.06,216.837,482.53,219.443,487.551,214.422,490.157,224.21,489.06" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0010" id="lnk17" data-source-line="23" data-link-type="dependency"><path d="M92.5,189.34 C109.14,162.46 133.38,130.11 163.03,110 C181.92,97.19 199.725,89.561 221.785,83.221" style="stroke:#181818;stroke-width:1;" fill="none" id="Admin-to-UC5"/><polygon points="226.59,81.84,216.835,80.482,221.785,83.221,219.045,88.17,226.59,81.84" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0002" data-entity-2="ent0009" id="lnk18" data-source-line="25" data-link-type="dependency"><path d="M117.7,534 C148.81,529.04 184.782,523.307 221.552,517.447" style="stroke:#181818;stroke-width:1;" fill="none" id="DevOps-to-UC4"/><polygon points="226.49,516.66,216.973,514.126,221.552,517.447,218.232,522.027,226.49,516.66" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0002" data-entity-2="ent0011" id="lnk19" data-source-line="26" data-link-type="dependency"><path d="M117.7,552.2 C151.46,559.06 191.85,567.264 230.88,575.194" style="stroke:#181818;stroke-width:1;" fill="none" id="DevOps-to-UC6"/><polygon points="235.78,576.19,227.757,570.478,230.88,575.194,226.164,578.318,235.78,576.19" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0003" data-entity-2="ent0007" id="lnk20" data-source-line="28" data-link-type="dependency"><path d="M110.37,375.9 C145.51,366.8 191.37,354.924 233.93,343.894" style="stroke:#181818;stroke-width:1;" fill="none" id="SecArch-to-UC2"/><polygon points="238.77,342.64,229.054,341.026,233.93,343.894,231.061,348.77,238.77,342.64" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0003" data-entity-2="ent0012" id="lnk21" data-source-line="29" data-link-type="dependency"><path d="M110.37,390.93 C137.11,393.38 167.881,396.193 202.201,399.343" style="stroke:#181818;stroke-width:1;" fill="none" id="SecArch-to-UC7"/><polygon points="207.18,399.8,198.583,394.994,202.201,399.343,197.852,402.961,207.18,399.8" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0006" data-entity-2="ent0004" id="lnk22" data-source-line="31" data-link-type="dependency"><path d="M397.23,252.81 C422.98,259.45 451.59,267.92 476.93,278 C488.9,282.76 496.937,286.489 508.407,292.599" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC1-to-AWS"/><polygon points="512.82,294.95,506.757,287.188,508.407,292.599,502.996,294.249,512.82,294.95" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0007" data-entity-2="ent0004" id="lnk23" data-source-line="32" data-link-type="dependency"><path d="M442.28,322 C467.33,322 487.22,322 507.5,322" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC2-to-AWS"/><polygon points="512.5,322,503.5,318,507.5,322,503.5,326,512.5,322" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0008" data-entity-2="ent0004" id="lnk24" data-source-line="33" data-link-type="dependency"><path d="M414.92,165.39 C436.71,171.6 458.79,180.69 476.93,194 C507.74,216.6 527.714,250.125 541.074,278.885" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC3-to-AWS"/><polygon points="543.18,283.42,543.016,273.573,541.074,278.885,535.761,276.943,543.18,283.42" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0009" data-entity-2="ent0004" id="lnk25" data-source-line="34" data-link-type="dependency"><path d="M410.24,486.37 C433.59,479.25 457.59,468.93 476.93,454 C508.17,429.88 528.323,394.702 541.603,365.112" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC4-to-AWS"/><polygon points="543.65,360.55,536.316,367.123,541.603,365.112,543.614,370.399,543.65,360.55" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0011" data-entity-2="ent0004" id="lnk26" data-source-line="35" data-link-type="dependency"><path d="M418.44,581.34 C439.74,574.89 460.72,565.04 476.93,550 C531.03,499.83 548.7,416.254 554.83,365.534" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC6-to-AWS"/><polygon points="555.43,360.57,550.379,369.025,554.83,365.534,558.321,369.985,555.43,360.57" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><?plantuml-src RLBBRjim4BppAxQvoqhy17e8O2Wv64LGDugJIu229LSIOObKoPLpAFezFVKhycEb9CiLMzrso9dPvN8-A2tAHY8KHBNx6CUMlyroHKNphN5eXT64ccR2LF63EXPSbPyiFo6vk3fA8zpNkgdAkEAEqCPKO8KkbfZnfgIuL7b1ivR0Iim8o81jZq0gYuAKqOnnGSR2rLPMIYj7baiF9RxgdSuiHt_IK6Fv5N077MbGtEiSTO7Acev-XwVFjUjeVNbnjjyRHKWzBSNSk-dtNxrZYc9hHJ5mKpy1LXosBsdVy2Lbh1sLwxn4V_-cCdgoN1nXPvuWWd38NlU30VZL2Uwyuf14sySlqVNrpQjEZCvKszx2ypu1X4UKsFKv93UJedaW-ZkxVyfOF9yKB_xhUAzbRPGcTzOj9dNBGEVBzgjEIl9sVpuB5Y7X5PTyi5bEsgm2cmUZbLynhxo1EUjMaxfrs7uN9tUmLpMMIW_lNKyADsq8CfyY2tjJllycvGdjflxvyqEoOJyPwy84KNJRRN-CvW5Q16WPe1LZVTWkjm5SCtOEsCKvn1l6V7EOpMwxg7d2g5wCwkMeNW_r7m00?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:621px;height:648px;background:#1B1B1B;" width="621px" height="648px" viewBox="0 0 621 648" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.8beta1?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><rect x="0" y="0" width="621" height="648" fill="#1B1B1B" style="stroke:none;"/><g class="cluster" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS" id="ent0005" data-source-line="9"><rect x="171.03" y="7" width="297.9" height="627" fill="none" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><text x="174.03" y="21.995" fill="#FFF" font-size="14" textLength="282.174" font-weight="700">SwiftTrack IoT - Infraestrutura AWS</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC1" id="ent0006" data-source-line="10"><ellipse cx="319.48" cy="236.004" rx="106.36" ry="24.124" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="275.894" y="229.647" fill="#FFF" font-size="14" textLength="87.172">UC-ARQ-001</text><text x="239.739" y="245.944" fill="#FFF" font-size="14" textLength="159.482">Configurar VPC e Rede</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC2" id="ent0007" data-source-line="11"><ellipse cx="319.482" cy="322" rx="122.452" ry="26.89" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="275.896" y="312.554" fill="#FFF" font-size="14" textLength="87.172">UC-ARQ-002</text><text x="211.823" y="328.851" fill="#FFF" font-size="14" textLength="215.318">Configurar Segurança de Rede</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC3" id="ent0008" data-source-line="12"><ellipse cx="319.477" cy="151.999" rx="112.597" ry="24.919" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="275.891" y="144.685" fill="#FFF" font-size="14" textLength="87.172">UC-ARQ-003</text><text x="229.386" y="160.982" fill="#FFF" font-size="14" textLength="180.182">Configurar VPC Endpoints</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC4" id="ent0009" data-source-line="13"><ellipse cx="319.477" cy="501.999" rx="104.717" ry="30.879" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="275.891" y="489.606" fill="#FFF" font-size="14" textLength="87.172">UC-ARQ-004</text><text x="230.288" y="505.903" fill="#FFF" font-size="14" textLength="178.377">Configurar Conectividade</text><text x="265.914" y="522.2" fill="#FFF" font-size="14" textLength="107.126">entre Camadas</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC5" id="ent0010" data-source-line="14"><ellipse cx="319.477" cy="67.003" rx="113.917" ry="25.183" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="275.891" y="59.401" fill="#FFF" font-size="14" textLength="87.172">UC-ARQ-005</text><text x="226.823" y="75.698" fill="#FFF" font-size="14" textLength="185.309">Configurar Monitoramento</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC6" id="ent0011" data-source-line="15"><ellipse cx="319.482" cy="593.002" rx="111.812" ry="24.762" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="275.896" y="585.859" fill="#FFF" font-size="14" textLength="87.172">UC-ARQ-006</text><text x="230.953" y="602.156" fill="#FFF" font-size="14" textLength="177.058">Configurar CI/CD Pipeline</text></g><g class="entity" data-qualified-name="SwiftTrack IoT - Infraestrutura AWS.UC7" id="ent0012" data-source-line="16"><ellipse cx="319.477" cy="410.001" rx="120.857" ry="26.571" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="275.891" y="400.898" fill="#FFF" font-size="14" textLength="87.172">UC-ARQ-007</text><text x="214.446" y="417.195" fill="#FFF" font-size="14" textLength="210.062">Definir Políticas de Segurança</text></g><g class="entity" data-qualified-name="Admin" id="ent0001" data-source-line="4"><ellipse cx="66.515" cy="198.2" rx="8" ry="8" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M66.515,206.2 L66.515,233.2 M53.515,214.2 L79.515,214.2 M66.515,233.2 L53.515,248.2 M66.515,233.2 L79.515,248.2" style="stroke:#E7E7E7;stroke-width:0.5;" fill="none"/><text x="6" y="262.695" fill="#FFF" font-size="14" textLength="121.03">Administrador de</text><text x="6" y="278.992" fill="#FFF" font-size="14" textLength="96.988">Infraestrutura</text></g><g class="entity" data-qualified-name="DevOps" id="ent0002" data-source-line="5"><ellipse cx="66.52" cy="504.2" rx="8" ry="8" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M66.52,512.2 L66.52,539.2 M53.52,520.2 L79.52,520.2 M66.52,539.2 L53.52,554.2 M66.52,539.2 L79.52,554.2" style="stroke:#E7E7E7;stroke-width:0.5;" fill="none"/><text x="15.65" y="568.695" fill="#FFF" font-size="14" textLength="101.739">Engenheiro de</text><text x="15.65" y="584.992" fill="#FFF" font-size="14" textLength="54.879">DevOps</text></g><g class="entity" data-qualified-name="SecArch" id="ent0003" data-source-line="6"><ellipse cx="66.515" cy="349.2" rx="8" ry="8" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M66.515,357.2 L66.515,384.2 M53.515,365.2 L79.515,365.2 M66.515,384.2 L53.515,399.2 M66.515,384.2 L79.515,399.2" style="stroke:#E7E7E7;stroke-width:0.5;" fill="none"/><text x="22.97" y="413.695" fill="#FFF" font-size="14" textLength="87.09">Arquiteto de</text><text x="22.97" y="429.992" fill="#FFF" font-size="14" textLength="74.744">Segurança</text></g><g class="entity" data-qualified-name="AWS" id="ent0004" data-source-line="7"><ellipse cx="559.503" cy="292.35" rx="8" ry="8" fill="#313139" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M559.503,300.35 L559.503,327.35 M546.503,308.35 L572.503,308.35 M559.503,327.35 L546.503,342.35 M559.503,327.35 L572.503,342.35" style="stroke:#E7E7E7;stroke-width:0.5;" fill="none"/><text x="512.93" y="356.845" fill="#FFF" font-size="14" textLength="93.146">Sistema AWS</text></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0006" id="lnk13" data-source-line="19" data-link-type="dependency"><path d="M127.31,236 C152.97,236 178.74,236 208.01,236" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="Admin-to-UC1"/><polygon points="213.01,236,204.01,232,208.01,236,204.01,240,213.01,236" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0007" id="lnk14" data-source-line="20" data-link-type="dependency"><path d="M127.38,263.83 C139.09,268.84 151.35,273.8 163.03,278 C187.18,286.68 209.115,293.434 233.515,300.254" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="Admin-to-UC2"/><polygon points="238.33,301.6,230.739,295.325,233.515,300.254,228.585,303.03,238.33,301.6" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0008" id="lnk15" data-source-line="21" data-link-type="dependency"><path d="M127.34,208.05 C139.05,203.05 151.33,198.13 163.03,194 C188.21,185.12 211.396,178.297 236.646,171.627" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="Admin-to-UC3"/><polygon points="241.48,170.35,231.757,168.781,236.646,171.627,233.8,176.516,241.48,170.35" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0009" id="lnk16" data-source-line="22" data-link-type="dependency"><path d="M103.57,282.61 C112.14,295.23 120.64,309.22 127.03,323 C152.42,377.78 121.01,410.64 163.03,454 C179.44,470.94 196.923,480.421 219.443,487.551" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="Admin-to-UC4"/><polygon points="224.21,489.06,216.837,482.53,219.443,487.551,214.422,490.157,224.21,489.06" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0001" data-entity-2="ent0010" id="lnk17" data-source-line="23" data-link-type="dependency"><path d="M92.5,189.34 C109.14,162.46 133.38,130.11 163.03,110 C181.92,97.19 199.725,89.561 221.785,83.221" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="Admin-to-UC5"/><polygon points="226.59,81.84,216.835,80.482,221.785,83.221,219.045,88.17,226.59,81.84" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0002" data-entity-2="ent0009" id="lnk18" data-source-line="25" data-link-type="dependency"><path d="M117.7,534 C148.81,529.04 184.782,523.307 221.552,517.447" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="DevOps-to-UC4"/><polygon points="226.49,516.66,216.973,514.126,221.552,517.447,218.232,522.027,226.49,516.66" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0002" data-entity-2="ent0011" id="lnk19" data-source-line="26" data-link-type="dependency"><path d="M117.7,552.2 C151.46,559.06 191.85,567.264 230.88,575.194" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="DevOps-to-UC6"/><polygon points="235.78,576.19,227.757,570.478,230.88,575.194,226.164,578.318,235.78,576.19" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0003" data-entity-2="ent0007" id="lnk20" data-source-line="28" data-link-type="dependency"><path d="M110.37,375.9 C145.51,366.8 191.37,354.924 233.93,343.894" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="SecArch-to-UC2"/><polygon points="238.77,342.64,229.054,341.026,233.93,343.894,231.061,348.77,238.77,342.64" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0003" data-entity-2="ent0012" id="lnk21" data-source-line="29" data-link-type="dependency"><path d="M110.37,390.93 C137.11,393.38 167.881,396.193 202.201,399.343" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="SecArch-to-UC7"/><polygon points="207.18,399.8,198.583,394.994,202.201,399.343,197.852,402.961,207.18,399.8" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0006" data-entity-2="ent0004" id="lnk22" data-source-line="31" data-link-type="dependency"><path d="M397.23,252.81 C422.98,259.45 451.59,267.92 476.93,278 C488.9,282.76 496.937,286.489 508.407,292.599" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC1-to-AWS"/><polygon points="512.82,294.95,506.757,287.188,508.407,292.599,502.996,294.249,512.82,294.95" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0007" data-entity-2="ent0004" id="lnk23" data-source-line="32" data-link-type="dependency"><path d="M442.28,322 C467.33,322 487.22,322 507.5,322" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC2-to-AWS"/><polygon points="512.5,322,503.5,318,507.5,322,503.5,326,512.5,322" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0008" data-entity-2="ent0004" id="lnk24" data-source-line="33" data-link-type="dependency"><path d="M414.92,165.39 C436.71,171.6 458.79,180.69 476.93,194 C507.74,216.6 527.714,250.125 541.074,278.885" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC3-to-AWS"/><polygon points="543.18,283.42,543.016,273.573,541.074,278.885,535.761,276.943,543.18,283.42" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0009" data-entity-2="ent0004" id="lnk25" data-source-line="34" data-link-type="dependency"><path d="M410.24,486.37 C433.59,479.25 457.59,468.93 476.93,454 C508.17,429.88 528.323,394.702 541.603,365.112" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC4-to-AWS"/><polygon points="543.65,360.55,536.316,367.123,541.603,365.112,543.614,370.399,543.65,360.55" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><g class="link" data-entity-1="ent0011" data-entity-2="ent0004" id="lnk26" data-source-line="35" data-link-type="dependency"><path d="M418.44,581.34 C439.74,574.89 460.72,565.04 476.93,550 C531.03,499.83 548.7,416.254 554.83,365.534" style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:7,7;" fill="none" id="UC6-to-AWS"/><polygon points="555.43,360.57,550.379,369.025,554.83,365.534,558.321,369.985,555.43,360.57" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/></g><?plantuml-src RLBBRjim4BppAxQvoqhy17e8O2Wv64LGDugJIu229LSIOObKoPLpAFezFVKhycEb9CiLMzrso9dPvN8-A2tAHY8KHBNx6CUMlyroHKNphN5eXT64ccR2LF63EXPSbPyiFo6vk3fA8zpNkgdAkEAEqCPKO8KkbfZnfgHOSdkSjVUin8o035YL5mHIMHIaZ6QC2p8MhhQoKbevibnwAF5LxtHcEVgJXXhBhu0xw4Y3ubxdg0jKrdJqEpnzhbr7wykBi_tUA4BgQIdctas__-eTKnHRAug1c_e9iEAmVKdxXYyfO-seNESb-litbT6JvU88E_C44OH3zheV3C1lJd3d5OSasZv-YQwlRrvrOdIcslOMdlS983oYnAxF8RcP5Cq3qT_P_LF6ulcaUF5VntijQwCqkRDkCQbR1ZfVjbzrKfAt-_DHi0W9hxZaWyroqcOLs3mOhVoAUUKDp5ctcjIjm_QxEBc3lQgnL7fuxtfIk6b3aFaKMTYRylqtAKzeD_NFdn-I3Vl9M1ScYABRRljZD0_G8a3B0AqOwyDskGtWch5pm2xE8Tumvfl3R7RRHSqJHlLYL2z7zNge_m00?></g></svg></div></div>
+
+<hr />
+<h2 id="3-especificacao-dos-casos-de-uso">3. ESPECIFICAÇÃO DOS CASOS DE USO<a class="headerlink" href="#3-especificacao-dos-casos-de-uso" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="uc-arq-001-configurar-vpc-e-rede-swifttrack">UC-ARQ-001: CONFIGURAR VPC E REDE SWIFTTRACK<a class="headerlink" href="#uc-arq-001-configurar-vpc-e-rede-swifttrack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-001</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar VPC e Rede SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Sistema AWS |</p>
+<p>| <strong>Pré-condição</strong> | 1. Conta AWS ativa.<br>2. Permissões IAM para criar VPC, sub-redes, IGW, NAT Gateway, Route Tables. |
+| <strong>Pós-condição</strong> | 1. VPC criada com CIDR 10.0.0.0/16.<br>2. 4 sub-redes criadas (2 públicas, 2 privadas) em 2 AZs.<br>3. Internet Gateway anexado.<br>4. NAT Gateways configurados.<br>5. Route Tables configuradas. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até o serviço VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Cria VPC com CIDR 10.0.0.0/16 e habilita DNS hostnames.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Cria 2 sub-redes públicas (uma por AZ) com CIDR 10.0.1.0/24 e 10.0.2.0/24.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Cria 2 sub-redes privadas (uma por AZ) com CIDR 10.0.3.0/24 e 10.0.4.0/24.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Cria e anexa Internet Gateway à VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Cria NAT Gateways (um por AZ) nas sub-redes públicas.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Configura Route Table pública: 10.0.0.0/16 → local, 0.0.0.0/0 → IGW.</td>
+</tr>
+<tr>
+<td style="text-align: left;">9.</td>
+<td style="text-align: left;">Configura Route Table privada: 10.0.0.0/16 → local, 0.0.0.0/0 → NAT Gateway.</td>
+</tr>
+<tr>
+<td style="text-align: left;">10.</td>
+<td style="text-align: left;">Associa sub-redes públicas à Route Table pública.</td>
+</tr>
+<tr>
+<td style="text-align: left;">11.</td>
+<td style="text-align: left;">Associa sub-redes privadas à Route Table privada.</td>
+</tr>
+<tr>
+<td style="text-align: left;">12.</td>
+<td style="text-align: left;">Valida conectividade: instância pública → Internet, instância privada → NAT.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">CIDR da VPC conflita com outra VPC ou rede on-premises (erro de criação).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">Limite de VPCs por região é atingido (5 VPCs por região).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 3</td>
+<td style="text-align: left;">Permissões IAM insuficientes (erro de autorização).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 4</td>
+<td style="text-align: left;">NAT Gateway falha (instância privada perde acesso à Internet).</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">VPC criada e configurada em &lt; 15 min.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disponibilidade</strong></td>
+<td style="text-align: left;">Multi-AZ com 2 AZs (redundância).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Sub-redes privadas sem rota direta para Internet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo</strong></td>
+<td style="text-align: left;">NAT Gateway: ~$0.045/hora por AZ (~$64/mês para 2 AZs).</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Endereçamento conflitante</td>
+<td style="text-align: left;">Planejar CIDR com folga (10.0.0.0/16).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Custo elevado do NAT Gateway</td>
+<td style="text-align: left;">Avaliar uso de NAT Instance (mais barato, menos gerenciado).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Erro de roteamento</td>
+<td style="text-align: left;">Testar conectividade com <code>ping</code> ou <code>traceroute</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Referências</strong> | 1. Amazon VPC Documentation<br>2. AWS Well-Architected - Reliability Pillar |</p>
+<hr />
+<h3 id="uc-arq-002-configurar-seguranca-de-rede-swifttrack">UC-ARQ-002: CONFIGURAR SEGURANÇA DE REDE SWIFTTRACK<a class="headerlink" href="#uc-arq-002-configurar-seguranca-de-rede-swifttrack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-002</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar Segurança de Rede SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Arquiteto de Segurança, Sistema AWS |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e sub-redes criadas (UC-ARQ-001).<br>2. IAM configurado. |
+| <strong>Pós-condição</strong> | 1. Security Groups configurados para cada camada.<br>2. NACLs configuradas.<br>3. IAM roles definidas para serviços. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até Security Groups.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Cria SG-ALB com regras de entrada: Portas 80, 443 (0.0.0.0/0).</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Cria SG-EC2-API com regras de entrada: Porta 8000 (origem: SG-ALB).</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Cria SG-RDS com regras de entrada: Porta 5432 (origem: SG-EC2-API).</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Cria SG-Lambda com regras de saída: DynamoDB, S3.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Cria NACLs para sub-redes públicas e privadas (camada extra de segurança).</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Define IAM roles para EC2, Lambda e RDS.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">Porta 8000 exposta acidentalmente → revisão das regras.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">IAM role com permissões excessivas → aplicar princípio de menor privilégio.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Princípio de menor privilégio implementado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Criptografia em trânsito (TLS 1.3).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Compliance</strong></td>
+<td style="text-align: left;">Conformidade com LGPD.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Security Groups permissivos</td>
+<td style="text-align: left;">Revisão periódica das regras.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acesso não autorizado</td>
+<td style="text-align: left;">MFA obrigatório para admins.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Referências</strong> | 1. AWS Security Best Practices<br>2. AWS Well-Architected - Security Pillar |</p>
+<hr />
+<h3 id="uc-arq-003-configurar-vpc-endpoints-swifttrack">UC-ARQ-003: CONFIGURAR VPC ENDPOINTS SWIFTTRACK<a class="headerlink" href="#uc-arq-003-configurar-vpc-endpoints-swifttrack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-003</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar VPC Endpoints SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Sistema AWS (DynamoDB, S3, Secrets Manager) |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e sub-redes privadas criadas (UC-ARQ-001).<br>2. IAM configurado. |
+| <strong>Pós-condição</strong> | 1. DynamoDB Gateway Endpoint configurado.<br>2. S3 Interface Endpoint configurado.<br>3. Secrets Manager Interface Endpoint configurado.<br>4. Políticas de endpoint restritivas aplicadas. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até VPC Endpoints.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Cria Gateway Endpoint para DynamoDB (tipo: Gateway).</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Associa às sub-redes privadas (10.0.3.0/24, 10.0.4.0/24).</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Atualiza Route Table privada com rota para DynamoDB.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Cria Interface Endpoint para S3 (tipo: Interface).</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Cria Interface Endpoint para Secrets Manager (tipo: Interface).</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Aplica políticas de endpoint para restringir acesso a buckets/segredos específicos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">9.</td>
+<td style="text-align: left;">Valida conectividade: EC2 → DynamoDB, Lambda → S3.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">Serviço não suporta Gateway Endpoint (ex: Secrets Manager) → usar Interface Endpoint.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">Política de endpoint bloqueia acesso → revisar e ajustar.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Tráfego não sai da VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo</strong></td>
+<td style="text-align: left;">Interface Endpoints: $0.01/hora cada (~$14/mês).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">Latência reduzida vs acesso via Internet.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Custo elevado</td>
+<td style="text-align: left;">Usar Gateway Endpoint para serviços suportados (DynamoDB, S3).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Políticas restritivas</td>
+<td style="text-align: left;">Testar políticas com usuários específicos antes de aplicar.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Referências</strong> | 1. AWS VPC Endpoints Documentation<br>2. AWS PrivateLink Documentation |</p>
+<hr />
+<h3 id="uc-arq-004-configurar-conectividade-entre-camadas-swifttrack">UC-ARQ-004: CONFIGURAR CONECTIVIDADE ENTRE CAMADAS SWIFTTRACK<a class="headerlink" href="#uc-arq-004-configurar-conectividade-entre-camadas-swifttrack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-004</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar Conectividade entre Camadas SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Engenheiro de DevOps |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e sub-redes criadas (UC-ARQ-001).<br>2. Security Groups configurados (UC-ARQ-002).<br>3. VPC Endpoints configurados (UC-ARQ-003). |
+| <strong>Pós-condição</strong> | 1. Application Load Balancer (ALB) configurado.<br>2. EC2 (API) configurada e comunicando com ALB.<br>3. RDS acessível apenas pela EC2.<br>4. Lambda acessando DynamoDB e S3 via endpoints. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Configura Application Load Balancer (ALB) na sub-rede pública.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Configura listener: porta 443 (HTTPS) → porta 8000 (EC2).</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Configura Target Group com EC2-API (porta 8000).</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Cria Launch Template para EC2-API com User Data (Gunicorn, Nginx).</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Configura Auto Scaling Group com mínimo 2 instâncias (Multi-AZ).</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Configura RDS PostgreSQL em Multi-AZ com Security Group SG-RDS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Configura Lambda com VPC (sub-redes privadas) e VPC Endpoints.</td>
+</tr>
+<tr>
+<td style="text-align: left;">9.</td>
+<td style="text-align: left;">Testa fluxo completo: ALB → EC2 → RDS, EC2 → DynamoDB.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">EC2 não alcança RDS (erro de SG) → revisar regras.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">Lambda não acessa DynamoDB (erro de endpoint) → revisar IAM.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Disponibilidade</strong></td>
+<td style="text-align: left;">99,95% (Multi-AZ + ALB + Auto Scaling).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">Latência &lt; 80ms para ingestão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Comunicação entre camadas via rede privada.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ALB como ponto único de falha</td>
+<td style="text-align: left;">ALB é gerenciado e altamente disponível.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Auto Scaling mal configurado</td>
+<td style="text-align: left;">Definir CloudWatch alarms para escalonamento.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Referências</strong> | 1. AWS ALB Documentation<br>2. AWS Auto Scaling Documentation |</p>
+<hr />
+<h3 id="uc-arq-005-configurar-monitoramento-swifttrack">UC-ARQ-005: CONFIGURAR MONITORAMENTO SWIFTTRACK<a class="headerlink" href="#uc-arq-005-configurar-monitoramento-swifttrack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-005</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar Monitoramento SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Engenheiro de DevOps |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e recursos configurados. |
+| <strong>Pós-condição</strong> | 1. CloudWatch dashboards configurados.<br>2. Alarmes definidos.<br>3. Logs centralizados. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até CloudWatch.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Cria Dashboard com métricas: CPU, Memória, Latência, TPS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Configura alarmes: CPU &gt; 80%, Latência &gt; 80ms, TPS &lt; 1000.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Configura CloudWatch Logs para EC2, RDS, Lambda.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Cria Log Groups centralizados.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Define métricas customizadas para ingestão de telemetria.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Observabilidade</strong></td>
+<td style="text-align: left;">100% de cobertura de logs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Resposta a incidentes</strong></td>
+<td style="text-align: left;">Tempo de resposta &lt; 15 min.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Referências</strong> | 1. AWS CloudWatch Documentation<br>2. AWS Well-Architected - Operational Excellence |</p>
+<hr />
+<h3 id="uc-arq-006-configurar-cicd-pipeline-swifttrack">UC-ARQ-006: CONFIGURAR CI/CD PIPELINE SWIFTTRACK<a class="headerlink" href="#uc-arq-006-configurar-cicd-pipeline-swifttrack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-006</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar CI/CD Pipeline SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Engenheiro de DevOps |
+| <strong>Ator Secundário</strong> | Sistema AWS (CodePipeline, CodeBuild, CodeDeploy) |</p>
+<p>| <strong>Pré-condição</strong> | 1. Código da API no repositório GitHub.<br>2. EC2 e RDS configurados. |
+| <strong>Pós-condição</strong> | 1. Pipeline automatizado funcionando.<br>2. Deploy &lt; 10 minutos.<br>3. Rollback &lt; 5 minutos. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Engenheiro acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Configura CodePipeline com Source (GitHub), Build (CodeBuild), Deploy (CodeDeploy).</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Configura CodeBuild com buildspec.yml (instalação de dependências, testes).</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Configura CodeDeploy com AppSpec.yml (deploy da API no EC2).</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Configura rollback automático em caso de falha.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Testa pipeline com commit no branch main.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Configura aprovação manual para produção.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">Build falha → notificação via SNS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">Deploy falha → rollback automático.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">Deploy &lt; 10 minutos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Confiabilidade</strong></td>
+<td style="text-align: left;">Rollback &lt; 5 minutos.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Referências</strong> | 1. AWS CodePipeline Documentation<br>2. AWS CodeBuild Documentation |</p>
+<hr />
+<h3 id="uc-arq-007-definir-politicas-de-seguranca-swifttrack">UC-ARQ-007: DEFINIR POLÍTICAS DE SEGURANÇA SWIFTTRACK<a class="headerlink" href="#uc-arq-007-definir-politicas-de-seguranca-swifttrack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-007</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Definir Políticas de Segurança SwiftTrack</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Arquiteto de Segurança |
+| <strong>Ator Secundário</strong> | Administrador de Infraestrutura |</p>
+<p>| <strong>Pré-condição</strong> | 1. Conta AWS configurada.<br>2. IAM configurado. |
+| <strong>Pós-condição</strong> | 1. Políticas IAM definidas.<br>2. Criptografia configurada.<br>3. Conformidade com LGPD. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Arquiteto de Segurança define políticas IAM (princípio de menor privilégio).</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Configura MFA obrigatório para todos os usuários.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Configura criptografia em repouso: RDS (AES-256), S3 (AES-256), DynamoDB (AES-256).</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Configura criptografia em trânsito: TLS 1.3 (ALB), API Gateway.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Configura Secrets Manager para credenciais do banco de dados.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Define políticas de rotação de chaves (a cada 90 dias).</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Configura CloudTrail para auditoria de acessos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Valida conformidade com LGPD.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Criptografia AES-256 em repouso.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">TLS 1.3 em trânsito.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Compliance</strong></td>
+<td style="text-align: left;">Conformidade com LGPD.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Chaves comprometidas</td>
+<td style="text-align: left;">Rotação a cada 90 dias.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acesso não autorizado</td>
+<td style="text-align: left;">MFA + auditoria.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Referências</strong> | 1. AWS IAM Documentation<br>2. AWS KMS Documentation<br>3. Lei Geral de Proteção de Dados (LGPD) |</p>
+<hr />
+<h2 id="4-matriz-de-rastreamento">4. MATRIZ DE RASTREAMENTO<a class="headerlink" href="#4-matriz-de-rastreamento" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Caso de Uso</strong></th>
+<th style="text-align: left;"><strong>Requisitos Suplementares</strong></th>
+<th style="text-align: left;"><strong>Documento de Visão</strong></th>
+<th style="text-align: left;"><strong>Serviços AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">UC-ARQ-001</td>
+<td style="text-align: left;">Confiabilidade (Multi-AZ), Custo</td>
+<td style="text-align: left;">Infraestrutura Híbrida</td>
+<td style="text-align: left;">VPC, Sub-redes, IGW, NAT, Route Tables</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-002</td>
+<td style="text-align: left;">Segurança (LGPD), Manutenibilidade</td>
+<td style="text-align: left;">Segurança e Privacidade</td>
+<td style="text-align: left;">Security Groups, NACLs, IAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-003</td>
+<td style="text-align: left;">Segurança (LGPD), Custo</td>
+<td style="text-align: left;">Arquitetura Híbrida</td>
+<td style="text-align: left;">VPC Endpoints (DynamoDB, S3, Secrets Manager)</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-004</td>
+<td style="text-align: left;">Desempenho (Latência), Disponibilidade (99,95%)</td>
+<td style="text-align: left;">API Administrativa + Ingestão</td>
+<td style="text-align: left;">ALB, EC2, RDS, Lambda</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-005</td>
+<td style="text-align: left;">Manutenibilidade, Disponibilidade</td>
+<td style="text-align: left;">Monitoramento</td>
+<td style="text-align: left;">CloudWatch, Logs, Alarms</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-006</td>
+<td style="text-align: left;">Manutenibilidade (Deploy/Rollback)</td>
+<td style="text-align: left;">Automação</td>
+<td style="text-align: left;">CodePipeline, CodeBuild, CodeDeploy</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-007</td>
+<td style="text-align: left;">Segurança (LGPD), Compliance</td>
+<td style="text-align: left;">Segurança e Privacidade</td>
+<td style="text-align: left;">IAM, KMS, Secrets Manager, CloudTrail</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-aprovacoes">5. APROVAÇÕES<a class="headerlink" href="#5-aprovacoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Função</strong></th>
+<th style="text-align: left;"><strong>Nome</strong></th>
+<th style="text-align: left;"><strong>Data</strong></th>
+<th style="text-align: left;"><strong>Assinatura</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Arquiteto de Soluções</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Professor Responsável</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Coordenador do Curso</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-historico-de-versoes">6. HISTÓRICO DE VERSÕES<a class="headerlink" href="#6-historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Versão</strong></th>
+<th style="text-align: left;"><strong>Data</strong></th>
+<th style="text-align: left;"><strong>Autor</strong></th>
+<th style="text-align: left;"><strong>Descrição das Alterações</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0.1</td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+<td style="text-align: left;">Criação inicial do documento.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+<td style="text-align: left;">Versão completa com todos os casos de uso.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>FIM DO DOCUMENTO</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+        <script src="../../../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
