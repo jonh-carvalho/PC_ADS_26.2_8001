@@ -14,7 +14,8 @@ nav:
         - Documento de Visão Preenchido: Disciplina/roteiros/Iniciacao/dv_template_preenchido.md
         - Requisitos Suplementares: Disciplina/roteiros/Iniciacao/requisitos_suplementares.md
       - Elaboração:
-        - Casos de Uso Arquiteturais: Disciplina\roteiros\Iniciacao\casos_uso_arquiteturais.md
+        - Casos de Uso Arquiteturais: Disciplina\roteiros\Elaboracao\casos_uso_arquiteturais.md
+        - Modelo de Análise (Pacotes/Subsistemas): Disciplina\roteiros\Elaboracao\modelo_de_analise-pacotes_subsistemas.md 
         #- Plan3: Disciplina/roteiros/Iniciacao/plan3casetemplate.md
 #      - Ambiente: Disciplina/ambiente.md
 #      - Roteiro:
@@ -32,7 +33,8 @@ nav:
     - Requisitos Suplementares: Iniciacao/rs.md
   - Elaboração: 
     - Index: Elaboracao/index.md
-    - Casos de Uso Arquiteturais: Elaboracao/cua.md
+    - Casos de Uso Arquiteturais: Elaboracao/cua.
+    - Modelo de Análise (Pacotes/Subsistemas): Elaboracao/maps.md
 
 
   - Bibliografia: Disciplina/bibliografia.md
