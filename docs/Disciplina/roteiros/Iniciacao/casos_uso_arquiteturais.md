@@ -1,10 +1,6 @@
-# Casos de Uso Arquequiterais
+# Casos de Uso Arquequiteturais
 
-## SWIFTTRACK IOT - INFRAESTRUTURA EM NUVEM AWS
-
----
-
-| **Informação do Documento** | |
+| **Informações** |  |
 | :--- | :--- |
 | **Projeto** | SwiftTrack IoT - Plataforma de Telemetria e Gestão Logística |
 | **Documento** | Modelo de Casos de Uso Arquiteturais |
@@ -12,11 +8,9 @@
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Em Desenvolvimento |
 | **Responsável** | [Nome do Grupo] |
-| **Disciplina** | Projeto de Cloud - Semana 3 |
+| **Disciplina** | Projeto de Cloud |
 
----
-
-## 1. INTRODUÇÃO
+## 1. Introdução
 
 ### 1.1. Propósito
 
@@ -39,9 +33,7 @@ Os casos de uso arquiteturais abrangem a configuração, operação e manutenç�
 - AWS Well-Architected Framework
 - Amazon VPC Documentation
 
----
-
-## 2. VISÃO GERAL DOS CASOS DE USO
+## 2. Visão Geral dos Casos de Uso
 
 ### 2.1. Atores
 
@@ -93,13 +85,9 @@ UC6 ..> AWS
 @enduml
 ```
 
----
+## 3. Especificação dos Casos de Uso
 
-## 3. ESPECIFICAÇÃO DOS CASOS DE USO
-
----
-
-### UC-ARQ-001: CONFIGURAR VPC E REDE SWIFTTRACK
+**UC-ARQ-001: Configurar VPC e Rede**
 
 | **Elemento** | **Especificação** |
 | :--- | :--- |
@@ -108,10 +96,8 @@ UC6 ..> AWS
 | **Versão** | 1.0 |
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Aprovado |
-
 | **Ator Principal** | Administrador de Infraestrutura |
 | **Ator Secundário** | Sistema AWS |
-
 | **Pré-condição** | 1. Conta AWS ativa.<br>2. Permissões IAM para criar VPC, sub-redes, IGW, NAT Gateway, Route Tables. |
 | **Pós-condição** | 1. VPC criada com CIDR 10.0.0.0/16.<br>2. 4 sub-redes criadas (2 públicas, 2 privadas) em 2 AZs.<br>3. Internet Gateway anexado.<br>4. NAT Gateways configurados.<br>5. Route Tables configuradas. |
 
@@ -150,11 +136,7 @@ UC6 ..> AWS
 | Custo elevado do NAT Gateway | Avaliar uso de NAT Instance (mais barato, menos gerenciado). |
 | Erro de roteamento | Testar conectividade com `ping` ou `traceroute`. |
 
-| **Referências** | 1. Amazon VPC Documentation<br>2. AWS Well-Architected - Reliability Pillar |
-
----
-
-### UC-ARQ-002: CONFIGURAR SEGURANÇA DE REDE SWIFTTRACK
+**UC-ARQ-002: Configurar Segurança de Rede**
 
 | **Elemento** | **Especificação** |
 | :--- | :--- |
@@ -163,10 +145,8 @@ UC6 ..> AWS
 | **Versão** | 1.0 |
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Aprovado |
-
 | **Ator Principal** | Administrador de Infraestrutura |
 | **Ator Secundário** | Arquiteto de Segurança, Sistema AWS |
-
 | **Pré-condição** | 1. VPC e sub-redes criadas (UC-ARQ-001).<br>2. IAM configurado. |
 | **Pós-condição** | 1. Security Groups configurados para cada camada.<br>2. NACLs configuradas.<br>3. IAM roles definidas para serviços. |
 
@@ -197,11 +177,7 @@ UC6 ..> AWS
 | Security Groups permissivos | Revisão periódica das regras. |
 | Acesso não autorizado | MFA obrigatório para admins. |
 
-| **Referências** | 1. AWS Security Best Practices<br>2. AWS Well-Architected - Security Pillar |
-
----
-
-### UC-ARQ-003: CONFIGURAR VPC ENDPOINTS SWIFTTRACK
+**UC-ARQ-003: Configurar VPC Endpoints**
 
 | **Elemento** | **Especificação** |
 | :--- | :--- |
@@ -210,10 +186,8 @@ UC6 ..> AWS
 | **Versão** | 1.0 |
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Aprovado |
-
 | **Ator Principal** | Administrador de Infraestrutura |
 | **Ator Secundário** | Sistema AWS (DynamoDB, S3, Secrets Manager) |
-
 | **Pré-condição** | 1. VPC e sub-redes privadas criadas (UC-ARQ-001).<br>2. IAM configurado. |
 | **Pós-condição** | 1. DynamoDB Gateway Endpoint configurado.<br>2. S3 Interface Endpoint configurado.<br>3. Secrets Manager Interface Endpoint configurado.<br>4. Políticas de endpoint restritivas aplicadas. |
 
@@ -245,11 +219,7 @@ UC6 ..> AWS
 | Custo elevado | Usar Gateway Endpoint para serviços suportados (DynamoDB, S3). |
 | Políticas restritivas | Testar políticas com usuários específicos antes de aplicar. |
 
-| **Referências** | 1. AWS VPC Endpoints Documentation<br>2. AWS PrivateLink Documentation |
-
----
-
-### UC-ARQ-004: CONFIGURAR CONECTIVIDADE ENTRE CAMADAS SWIFTTRACK
+**UC-ARQ-004: Configurar Conectividade entre Camadas**
 
 | **Elemento** | **Especificação** |
 | :--- | :--- |
@@ -258,10 +228,8 @@ UC6 ..> AWS
 | **Versão** | 1.0 |
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Aprovado |
-
 | **Ator Principal** | Administrador de Infraestrutura |
 | **Ator Secundário** | Engenheiro de DevOps |
-
 | **Pré-condição** | 1. VPC e sub-redes criadas (UC-ARQ-001).<br>2. Security Groups configurados (UC-ARQ-002).<br>3. VPC Endpoints configurados (UC-ARQ-003). |
 | **Pós-condição** | 1. Application Load Balancer (ALB) configurado.<br>2. EC2 (API) configurada e comunicando com ALB.<br>3. RDS acessível apenas pela EC2.<br>4. Lambda acessando DynamoDB e S3 via endpoints. |
 
@@ -293,11 +261,7 @@ UC6 ..> AWS
 | ALB como ponto único de falha | ALB é gerenciado e altamente disponível. |
 | Auto Scaling mal configurado | Definir CloudWatch alarms para escalonamento. |
 
-| **Referências** | 1. AWS ALB Documentation<br>2. AWS Auto Scaling Documentation |
-
----
-
-### UC-ARQ-005: CONFIGURAR MONITORAMENTO SWIFTTRACK
+### UC-ARQ-005: Configurar Monitoramento
 
 | **Elemento** | **Especificação** |
 | :--- | :--- |
@@ -306,10 +270,8 @@ UC6 ..> AWS
 | **Versão** | 1.0 |
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Aprovado |
-
 | **Ator Principal** | Administrador de Infraestrutura |
 | **Ator Secundário** | Engenheiro de DevOps |
-
 | **Pré-condição** | 1. VPC e recursos configurados. |
 | **Pós-condição** | 1. CloudWatch dashboards configurados.<br>2. Alarmes definidos.<br>3. Logs centralizados. |
 
@@ -328,11 +290,7 @@ UC6 ..> AWS
 | **Observabilidade** | 100% de cobertura de logs. |
 | **Resposta a incidentes** | Tempo de resposta < 15 min. |
 
-| **Referências** | 1. AWS CloudWatch Documentation<br>2. AWS Well-Architected - Operational Excellence |
-
----
-
-### UC-ARQ-006: CONFIGURAR CI/CD PIPELINE SWIFTTRACK
+**UC-ARQ-006: Configurar CI/CD Pipeline**
 
 | **Elemento** | **Especificação** |
 | :--- | :--- |
@@ -341,10 +299,8 @@ UC6 ..> AWS
 | **Versão** | 1.0 |
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Aprovado |
-
 | **Ator Principal** | Engenheiro de DevOps |
 | **Ator Secundário** | Sistema AWS (CodePipeline, CodeBuild, CodeDeploy) |
-
 | **Pré-condição** | 1. Código da API no repositório GitHub.<br>2. EC2 e RDS configurados. |
 | **Pós-condição** | 1. Pipeline automatizado funcionando.<br>2. Deploy < 10 minutos.<br>3. Rollback < 5 minutos. |
 
@@ -368,11 +324,7 @@ UC6 ..> AWS
 | **Desempenho** | Deploy < 10 minutos. |
 | **Confiabilidade** | Rollback < 5 minutos. |
 
-| **Referências** | 1. AWS CodePipeline Documentation<br>2. AWS CodeBuild Documentation |
-
----
-
-### UC-ARQ-007: DEFINIR POLÍTICAS DE SEGURANÇA SWIFTTRACK
+**UC-ARQ-007: Definir Políticas de Segurança**
 
 | **Elemento** | **Especificação** |
 | :--- | :--- |
@@ -381,10 +333,8 @@ UC6 ..> AWS
 | **Versão** | 1.0 |
 | **Data** | [DD/MM/AAAA] |
 | **Status** | Aprovado |
-
 | **Ator Principal** | Arquiteto de Segurança |
 | **Ator Secundário** | Administrador de Infraestrutura |
-
 | **Pré-condição** | 1. Conta AWS configurada.<br>2. IAM configurado. |
 | **Pós-condição** | 1. Políticas IAM definidas.<br>2. Criptografia configurada.<br>3. Conformidade com LGPD. |
 
@@ -410,11 +360,7 @@ UC6 ..> AWS
 | Chaves comprometidas | Rotação a cada 90 dias. |
 | Acesso não autorizado | MFA + auditoria. |
 
-| **Referências** | 1. AWS IAM Documentation<br>2. AWS KMS Documentation<br>3. Lei Geral de Proteção de Dados (LGPD) |
-
----
-
-## 4. MATRIZ DE RASTREAMENTO
+## 4. Matriz de Rastreamento
 
 | **Caso de Uso** | **Requisitos Suplementares** | **Documento de Visão** | **Serviços AWS** |
 | :--- | :--- | :--- | :--- |
@@ -426,9 +372,7 @@ UC6 ..> AWS
 | UC-ARQ-006 | Manutenibilidade (Deploy/Rollback) | Automação | CodePipeline, CodeBuild, CodeDeploy |
 | UC-ARQ-007 | Segurança (LGPD), Compliance | Segurança e Privacidade | IAM, KMS, Secrets Manager, CloudTrail |
 
----
-
-## 5. APROVAÇÕES
+## 5. Aprovações
 
 | **Função** | **Nome** | **Data** | **Assinatura** |
 | :--- | :--- | :--- | :--- |
@@ -436,15 +380,9 @@ UC6 ..> AWS
 | Professor Responsável | | | |
 | Coordenador do Curso | | | |
 
----
-
-## 6. HISTÓRICO DE VERSÕES
+## 6. Histórico de Versões
 
 | **Versão** | **Data** | **Autor** | **Descrição das Alterações** |
 | :--- | :--- | :--- | :--- |
 | 0.1 | [DD/MM/AAAA] | [Nome do Grupo] | Criação inicial do documento. |
 | 1.0 | [DD/MM/AAAA] | [Nome do Grupo] | Versão completa com todos os casos de uso. |
-
----
-
-**FIM DO DOCUMENTO**

@@ -6,9 +6,11 @@
 | Aula 02 - 13/08/2026 | :material-check: [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  |
 | Aula 03 - 20/08/2026 | :material-check: [AWS Educate](https://awseducate.instructure.com/courses/1160) <br> :material-check: [Avaliação de Custos](../Disciplina/docs/aula03/AWS_Financial_Blueprint.pdf) <br> :material-check: Fase de Iniciação |
 | Aula 04 - 27/08/2026 | :material-check: [Requisitos Suplementares](../Disciplina/docs/aula04/Requisitos%20Suplementares.pdf)  |
-| Aula 05 - 03/08/2026 | :material-check: Casos de Uso Arquiteturais |
-
-
+| Aula 05 - 03/09/2026 | :material-check: Casos de Uso Arquiteturais |
+| Aula 06 - 10/09/2026 | :material-check: Teste de Progresso  |
+| Aula 07 - 17/09/2026 | :material-check:  |
+| Aula 08 - 24/09/2026 | :material-check:  |
+| Aula 08 - 01/10/2026 | :material-check: AP1 |
 <!--
 Aula 05 - 26/03/2026 | :material-check: Roteiro Nginx |
 Aula 06 - 02/04/2026 | :material-check: Feridado  |
