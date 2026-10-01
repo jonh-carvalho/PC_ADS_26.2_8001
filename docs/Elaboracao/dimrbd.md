@@ -1,6 +1,6 @@
-# MODELO DE ANÁLISE (CLASSES DE ANÁLISE)
+# Modelo de Análise (Classes de Análise)
 
-## DIMENSIONAMENTO DE BANCO DE DADOS (RDS)
+## Dimensionamento de Banco de Dados (RDS)
 
 ## [NOME DO PROJETO] - [DESCRIÇÃO CURTA DO PROJETO]
 

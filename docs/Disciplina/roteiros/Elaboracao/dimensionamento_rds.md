@@ -1,8 +1,8 @@
-# MODELO DE ANÁLISE (CLASSES DE ANÁLISE)
+# Modelo de Análise (Classes de Análise)
 
-## DIMENSIONAMENTO DE BANCO DE DADOS (RDS)
+## Dimensionamento de Banco de Dados (RDS)
 
-## SWIFTTRACK IOT - PLATAFORMA DE TELEMETRIA E GESTÃO LOGÍSTICA
+## SwiftTrack IOT - Plataforma de Telemetria e Gestão Logística
 
 ---
 
@@ -19,13 +19,14 @@
 
 ---
 
-## 1. INTRODUÇÃO
+## 1. Introdução
 
 ### 1.1. Propósito
 
 Este documento apresenta o **Modelo de Análise (Classes de Análise)** para o dimensionamento do banco de dados relacional **Amazon RDS (PostgreSQL)** da plataforma **SwiftTrack IoT** na AWS. O modelo descreve as classes de análise responsáveis pela persistência de dados transacionais (faturas, clientes, rotas, motoristas), suas responsabilidades, atributos e relacionamentos, além das decisões de dimensionamento baseadas nos requisitos não-funcionais.
 
 O modelo é derivado diretamente dos seguintes artefatos:
+
 - **Documento de Visão** (Semana 1) - Seção "Recursos do Produto (Arquitetura AWS)"
 - **Documento de Requisitos Suplementares** (Semana 2) - Seções "Desempenho" e "Confiabilidade"
 - **Modelo de Casos de Uso Arquiteturais** (Semana 3) - UC-ARQ-004 (Conectividade entre Camadas)
@@ -34,6 +35,7 @@ O modelo é derivado diretamente dos seguintes artefatos:
 ### 1.2. Escopo
 
 O modelo abrange o dimensionamento do banco de dados relacional RDS PostgreSQL, incluindo:
+
 - **Instância primária** (`DatabaseInstance`) com Multi-AZ
 - **Réplica de leitura** (`ReadReplica`) para dashboards e relatórios
 - **Política de backup** (`BackupPolicy`) com PITR e retenção de 30 dias
@@ -73,7 +75,7 @@ O modelo abrange o dimensionamento do banco de dados relacional RDS PostgreSQL, 
 
 ---
 
-## 2. VISÃO GERAL DO DIMENSIONAMENTO
+## 2. Visão Geral do Dimensionamento
 
 ### 2.1. Requisitos que Impactam o Dimensionamento
 
@@ -94,44 +96,44 @@ O modelo abrange o dimensionamento do banco de dados relacional RDS PostgreSQL, 
 
 ### 2.2. Arquitetura de Banco de Dados
 
-```
+```text
 +------------------------------------------------------------------+
 |                    ARQUITETURA RDS SWIFTTRACK                     |
 +------------------------------------------------------------------+
-|                                                                   |
-|  +---------------------------+  +-----------------------------+   |
-|  |  AZ us-east-1a            |  |  AZ us-east-1b              |   |
-|  |  +---------------------+  |  |  +---------------------+  |   |
-|  |  | Subnet-Private-A    |  |  |  | Subnet-Private-B    |  |   |
-|  |  | 10.0.3.0/24         |  |  |  | 10.0.4.0/24         |  |   |
-|  |  |                     |  |  |  |                     |  |   |
-|  |  | [RDS Primary]       |  |  |  | [RDS Standby]       |  |   |
-|  |  | db.t3.medium        |  |  |  | db.t3.medium        |  |   |
-|  |  | 100 GB gp3          |  |  |  | 100 GB gp3          |  |   |
-|  |  | Multi-AZ: Sim       |  |  |  | Multi-AZ: Sim       |  |   |
-|  |  |                     |  |  |  |                     |  |   |
-|  |  | Replicação          |  |  |  |                     |  |   |
-|  |  | Síncrona            |  |  |  |                     |  |   |
-|  |  +----------+----------+  |  |  +---------------------+  |   |
-|  |             |              |  |                            |   |
-|  |  +----------v----------+  |  |  +---------------------+  |   |
-|  |  | [Read Replica]      |  |  |  | [Backup]            |  |   |
-|  |  | db.t3.small         |  |  |  | Snapshot diário     |  |   |
-|  |  | 100 GB gp3          |  |  |  | Retenção: 30 dias   |  |   |
-|  |  | Replicação assínc.  |  |  |  | PITR: 15 min        |  |   |
-|  |  +---------------------+  |  |  +---------------------+  |   |
-|  +---------------------------+  +-----------------------------+   |
-|                                                                   |
-|  +-----------------------------------------------------------+   |
-|  |  Configurações Adicionais                                 |   |
-|  |  - Engine: PostgreSQL 14                                  |   |
-|  |  - Backup Retention: 30 dias                              |   |
-|  |  - PITR: Habilitado (RPO 15 min)                          |   |
-|  |  - Encryption: AES-256 (KMS CMK)                          |   |
-|  |  - Parameter Group: customizado (max_connections=500)     |   |
-|  |  - Security Group: SG-RDS (porta 5432, origem SG-EC2-API) |   |
-|  |  - Subnet Group: sub-redes privadas (Multi-AZ)            |   |
-|  +-----------------------------------------------------------+   |
+|                                                                  |
+|  +---------------------------+   +-----------------------------+  |
+|  | AZ us-east-1a            |   | AZ us-east-1b              |  |
+|  | +---------------------+  |   | +---------------------+    |  |
+|  | | Subnet-Private-A    |  |   | | Subnet-Private-B    |    |  |
+|  | | 10.0.3.0/24         |  |   | | 10.0.4.0/24         |    |  |
+|  | |                     |  |   | |                     |    |  |
+|  | | [RDS Primary]       |  |   | | [RDS Standby]       |    |  |
+|  | | db.t3.medium        |  |   | | db.t3.medium        |    |  |
+|  | | 100 GB gp3          |  |   | | 100 GB gp3          |    |  |
+|  | | Multi-AZ: Sim       |  |   | | Multi-AZ: Sim       |    |  |
+|  | |                     |  |   | |                     |    |  |
+|  | | Replicação          |  |   | |                     |    |  |
+|  | | Síncrona            |  |   | |                     |    |  |
+|  | +----------+----------+  |   | +---------------------+    |  |
+|  |            |               |   |                           |  |
+|  | +----------v----------+   |   | +---------------------+    |  |
+|  | | [Read Replica]      |   |   | | [Backup]            |    |  |
+|  | | db.t3.small         |   |   | | Snapshot diário     |    |  |
+|  | | 100 GB gp3          |   |   | | Retenção: 30 dias   |    |  |
+|  | | Replicação assínc.  |   |   | | PITR: 15 min        |    |  |
+|  | +---------------------+   |   | +---------------------+    |  |
+|  +---------------------------+   +-----------------------------+  |
+|                                                                  |
+|  +------------------------------------------------------------+  |
+|  | Configurações Adicionais                                    |  |
+|  | - Engine: PostgreSQL 14                                     |  |
+|  | - Backup Retention: 30 dias                                 |  |
+|  | - PITR: Habilitado (RPO 15 min)                             |  |
+|  | - Encryption: AES-256 (KMS CMK)                              |  |
+|  | - Parameter Group: customizado (max_connections=500)        |  |
+|  | - Security Group: SG-RDS (porta 5432, origem SG-EC2-API)    |  |
+|  | - Subnet Group: sub-redes privadas (Multi-AZ)               |  |
+|  +------------------------------------------------------------+  |
 +------------------------------------------------------------------+
 ```
 
@@ -149,11 +151,11 @@ O modelo abrange o dimensionamento do banco de dados relacional RDS PostgreSQL, 
 
 ---
 
-## 3. ESPECIFICAÇÃO DAS CLASSES DE ANÁLISE
+## 3. Especificação das Classes de Análise
 
 ---
 
-### 3.1. CLASSE: DATABASEINSTANCE
+### 3.1. Classe: DATABASEINSTANCE
 
 #### 3.1.1. Responsabilidade
 
@@ -232,7 +234,7 @@ Representar a instância primária do banco de dados RDS PostgreSQL, gerenciando
 
 ---
 
-### 3.2. CLASSE: READREPLICA
+### 3.2. Classe: READREPLICA
 
 #### 3.2.1. Responsabilidade
 
@@ -285,7 +287,7 @@ Representar uma réplica de leitura do banco de dados, utilizada para distribuir
 
 ---
 
-### 3.3. CLASSE: BACKUPPOLICY
+### 3.3. Classe: BACKUPPOLICY
 
 #### 3.3.1. Responsabilidade
 
@@ -341,7 +343,7 @@ Gerenciar as políticas de backup automático e recuperação do banco de dados,
 
 ---
 
-### 3.4. CLASSE: PARAMETERGROUP
+### 3.4. Classe: PARAMETERGROUP
 
 #### 3.4.1. Responsabilidade
 
@@ -394,7 +396,7 @@ Gerenciar as configurações específicas do engine PostgreSQL, otimizando perfo
 
 ---
 
-### 3.5. CLASSE: SECURITYGROUP
+### 3.5. Classe: SECURITYGROUP
 
 #### 3.5.1. Responsabilidade
 
@@ -446,7 +448,7 @@ Controlar o acesso de rede à instância RDS, permitindo apenas conexões da cam
 
 ---
 
-### 3.6. CLASSE: SUBNETGROUP
+### 3.6. Classe: SUBNETGROUP
 
 #### 3.6.1. Responsabilidade
 
@@ -485,7 +487,7 @@ Definir as sub-redes privadas onde a instância RDS será implantada, garantindo
 
 ---
 
-## 4. DIAGRAMA DE CLASSES (PLANTUML)
+## 4. Diagrama de Classes (PlantUML)
 
 ```plantuml
 @startuml
@@ -592,7 +594,7 @@ package "Banco de Dados" {
 
 ---
 
-## 5. DIAGRAMA DE SEQUÊNCIA - FAILOVER MULTI-AZ
+## 5. Diagrama de Sequência - Failover Multi-AZ
 
 ```plantuml
 @startuml
@@ -656,7 +658,7 @@ deactivate SNS
 
 ---
 
-## 6. DIAGRAMA DE ATIVIDADES - RESTAURAÇÃO PITR
+## 6. Diagrama de Atividades - Restauração PITR
 
 ```plantuml
 @startuml
@@ -699,7 +701,7 @@ endif
 
 ---
 
-## 7. MEMÓRIA DE CÁLCULO
+## 7. Memória de Cálculo
 
 ### 7.1. Cálculo de vCPU e Memória
 
@@ -758,7 +760,7 @@ endif
 
 ---
 
-## 8. TRADE-OFFS DOCUMENTADOS
+## 8. Trade-Offs Documentados
 
 | **Decisão** | **Alternativa** | **Prós** | **Contras** | **Custo Impacto** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -771,7 +773,7 @@ endif
 
 ---
 
-## 9. RISCOS E MITIGAÇÕES
+## 9. Riscos e Mitigações
 
 | **Risco** | **Probabilidade** | **Impacto** | **Mitigação** |
 | :--- | :--- | :--- | :--- |
@@ -785,7 +787,7 @@ endif
 
 ---
 
-## 10. CONSIDERAÇÕES FINAIS
+## 10. Cconsiderações Finais
 
 ### 10.1. Lições Aprendidas
 
@@ -803,7 +805,7 @@ endif
 
 ---
 
-## 11. APROVAÇÕES
+## 11. Aprovações
 
 | **Função** | **Nome** | **Data** | **Assinatura** |
 | :--- | :--- | :--- | :--- |
@@ -814,20 +816,17 @@ endif
 
 ---
 
-## 12. HISTÓRICO DE VERSÕES
+## 12. Histórico de Versões
+
 
 | **Versão** | **Data** | **Autor** | **Descrição das Alterações** |
 | :--- | :--- | :--- | :--- |
 | 0.1 | [DD/MM/AAAA] | [Nome do Grupo] | Criação inicial do documento. |
 | 1.0 | [DD/MM/AAAA] | [Nome do Grupo] | Versão completa com todas as classes e cálculos. |
 
----
 
-**FIM DO DOCUMENTO**
 
----
-
-## INSTRUÇÕES DE PREENCHIMENTO
+## Instruções de Preenchimento
 
 ### Como Utilizar Este Modelo
 
