@@ -16,6 +16,7 @@ nav:
       - Elaboração:
         - Casos de Uso Arquiteturais: Disciplina\roteiros\Elaboracao\casos_uso_arquiteturais.md
         - Modelo de Análise (Pacotes/Subsistemas): Disciplina\roteiros\Elaboracao\modelo_de_analise-pacotes_subsistemas.md 
+        - Modelo de Análise (Dimensionamento BD): Disciplina\roteiros\Elaboracao\dimensionamento_rds.md
         #- Plan3: Disciplina/roteiros/Iniciacao/plan3casetemplate.md
 #      - Ambiente: Disciplina/ambiente.md
 #      - Roteiro:
@@ -35,7 +36,7 @@ nav:
     - Index: Elaboracao/index.md
     - Casos de Uso Arquiteturais: Elaboracao/cua.
     - Modelo de Análise (Pacotes/Subsistemas): Elaboracao/maps.md
-
+    - Modelo de Análise (Dimensionamento BD): Elaboracao/dimrbd.md
 
   - Bibliografia: Disciplina/bibliografia.md
 
