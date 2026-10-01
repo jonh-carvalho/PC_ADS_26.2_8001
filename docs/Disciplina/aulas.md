@@ -8,9 +8,9 @@
 | Aula 04 - 27/08/2026 | :material-check: [Requisitos Suplementares](../Disciplina/docs/aula04/Requisitos%20Suplementares.pdf)  |
 | Aula 05 - 03/09/2026 | :material-check: Casos de Uso Arquiteturais |
 | Aula 06 - 10/09/2026 | :material-check: Teste de Progresso  |
-| Aula 07 - 17/09/2026 | :material-check:  Análise - Pacotes |
+| Aula 07 - 17/09/2026 | :material-check:  Análise - [Pacotes](../Disciplina/docs/aula07/Aws_Security.pdf) |
 | Aula 08 - 24/09/2026 | :material-check: AP1  |
-| Aula 09 - 01/10/2026 | :material-check: RDS |
+| Aula 09 - 01/10/2026 | :material-check: [Dimensionamento](../Disciplina/docs/aula09/Dimensionamento_RDS.pdf) - RDS |
 | Aula 10 - 08/10/2026 | :material-check: S3  |
 | Aula 11 - 15/10/2026 | :material-check: Feriado |
 | Aula 12 - 22/10/2026 | :material-check:  |
