@@ -29,10 +29,11 @@ hide:
 
       <section class="bdcc-card bdcc-card--accent">
         <h2 class="bdcc-card__title">Entrega das atividades</h2>
-        <p class="bdcc-note">
+        <p class="bdcc-note">         
           As APs deverão ser enviadas no GitHub.
         </p>
         <div class="bdcc-accent-line" aria-hidden="true"></div>
+        <a href="https://github.com/Projetos-de-Extensao/PC_ADS_26.2_8001_I">Grupo I</a>, <a href="https://github.com/Projetos-de-Extensao/PC_ADS_26.2_8001_II">Grupo II</a>, <a href="https://github.com/Projetos-de-Extensao/PC_ADS_26.2_8001_III">Grupo III</a> e <a href="https://github.com/Projetos-de-Extensao/PC_ADS_26.2_8001_IV">Grupo IV</a>
       </section>
     </div>
   </div>
