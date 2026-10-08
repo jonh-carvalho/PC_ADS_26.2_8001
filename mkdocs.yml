@@ -36,7 +36,7 @@ nav:
     - Requisitos Suplementares: Iniciacao/rs.md
   - Elaboração: 
     - Index: Elaboracao/index.md
-    - Casos de Uso Arquiteturais: Elaboracao/cua.
+    - Casos de Uso Arquiteturais: Elaboracao/cua.md
     - Modelo de Análise (Pacotes/Subsistemas): Elaboracao/maps.md
     - Modelo de Análise (Dimensionamento BD): Elaboracao/dimrbd.md
     - Modelo de Análise (Modelo de Computação): Elaboracao/dim_comp.md
