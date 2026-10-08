@@ -1,0 +1,3825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+        <link rel="prev" href="../dimrbd/">
+      
+      
+        <link rel="next" href="../seq_com/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Modelo de Análise (Modelo de Computação) - PC_ADS_26.2_8001</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-de-analise-classes-de-analise" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PC_ADS_26.2_8001" class="md-header__button md-logo" aria-label="PC_ADS_26.2_8001" data-md-component="logo">
+      
+  <img src="../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PC_ADS_26.2_8001
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modelo de Análise (Modelo de Computação)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#193257" data-md-color-accent="#FAB90A"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="all" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PC_ADS_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Disciplina/aulas/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Iniciacao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Elaboração
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Disciplina/bibliografia/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PC_ADS_26.2_8001" class="md-nav__button md-logo" aria-label="PC_ADS_26.2_8001" data-md-component="logo">
+      
+  <img src="../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PC_ADS_26.2_8001
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PC_ADS_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disciplina
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Disciplina
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/aulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iniciação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Iniciação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/desafios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desafios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/case_template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Case Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/dv_template_preenchido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documento de Visão Preenchido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/requisitos_suplementares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos Suplementares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elaboração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elaboração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Elaboracao/casos_uso_arquiteturais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Uso Arquiteturais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Elaboracao/modelo_de_analise-pacotes_subsistemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Análise (Pacotes/Subsistemas)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Elaboracao/dimensionamento_rds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Análise (Dimensionamento BD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Elaboracao/dimens_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Análise (Modelo de Computação)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Elaboracao/consolida_arqui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Design (Consolidação Arquitetural)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Iniciacao/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iniciação
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Iniciação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/dv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documento de Visão Preenchido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos Suplementares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elaboração
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elaboração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cua." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Uso Arquiteturais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Análise (Pacotes/Subsistemas)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dimrbd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Análise (Dimensionamento BD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Análise (Modelo de Computação)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Análise (Modelo de Computação)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dimensionamento-de-computacao-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DIMENSIONAMENTO DE COMPUTAÇÃO (EC2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nome-do-projeto-descricao-curta-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [NOME DO PROJETO] - [DESCRIÇÃO CURTA DO PROJETO]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. INTRODUÇÃO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. INTRODUÇÃO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Propósito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-definicoes-e-siglas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Definições e Siglas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Referências
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visao-geral-do-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. VISÃO GERAL DO DIMENSIONAMENTO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. VISÃO GERAL DO DIMENSIONAMENTO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-requisitos-que-impactam-o-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Requisitos que Impactam o Dimensionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-arquitetura-de-computacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Arquitetura de Computação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-matriz-de-rastreamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Matriz de Rastreamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-especificacao-das-classes-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ESPECIFICAÇÃO DAS CLASSES DE ANÁLISE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. ESPECIFICAÇÃO DAS CLASSES DE ANÁLISE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-classe-computeinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. CLASSE: COMPUTEINSTANCE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. CLASSE: COMPUTEINSTANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1. Responsabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2. Atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-responsabilidades-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3. Responsabilidades (Métodos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4. Relacionamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-justificativa-do-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.5. Justificativa do Dimensionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-estimativa-de-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.6. Estimativa de Custo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-classe-autoscalinggroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. CLASSE: AUTOSCALINGGROUP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. CLASSE: AUTOSCALINGGROUP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1. Responsabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2. Atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-responsabilidades-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3. Responsabilidades (Métodos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4. Relacionamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-justificativa-do-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.5. Justificativa do Dimensionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-estimativa-de-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.6. Estimativa de Custo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-classe-loadbalancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. CLASSE: LOADBALANCER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. CLASSE: LOADBALANCER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1. Responsabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2. Atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-responsabilidades-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3. Responsabilidades (Métodos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.4. Relacionamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335-justificativa-do-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.5. Justificativa do Dimensionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#336-estimativa-de-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.6. Estimativa de Custo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-classe-targetgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. CLASSE: TARGETGROUP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. CLASSE: TARGETGROUP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1. Responsabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2. Atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-responsabilidades-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3. Responsabilidades (Métodos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4. Relacionamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#345-justificativa-do-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.5. Justificativa do Dimensionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#346-estimativa-de-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.6. Estimativa de Custo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-classe-launchtemplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. CLASSE: LAUNCHTEMPLATE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. CLASSE: LAUNCHTEMPLATE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1. Responsabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.2. Atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-responsabilidades-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.3. Responsabilidades (Métodos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.4. Relacionamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-justificativa-do-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.5. Justificativa do Dimensionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#356-estimativa-de-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.6. Estimativa de Custo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-classe-scalingpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. CLASSE: SCALINGPOLICY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. CLASSE: SCALINGPOLICY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.1. Responsabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2. Atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#363-responsabilidades-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.3. Responsabilidades (Métodos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.4. Relacionamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#365-justificativa-do-dimensionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.5. Justificativa do Dimensionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#366-estimativa-de-custo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.6. Estimativa de Custo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-diagrama-de-classes-plantuml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DIAGRAMA DE CLASSES (PLANTUML)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seq_com/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Design (Consolidação Arquitetural)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/bibliografia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bibliografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modelo-de-analise-classes-de-analise">MODELO DE ANÁLISE (CLASSES DE ANÁLISE)<a class="headerlink" href="#modelo-de-analise-classes-de-analise" title="Permanent link">&para;</a></h1>
+<h2 id="dimensionamento-de-computacao-ec2">DIMENSIONAMENTO DE COMPUTAÇÃO (EC2)<a class="headerlink" href="#dimensionamento-de-computacao-ec2" title="Permanent link">&para;</a></h2>
+<h2 id="nome-do-projeto-descricao-curta-do-projeto">[NOME DO PROJETO] - [DESCRIÇÃO CURTA DO PROJETO]<a class="headerlink" href="#nome-do-projeto-descricao-curta-do-projeto" title="Permanent link">&para;</a></h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Informação do Documento</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Projeto</strong></td>
+<td style="text-align: left;">[Nome do Projeto]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Documento</strong></td>
+<td style="text-align: left;">Modelo de Análise (Classes de Análise) - Dimensionamento de Computação (EC2)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Responsável</strong></td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disciplina</strong></td>
+<td style="text-align: left;">Projeto de Cloud - Semana 6</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fase RUP/UP</strong></td>
+<td style="text-align: left;">Elaboration</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-introducao">1. INTRODUÇÃO<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<h3 id="11-proposito">1.1. Propósito<a class="headerlink" href="#11-proposito" title="Permanent link">&para;</a></h3>
+<p>Este documento apresenta o <strong>Modelo de Análise (Classes de Análise)</strong> para o dimensionamento da camada de computação <strong>[Amazon EC2 / Amazon ECS / AWS Fargate]</strong> da plataforma <strong>[NOME DO PROJETO]</strong> na AWS. O modelo descreve as classes de análise responsáveis pelo processamento da API, suas responsabilidades, atributos e relacionamentos, além das decisões de dimensionamento baseadas nos requisitos não-funcionais.</p>
+<p>O modelo é derivado diretamente dos seguintes artefatos:
+- <strong>Documento de Visão</strong> (Semana 1) - Seção "Recursos do Produto (Arquitetura AWS)"
+- <strong>Documento de Requisitos Suplementares</strong> (Semana 2) - Seções "Desempenho" e "Disponibilidade"
+- <strong>Modelo de Casos de Uso Arquiteturais</strong> (Semana 3) - UC-ARQ-XXX (Conectividade entre Camadas)
+- <strong>Modelo de Análise (Pacotes/Subsistemas)</strong> (Semana 4) - Pacote "[Network Security]"
+- <strong>Modelo de Análise (Classes) - RDS</strong> (Semana 5) - Integração com banco de dados</p>
+<h3 id="12-escopo">1.2. Escopo<a class="headerlink" href="#12-escopo" title="Permanent link">&para;</a></h3>
+<p>O modelo abrange o dimensionamento da camada de computação, incluindo:
+- <strong>Instância de computação</strong> (<code>ComputeInstance</code>) para a API
+- <strong>Auto Scaling Group</strong> (<code>AutoScalingGroup</code>) para escalabilidade automática
+- <strong>Load Balancer</strong> (<code>LoadBalancer</code>) para distribuição de carga
+- <strong>Target Group</strong> (<code>TargetGroup</code>) para registro de instâncias
+- <strong>Launch Template</strong> (<code>LaunchTemplate</code>) para padronização de instâncias
+- <strong>Políticas de Escalonamento</strong> (<code>ScalingPolicy</code>) para escala horizontal
+- <strong>Cálculos de dimensionamento</strong> (vCPU, memória, número de instâncias)
+- <strong>Estimativa de custo</strong> e comparação com alternativas</p>
+<p><strong>Fora do escopo:</strong> Instâncias EC2 para o NAT Gateway (tratadas na Semana 3), Lambda (serverless, tratado em documento separado), RDS (tratado na Semana 5) e S3 (tratado na Semana 7).</p>
+<h3 id="13-definicoes-e-siglas">1.3. Definições e Siglas<a class="headerlink" href="#13-definicoes-e-siglas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Sigla</strong></th>
+<th style="text-align: left;"><strong>Definição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>EC2</strong></td>
+<td style="text-align: left;">Elastic Compute Cloud</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ALB</strong></td>
+<td style="text-align: left;">Application Load Balancer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NLB</strong></td>
+<td style="text-align: left;">Network Load Balancer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ASG</strong></td>
+<td style="text-align: left;">Auto Scaling Group</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>AMI</strong></td>
+<td style="text-align: left;">Amazon Machine Image</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS</strong></td>
+<td style="text-align: left;">Elastic Block Store</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS</strong></td>
+<td style="text-align: left;">Transactions Per Second</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Multi-AZ</strong></td>
+<td style="text-align: left;">Múltiplas Zonas de Disponibilidade</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SLA</strong></td>
+<td style="text-align: left;">Service Level Agreement</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPO</strong></td>
+<td style="text-align: left;">Recovery Point Objective</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RTO</strong></td>
+<td style="text-align: left;">Recovery Time Objective</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD</strong></td>
+<td style="text-align: left;">Lei Geral de Proteção de Dados</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG</strong></td>
+<td style="text-align: left;">Security Group</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-referencias">1.4. Referências<a class="headerlink" href="#14-referencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Documento de Visão - [NOME DO PROJETO] (v1.0)</li>
+<li>Documento de Requisitos Suplementares - [NOME DO PROJETO] (v1.0)</li>
+<li>Modelo de Casos de Uso Arquiteturais - [NOME DO PROJETO] (v1.0)</li>
+<li>Modelo de Análise (Pacotes/Subsistemas) - [NOME DO PROJETO] (v1.0)</li>
+<li>Modelo de Análise (Classes) - RDS - [NOME DO PROJETO] (v1.0)</li>
+<li>AWS EC2 Documentation</li>
+<li>AWS Auto Scaling Documentation</li>
+<li>AWS Well-Architected Framework - Performance Efficiency Pillar</li>
+<li>AWS EC2 Pricing</li>
+</ul>
+<hr />
+<h2 id="2-visao-geral-do-dimensionamento">2. VISÃO GERAL DO DIMENSIONAMENTO<a class="headerlink" href="#2-visao-geral-do-dimensionamento" title="Permanent link">&para;</a></h2>
+<h3 id="21-requisitos-que-impactam-o-dimensionamento">2.1. Requisitos que Impactam o Dimensionamento<a class="headerlink" href="#21-requisitos-que-impactam-o-dimensionamento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Usuários ativos</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Documento de Visão</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Requisições por segundo (pico)</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Latência máxima (API)</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU por requisição</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Estimativa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória por requisição</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Estimativa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conexões simultâneas</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Estimativa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SLA de disponibilidade</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Picos de demanda</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPO</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RTO</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orçamento total do projeto</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Documento de Visão</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orçamento alocado para EC2</strong></td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">Estimativa</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-arquitetura-de-computacao">2.2. Arquitetura de Computação<a class="headerlink" href="#22-arquitetura-de-computacao" title="Permanent link">&para;</a></h3>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:1756px;height:803px;background:#FFFFFF;" width="1756px" height="803px" viewBox="0 0 1756 803" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="title" data-source-line="2"><text x="676.066" y="22.995" fill="#000" font-size="14" textLength="396.867" font-weight="700">Arquitetura de Computação - [NOME DO PROJETO]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o." id="ent0001" data-source-line="7"><polygon points="16,53.297,26,43.297,1731,43.297,1731,768.637,1721,778.637,16,778.637,16,53.297" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1721" y1="53.297" x2="1731" y2="43.297" style="stroke:#181818;stroke-width:1;"/><line x1="16" y1="53.297" x2="1721" y2="53.297" style="stroke:#181818;stroke-width:1;"/><line x1="1721" y1="53.297" x2="1721" y2="778.637" style="stroke:#181818;stroke-width:1;"/><text x="785.626" y="69.292" fill="#000" font-size="14" textLength="167.747" font-weight="700">AWS Region [Região]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR." id="ent0002" data-source-line="8"><polygon points="40,101.297,50,91.297,1707,91.297,1707,744.637,1697,754.637,40,754.637,40,101.297" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1697" y1="101.297" x2="1707" y2="91.297" style="stroke:#181818;stroke-width:1;"/><line x1="40" y1="101.297" x2="1697" y2="101.297" style="stroke:#181818;stroke-width:1;"/><line x1="1697" y1="101.297" x2="1697" y2="754.637" style="stroke:#181818;stroke-width:1;"/><text x="826.037" y="117.292" fill="#000" font-size="14" textLength="86.926" font-weight="700">VPC [CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome." id="ent0003" data-source-line="9"><polygon points="64,149.297,74,139.297,759,139.297,759,720.637,749,730.637,64,730.637,64,149.297" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="749" y1="149.297" x2="759" y2="139.297" style="stroke:#181818;stroke-width:1;"/><line x1="64" y1="149.297" x2="749" y2="149.297" style="stroke:#181818;stroke-width:1;"/><line x1="749" y1="149.297" x2="749" y2="730.637" style="stroke:#181818;stroke-width:1;"/><text x="365.462" y="165.292" fill="#000" font-size="14" textLength="84.075" font-weight="700">AZ [Nome]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-A.n.CIDR." id="ent0004" data-source-line="10"><polygon points="307,197.297,317,187.297,509,187.297,509,311.897,499,321.897,307,321.897,307,197.297" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="499" y1="197.297" x2="509" y2="187.297" style="stroke:#181818;stroke-width:1;"/><line x1="307" y1="197.297" x2="499" y2="197.297" style="stroke:#181818;stroke-width:1;"/><line x1="499" y1="197.297" x2="499" y2="321.897" style="stroke:#181818;stroke-width:1;"/><text x="340.586" y="213.292" fill="#000" font-size="14" textLength="126.827" font-weight="700">Subnet-Public-A</text><text x="340.586" y="229.589" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR." id="ent0006" data-source-line="13"><polygon points="88,380.897,98,370.897,500,370.897,500,696.637,490,706.637,88,706.637,88,380.897" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="490" y1="380.897" x2="500" y2="370.897" style="stroke:#181818;stroke-width:1;"/><line x1="88" y1="380.897" x2="490" y2="380.897" style="stroke:#181818;stroke-width:1;"/><line x1="490" y1="380.897" x2="490" y2="706.637" style="stroke:#181818;stroke-width:1;"/><text x="222.297" y="396.892" fill="#000" font-size="14" textLength="135.406" font-weight="700">Subnet-Private-A</text><text x="222.297" y="413.189" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A" id="ent0007" data-source-line="14"><rect x="120" y="442.897" width="348" height="231.74" fill="#E3F2FD" style="stroke:#181818;stroke-width:1;" rx="2.5" ry="2.5"/><rect x="448" y="447.897" width="15" height="10" fill="#E3F2FD" style="stroke:#181818;stroke-width:1;"/><rect x="446" y="449.897" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:1;"/><rect x="446" y="453.897" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:1;"/><text x="228.402" y="468.892" fill="#000" font-size="14" textLength="46.785" font-weight="700">[Tipo]</text><text x="228.402" y="485.189" fill="#000" font-size="14" textLength="131.195" font-weight="700">([InstanceType])</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-B.n.CIDR." id="ent0011" data-source-line="22"><polygon points="533,197.297,543,187.297,735,187.297,735,311.897,725,321.897,533,321.897,533,197.297" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="725" y1="197.297" x2="735" y2="187.297" style="stroke:#181818;stroke-width:1;"/><line x1="533" y1="197.297" x2="725" y2="197.297" style="stroke:#181818;stroke-width:1;"/><line x1="725" y1="197.297" x2="725" y2="321.897" style="stroke:#181818;stroke-width:1;"/><text x="566.668" y="213.292" fill="#000" font-size="14" textLength="126.663" font-weight="700">Subnet-Public-B</text><text x="566.668" y="229.589" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-B.n.CIDR." id="ent0013" data-source-line="25"><polygon points="524,442.747,534,432.747,735,432.747,735,557.337,725,567.337,524,567.337,524,442.747" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="725" y1="442.747" x2="735" y2="432.747" style="stroke:#181818;stroke-width:1;"/><line x1="524" y1="442.747" x2="725" y2="442.747" style="stroke:#181818;stroke-width:1;"/><line x1="725" y1="442.747" x2="725" y2="567.337" style="stroke:#181818;stroke-width:1;"/><text x="557.879" y="458.742" fill="#000" font-size="14" textLength="135.242" font-weight="700">Subnet-Private-B</text><text x="557.879" y="475.039" fill="#000" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Auto Scaling Group" id="ent0015" data-source-line="34"><polygon points="783,213.297,793,203.297,1011,203.297,1011,311.897,1001,321.897,783,321.897,783,213.297" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1001" y1="213.297" x2="1011" y2="203.297" style="stroke:#181818;stroke-width:1;"/><line x1="783" y1="213.297" x2="1001" y2="213.297" style="stroke:#181818;stroke-width:1;"/><line x1="1001" y1="213.297" x2="1001" y2="321.897" style="stroke:#181818;stroke-width:1;"/><text x="816.861" y="229.292" fill="#000" font-size="14" textLength="152.277" font-weight="700">Auto Scaling Group</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template" id="ent0017" data-source-line="38"><polygon points="1035,226.447,1045,216.447,1324,216.447,1324,544.187,1314,554.187,1035,554.187,1035,226.447" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1314" y1="226.447" x2="1324" y2="216.447" style="stroke:#181818;stroke-width:1;"/><line x1="1035" y1="226.447" x2="1314" y2="226.447" style="stroke:#181818;stroke-width:1;"/><line x1="1314" y1="226.447" x2="1314" y2="554.187" style="stroke:#181818;stroke-width:1;"/><text x="1107.735" y="242.442" fill="#000" font-size="14" textLength="135.529" font-weight="700">Launch Template</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group" id="ent0022" data-source-line="45"><polygon points="1348,226.447,1358,216.447,1683,216.447,1683,544.187,1673,554.187,1348,554.187,1348,226.447" fill="#F5F5F5" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1673" y1="226.447" x2="1683" y2="216.447" style="stroke:#181818;stroke-width:1;"/><line x1="1348" y1="226.447" x2="1673" y2="226.447" style="stroke:#181818;stroke-width:1;"/><line x1="1673" y1="226.447" x2="1673" y2="554.187" style="stroke:#181818;stroke-width:1;"/><text x="1459.007" y="242.442" fill="#000" font-size="14" textLength="104.986" font-weight="700">Target Group</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-A.n.CIDR..ALB_A" id="ent0005" data-source-line="11"><rect x="353.06" y="243.297" width="139.873" height="62.594" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="472.933" y="248.297" width="15" height="10" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="470.933" y="250.297" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="470.933" y="254.297" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><text x="368.06" y="276.292" fill="#000" font-size="14" textLength="78.224">Application</text><text x="368.06" y="292.589" fill="#000" font-size="14" textLength="99.873">Load Balancer</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A..Framework.App." id="ent0008" data-source-line="15"><path d="M143.71,504.397 L143.71,535.694 A2.5,2.5 0 0 0 146.21,538.194 L271.795,538.194 A2.5,2.5 0 0 0 274.295,535.694 L274.295,511.897 L264.295,501.897 L146.21,501.897 A2.5,2.5 0 0 0 143.71,504.397" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M264.295,501.897 L264.295,509.397 A2.5,2.5 0 0 0 266.795,511.897 L274.295,511.897" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="153.71" y="524.892" fill="#000" font-size="14" textLength="110.585">Framework/App</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A..Servidor Web." id="ent0009" data-source-line="16"><path d="M309.78,504.397 L309.78,535.694 A2.5,2.5 0 0 0 312.28,538.194 L421.712,538.194 A2.5,2.5 0 0 0 424.212,535.694 L424.212,511.897 L414.212,501.897 L312.28,501.897 A2.5,2.5 0 0 0 309.78,504.397" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M414.212,501.897 L414.212,509.397 A2.5,2.5 0 0 0 416.712,511.897 L424.212,511.897" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="319.78" y="524.892" fill="#000" font-size="14" textLength="94.432">Servidor Web</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A..Storage." id="ent0010" data-source-line="17"><path d="M171.61,616.837 L171.61,648.134 A2.5,2.5 0 0 0 174.11,650.634 L243.886,650.634 A2.5,2.5 0 0 0 246.386,648.134 L246.386,624.337 L236.386,614.337 L174.11,614.337 A2.5,2.5 0 0 0 171.61,616.837" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M236.386,614.337 L236.386,621.837 A2.5,2.5 0 0 0 238.886,624.337 L246.386,624.337" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="181.61" y="637.332" fill="#000" font-size="14" textLength="54.776">Storage</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-B.n.CIDR..ALB_B" id="ent0012" data-source-line="23"><rect x="571.06" y="243.297" width="139.873" height="62.594" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="690.933" y="248.297" width="15" height="10" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="688.933" y="250.297" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="688.933" y="254.297" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><text x="586.06" y="276.292" fill="#000" font-size="14" textLength="78.224">Application</text><text x="586.06" y="292.589" fill="#000" font-size="14" textLength="99.873">Load Balancer</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-B.n.CIDR..EC2_B" id="ent0014" data-source-line="26"><rect x="563.13" y="488.747" width="155.732" height="62.594" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="698.862" y="493.747" width="15" height="10" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="696.862" y="495.747" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="696.862" y="499.747" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><text x="578.13" y="521.742" fill="#000" font-size="14" textLength="40.817">[Tipo]</text><text x="578.13" y="538.039" fill="#000" font-size="14" textLength="115.732">([InstanceType])</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Auto Scaling Group.ASG" id="ent0016" data-source-line="35"><rect x="798.74" y="243.297" width="168.529" height="62.594" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="947.269" y="248.297" width="15" height="10" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="945.269" y="250.297" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><rect x="945.269" y="254.297" width="4" height="2" fill="#E3F2FD" style="stroke:#181818;stroke-width:0.5;"/><text x="813.74" y="276.292" fill="#000" font-size="14" textLength="128.529">Min: [N] | Max: [N]</text><text x="813.74" y="292.589" fill="#000" font-size="14" textLength="84.396">Desired: [N]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.AMI. .AMI." id="ent0018" data-source-line="39"><path d="M1051.17,258.947 L1051.17,290.244 A2.5,2.5 0 0 0 1053.67,292.744 L1140.331,292.744 A2.5,2.5 0 0 0 1142.831,290.244 L1142.831,266.447 L1132.831,256.447 L1053.67,256.447 A2.5,2.5 0 0 0 1051.17,258.947" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M1132.831,256.447 L1132.831,263.947 A2.5,2.5 0 0 0 1135.331,266.447 L1142.831,266.447" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="1061.17" y="279.442" fill="#000" font-size="14" textLength="71.661">AMI: [AMI]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.Instance. .Tipo." id="ent0019" data-source-line="40"><path d="M1178.23,258.947 L1178.23,290.244 A2.5,2.5 0 0 0 1180.73,292.744 L1305.262,292.744 A2.5,2.5 0 0 0 1307.762,290.244 L1307.762,266.447 L1297.762,256.447 L1180.73,256.447 A2.5,2.5 0 0 0 1178.23,258.947" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M1297.762,256.447 L1297.762,263.947 A2.5,2.5 0 0 0 1300.262,266.447 L1307.762,266.447" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="1188.23" y="279.442" fill="#000" font-size="14" textLength="109.532">Instance: [Tipo]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.SG. .SG." id="ent0020" data-source-line="41"><path d="M1057.22,504.397 L1057.22,535.694 A2.5,2.5 0 0 0 1059.72,538.194 L1134.282,538.194 A2.5,2.5 0 0 0 1136.782,535.694 L1136.782,511.897 L1126.782,501.897 L1059.72,501.897 A2.5,2.5 0 0 0 1057.22,504.397" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M1126.782,501.897 L1126.782,509.397 A2.5,2.5 0 0 0 1129.282,511.897 L1136.782,511.897" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="1067.22" y="524.892" fill="#000" font-size="14" textLength="59.562">SG: [SG]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.IAM. .Role." id="ent0021" data-source-line="42"><path d="M1171.66,504.397 L1171.66,535.694 A2.5,2.5 0 0 0 1174.16,538.194 L1265.832,538.194 A2.5,2.5 0 0 0 1268.332,535.694 L1268.332,511.897 L1258.332,501.897 L1174.16,501.897 A2.5,2.5 0 0 0 1171.66,504.397" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M1258.332,501.897 L1258.332,509.397 A2.5,2.5 0 0 0 1260.832,511.897 L1268.332,511.897" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="1181.66" y="524.892" fill="#000" font-size="14" textLength="76.672">IAM: [Role]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group.Protocol. .Protocolo." id="ent0023" data-source-line="46"><path d="M1363.7,258.947 L1363.7,290.244 A2.5,2.5 0 0 0 1366.2,292.744 L1523.798,292.744 A2.5,2.5 0 0 0 1526.298,290.244 L1526.298,266.447 L1516.298,256.447 L1366.2,256.447 A2.5,2.5 0 0 0 1363.7,258.947" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M1516.298,256.447 L1516.298,263.947 A2.5,2.5 0 0 0 1518.798,266.447 L1526.298,266.447" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="1373.7" y="279.442" fill="#000" font-size="14" textLength="142.598">Protocol: [Protocolo]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group.Port. .Porta." id="ent0024" data-source-line="47"><path d="M1561.41,258.947 L1561.41,290.244 A2.5,2.5 0 0 0 1563.91,292.744 L1664.086,292.744 A2.5,2.5 0 0 0 1666.586,290.244 L1666.586,266.447 L1656.586,256.447 L1563.91,256.447 A2.5,2.5 0 0 0 1561.41,258.947" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M1656.586,256.447 L1656.586,263.947 A2.5,2.5 0 0 0 1659.086,266.447 L1666.586,266.447" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="1571.41" y="279.442" fill="#000" font-size="14" textLength="85.176">Port: [Porta]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group.Health Check. .Path." id="ent0025" data-source-line="48"><path d="M1363.52,504.397 L1363.52,535.694 A2.5,2.5 0 0 0 1366.02,538.194 L1525.983,538.194 A2.5,2.5 0 0 0 1528.483,535.694 L1528.483,511.897 L1518.483,501.897 L1366.02,501.897 A2.5,2.5 0 0 0 1363.52,504.397" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><path d="M1518.483,501.897 L1518.483,509.397 A2.5,2.5 0 0 0 1520.983,511.897 L1528.483,511.897" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1"/><text x="1373.52" y="524.892" fill="#000" font-size="14" textLength="144.963">Health Check: [Path]</text></g><g class="link" data-entity-1="ent0005" data-entity-2="ent0007" id="lnk26" data-source-line="53" data-link-type="dependency"><path d="M429.47,306.217 C432.87,322.917 436.95,343.997 440,362.897 C442.74,379.894 445.343,397.983 447.709,415.595 C448.893,424.401 450.017,433.089 451.07,441.461 C451.103,441.723 450.513,437.023 450.546,437.284" style="stroke:#181818;stroke-width:1;" fill="none" id="ALB_A-to-EC2_A"/><polygon points="451.169,442.245,454.016,432.817,450.546,437.284,446.079,433.814,451.169,442.245" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="439" y="350.964" fill="#000" font-size="13" textLength="86.595">Target Group</text></g><g class="link" data-entity-1="ent0012" data-entity-2="ent0014" id="lnk27" data-source-line="54" data-link-type="dependency"><path d="M641,305.937 C641,352.587 641,436.437 641,483.317" style="stroke:#181818;stroke-width:1;" fill="none" id="ALB_B-to-EC2_B"/><polygon points="641,488.317,645,479.317,641,483.317,637,479.317,641,488.317" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="642" y="350.964" fill="#000" font-size="13" textLength="86.595">Target Group</text></g><g class="link" data-entity-1="ent0016" data-entity-2="ent0007" id="lnk28" data-source-line="55" data-link-type="dependency"><path d="M829.36,306.257 C791.95,327.387 747.01,352.127 737,354.897 C716.63,360.527 564.99,351.807 547,362.897 C513.71,383.412 492.115,421.559 478.766,455.012 C475.429,463.375 472.607,471.445 470.247,478.872 C469.657,480.729 469.096,482.546 468.562,484.317 C468.429,484.76 469.721,480.406 469.592,480.843" style="stroke:#181818;stroke-width:1;" fill="none" id="ASG-to-EC2_A"/><polygon points="468.168,485.636,474.565,478.148,469.592,480.843,466.896,475.87,468.168,485.636" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="770" y="350.964" fill="#000" font-size="13" textLength="56.558">gerencia</text></g><g class="link" data-entity-1="ent0016" data-entity-2="ent0014" id="lnk29" data-source-line="56" data-link-type="dependency"><path d="M869.79,306.297 C862.31,321.757 852.05,340.267 840,354.897 C795.44,408.997 735.095,455.443 691.725,485.593" style="stroke:#181818;stroke-width:1;" fill="none" id="ASG-to-EC2_B"/><polygon points="687.62,488.447,697.293,486.594,691.725,485.593,692.727,480.025,687.62,488.447" fill="#181818" style="stroke:#181818;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="852" y="350.964" fill="#000" font-size="13" textLength="56.558">gerencia</text></g><?plantuml-src nLDDRzD04BtxLmpX0eVKKX6N7f3iV55eI1H7L2A9eeazjLTPxvhrR5i4-JKS-27zOwoJ9dK-940zO4lUzRoPUM_UQby85KkR46JCHNdX-mRlpbB1cLtOaaoi5PFYirZdVbyiCnJoey5RujBFbucEotbXS-ddM38PdpFAgVGJka4hsPSYpVYiIl1Oi2G8p5ShcDWQ14VPqdbX6Hz-FVpKq8J9fq6_0-q134U33vtnOEPvvLAe0Wtce7H28SRBr6YhafQMsi3BxjlghMKvcOLMJl1HQkTDzxpRzhog3pI2wmX6b0gjO5AjJi2i0TyzW0t-UTY2IUkoFNgCRkF15wTIvxGBRu78BXHnSsWNKiJDOAhsgwjdfysrAGgNXkpuf-fAOm8XIbGncGPW2S5LE0yUwrOdQOouHQO_yap6ej2pgNerkLGbLmJZRmNDNgzPEgtpUL2h0xWHxemQawvpakwqMVfEvwnnd12HkHM9S_MQ5YTnrWPJga6hlMbM_-ve-7n7mxznD7oke-5_TBHkgsKDKOnIg1HwxY8KJmFLnkaBTU7ydy4FwEFzUZjLRIg5eMJzjt4lwfrckKAhuWp6b1VIkVT4iP4Tz2zT4_VTwTx4jzOvS6tdFXhrN3pg7TO4VHSUQRaruKZC64rAV3ZifdfeDEjOIzTYkpsa7Mh35UmMF83U4qhEe9LHlAnIaBEQY9MtyhprbOLcyztZjRg0kfmr7ExWy0YEUdkrAHbIiS0z8Am1lm40?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="DESCRIPTION" style="width:1756px;height:803px;background:#1B1B1B;" width="1756px" height="803px" viewBox="0 0 1756 803" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><rect x="0" y="0" width="1756" height="803" fill="#1B1B1B" style="stroke:none;"/><g class="title" data-source-line="2"><text x="676.066" y="22.995" fill="#FFF" font-size="14" textLength="396.867" font-weight="700">Arquitetura de Computação - [NOME DO PROJETO]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o." id="ent0001" data-source-line="7"><polygon points="16,53.297,26,43.297,1731,43.297,1731,768.637,1721,778.637,16,778.637,16,53.297" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1721" y1="53.297" x2="1731" y2="43.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="16" y1="53.297" x2="1721" y2="53.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="1721" y1="53.297" x2="1721" y2="778.637" style="stroke:#E7E7E7;stroke-width:1;"/><text x="785.626" y="69.292" fill="#FFF" font-size="14" textLength="167.747" font-weight="700">AWS Region [Região]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR." id="ent0002" data-source-line="8"><polygon points="40,101.297,50,91.297,1707,91.297,1707,744.637,1697,754.637,40,754.637,40,101.297" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1697" y1="101.297" x2="1707" y2="91.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="40" y1="101.297" x2="1697" y2="101.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="1697" y1="101.297" x2="1697" y2="754.637" style="stroke:#E7E7E7;stroke-width:1;"/><text x="826.037" y="117.292" fill="#FFF" font-size="14" textLength="86.926" font-weight="700">VPC [CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome." id="ent0003" data-source-line="9"><polygon points="64,149.297,74,139.297,759,139.297,759,720.637,749,730.637,64,730.637,64,149.297" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="749" y1="149.297" x2="759" y2="139.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="64" y1="149.297" x2="749" y2="149.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="749" y1="149.297" x2="749" y2="730.637" style="stroke:#E7E7E7;stroke-width:1;"/><text x="365.462" y="165.292" fill="#FFF" font-size="14" textLength="84.075" font-weight="700">AZ [Nome]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-A.n.CIDR." id="ent0004" data-source-line="10"><polygon points="307,197.297,317,187.297,509,187.297,509,311.897,499,321.897,307,321.897,307,197.297" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="499" y1="197.297" x2="509" y2="187.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="307" y1="197.297" x2="499" y2="197.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="499" y1="197.297" x2="499" y2="321.897" style="stroke:#E7E7E7;stroke-width:1;"/><text x="340.586" y="213.292" fill="#FFF" font-size="14" textLength="126.827" font-weight="700">Subnet-Public-A</text><text x="340.586" y="229.589" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR." id="ent0006" data-source-line="13"><polygon points="88,380.897,98,370.897,500,370.897,500,696.637,490,706.637,88,706.637,88,380.897" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="490" y1="380.897" x2="500" y2="370.897" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="88" y1="380.897" x2="490" y2="380.897" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="490" y1="380.897" x2="490" y2="706.637" style="stroke:#E7E7E7;stroke-width:1;"/><text x="222.297" y="396.892" fill="#FFF" font-size="14" textLength="135.406" font-weight="700">Subnet-Private-A</text><text x="222.297" y="413.189" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A" id="ent0007" data-source-line="14"><rect x="120" y="442.897" width="348" height="231.74" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:1;" rx="2.5" ry="2.5"/><rect x="448" y="447.897" width="15" height="10" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:1;"/><rect x="446" y="449.897" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:1;"/><rect x="446" y="453.897" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:1;"/><text x="228.402" y="468.892" fill="#FFF" font-size="14" textLength="46.785" font-weight="700">[Tipo]</text><text x="228.402" y="485.189" fill="#FFF" font-size="14" textLength="131.195" font-weight="700">([InstanceType])</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-B.n.CIDR." id="ent0011" data-source-line="22"><polygon points="533,197.297,543,187.297,735,187.297,735,311.897,725,321.897,533,321.897,533,197.297" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="725" y1="197.297" x2="735" y2="187.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="533" y1="197.297" x2="725" y2="197.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="725" y1="197.297" x2="725" y2="321.897" style="stroke:#E7E7E7;stroke-width:1;"/><text x="566.668" y="213.292" fill="#FFF" font-size="14" textLength="126.663" font-weight="700">Subnet-Public-B</text><text x="566.668" y="229.589" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-B.n.CIDR." id="ent0013" data-source-line="25"><polygon points="524,442.747,534,432.747,735,432.747,735,557.337,725,567.337,524,567.337,524,442.747" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="725" y1="442.747" x2="735" y2="432.747" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="524" y1="442.747" x2="725" y2="442.747" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="725" y1="442.747" x2="725" y2="567.337" style="stroke:#E7E7E7;stroke-width:1;"/><text x="557.879" y="458.742" fill="#FFF" font-size="14" textLength="135.242" font-weight="700">Subnet-Private-B</text><text x="557.879" y="475.039" fill="#FFF" font-size="14" textLength="50.682" font-weight="700">[CIDR]</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Auto Scaling Group" id="ent0015" data-source-line="34"><polygon points="783,213.297,793,203.297,1011,203.297,1011,311.897,1001,321.897,783,321.897,783,213.297" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1001" y1="213.297" x2="1011" y2="203.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="783" y1="213.297" x2="1001" y2="213.297" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="1001" y1="213.297" x2="1001" y2="321.897" style="stroke:#E7E7E7;stroke-width:1;"/><text x="816.861" y="229.292" fill="#FFF" font-size="14" textLength="152.277" font-weight="700">Auto Scaling Group</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template" id="ent0017" data-source-line="38"><polygon points="1035,226.447,1045,216.447,1324,216.447,1324,544.187,1314,554.187,1035,554.187,1035,226.447" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1314" y1="226.447" x2="1324" y2="216.447" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="1035" y1="226.447" x2="1314" y2="226.447" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="1314" y1="226.447" x2="1314" y2="554.187" style="stroke:#E7E7E7;stroke-width:1;"/><text x="1107.735" y="242.442" fill="#FFF" font-size="14" textLength="135.529" font-weight="700">Launch Template</text></g><g class="cluster" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group" id="ent0022" data-source-line="45"><polygon points="1348,226.447,1358,216.447,1683,216.447,1683,544.187,1673,554.187,1348,554.187,1348,226.447" fill="#F5F5F5" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><line x1="1673" y1="226.447" x2="1683" y2="216.447" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="1348" y1="226.447" x2="1673" y2="226.447" style="stroke:#E7E7E7;stroke-width:1;"/><line x1="1673" y1="226.447" x2="1673" y2="554.187" style="stroke:#E7E7E7;stroke-width:1;"/><text x="1459.007" y="242.442" fill="#FFF" font-size="14" textLength="104.986" font-weight="700">Target Group</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-A.n.CIDR..ALB_A" id="ent0005" data-source-line="11"><rect x="353.06" y="243.297" width="139.873" height="62.594" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="472.933" y="248.297" width="15" height="10" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="470.933" y="250.297" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="470.933" y="254.297" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="368.06" y="276.292" fill="#FFF" font-size="14" textLength="78.224">Application</text><text x="368.06" y="292.589" fill="#FFF" font-size="14" textLength="99.873">Load Balancer</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A..Framework.App." id="ent0008" data-source-line="15"><path d="M143.71,504.397 L143.71,535.694 A2.5,2.5 0 0 0 146.21,538.194 L271.795,538.194 A2.5,2.5 0 0 0 274.295,535.694 L274.295,511.897 L264.295,501.897 L146.21,501.897 A2.5,2.5 0 0 0 143.71,504.397" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M264.295,501.897 L264.295,509.397 A2.5,2.5 0 0 0 266.795,511.897 L274.295,511.897" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="153.71" y="524.892" fill="#FFF" font-size="14" textLength="110.585">Framework/App</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A..Servidor Web." id="ent0009" data-source-line="16"><path d="M309.78,504.397 L309.78,535.694 A2.5,2.5 0 0 0 312.28,538.194 L421.712,538.194 A2.5,2.5 0 0 0 424.212,535.694 L424.212,511.897 L414.212,501.897 L312.28,501.897 A2.5,2.5 0 0 0 309.78,504.397" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M414.212,501.897 L414.212,509.397 A2.5,2.5 0 0 0 416.712,511.897 L424.212,511.897" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="319.78" y="524.892" fill="#FFF" font-size="14" textLength="94.432">Servidor Web</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-A.n.CIDR..EC2_A..Storage." id="ent0010" data-source-line="17"><path d="M171.61,616.837 L171.61,648.134 A2.5,2.5 0 0 0 174.11,650.634 L243.886,650.634 A2.5,2.5 0 0 0 246.386,648.134 L246.386,624.337 L236.386,614.337 L174.11,614.337 A2.5,2.5 0 0 0 171.61,616.837" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M236.386,614.337 L236.386,621.837 A2.5,2.5 0 0 0 238.886,624.337 L246.386,624.337" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="181.61" y="637.332" fill="#FFF" font-size="14" textLength="54.776">Storage</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Public-B.n.CIDR..ALB_B" id="ent0012" data-source-line="23"><rect x="571.06" y="243.297" width="139.873" height="62.594" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="690.933" y="248.297" width="15" height="10" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="688.933" y="250.297" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="688.933" y="254.297" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="586.06" y="276.292" fill="#FFF" font-size="14" textLength="78.224">Application</text><text x="586.06" y="292.589" fill="#FFF" font-size="14" textLength="99.873">Load Balancer</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..AZ .Nome..Subnet-Private-B.n.CIDR..EC2_B" id="ent0014" data-source-line="26"><rect x="563.13" y="488.747" width="155.732" height="62.594" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="698.862" y="493.747" width="15" height="10" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="696.862" y="495.747" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="696.862" y="499.747" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="578.13" y="521.742" fill="#FFF" font-size="14" textLength="40.817">[Tipo]</text><text x="578.13" y="538.039" fill="#FFF" font-size="14" textLength="115.732">([InstanceType])</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Auto Scaling Group.ASG" id="ent0016" data-source-line="35"><rect x="798.74" y="243.297" width="168.529" height="62.594" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;" rx="2.5" ry="2.5"/><rect x="947.269" y="248.297" width="15" height="10" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="945.269" y="250.297" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect x="945.269" y="254.297" width="4" height="2" fill="#E3F2FD" style="stroke:#E7E7E7;stroke-width:0.5;"/><text x="813.74" y="276.292" fill="#FFF" font-size="14" textLength="128.529">Min: [N] | Max: [N]</text><text x="813.74" y="292.589" fill="#FFF" font-size="14" textLength="84.396">Desired: [N]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.AMI. .AMI." id="ent0018" data-source-line="39"><path d="M1051.17,258.947 L1051.17,290.244 A2.5,2.5 0 0 0 1053.67,292.744 L1140.331,292.744 A2.5,2.5 0 0 0 1142.831,290.244 L1142.831,266.447 L1132.831,256.447 L1053.67,256.447 A2.5,2.5 0 0 0 1051.17,258.947" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M1132.831,256.447 L1132.831,263.947 A2.5,2.5 0 0 0 1135.331,266.447 L1142.831,266.447" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="1061.17" y="279.442" fill="#FFF" font-size="14" textLength="71.661">AMI: [AMI]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.Instance. .Tipo." id="ent0019" data-source-line="40"><path d="M1178.23,258.947 L1178.23,290.244 A2.5,2.5 0 0 0 1180.73,292.744 L1305.262,292.744 A2.5,2.5 0 0 0 1307.762,290.244 L1307.762,266.447 L1297.762,256.447 L1180.73,256.447 A2.5,2.5 0 0 0 1178.23,258.947" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M1297.762,256.447 L1297.762,263.947 A2.5,2.5 0 0 0 1300.262,266.447 L1307.762,266.447" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="1188.23" y="279.442" fill="#FFF" font-size="14" textLength="109.532">Instance: [Tipo]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.SG. .SG." id="ent0020" data-source-line="41"><path d="M1057.22,504.397 L1057.22,535.694 A2.5,2.5 0 0 0 1059.72,538.194 L1134.282,538.194 A2.5,2.5 0 0 0 1136.782,535.694 L1136.782,511.897 L1126.782,501.897 L1059.72,501.897 A2.5,2.5 0 0 0 1057.22,504.397" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M1126.782,501.897 L1126.782,509.397 A2.5,2.5 0 0 0 1129.282,511.897 L1136.782,511.897" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="1067.22" y="524.892" fill="#FFF" font-size="14" textLength="59.562">SG: [SG]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Launch Template.IAM. .Role." id="ent0021" data-source-line="42"><path d="M1171.66,504.397 L1171.66,535.694 A2.5,2.5 0 0 0 1174.16,538.194 L1265.832,538.194 A2.5,2.5 0 0 0 1268.332,535.694 L1268.332,511.897 L1258.332,501.897 L1174.16,501.897 A2.5,2.5 0 0 0 1171.66,504.397" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M1258.332,501.897 L1258.332,509.397 A2.5,2.5 0 0 0 1260.832,511.897 L1268.332,511.897" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="1181.66" y="524.892" fill="#FFF" font-size="14" textLength="76.672">IAM: [Role]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group.Protocol. .Protocolo." id="ent0023" data-source-line="46"><path d="M1363.7,258.947 L1363.7,290.244 A2.5,2.5 0 0 0 1366.2,292.744 L1523.798,292.744 A2.5,2.5 0 0 0 1526.298,290.244 L1526.298,266.447 L1516.298,256.447 L1366.2,256.447 A2.5,2.5 0 0 0 1363.7,258.947" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M1516.298,256.447 L1516.298,263.947 A2.5,2.5 0 0 0 1518.798,266.447 L1526.298,266.447" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="1373.7" y="279.442" fill="#FFF" font-size="14" textLength="142.598">Protocol: [Protocolo]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group.Port. .Porta." id="ent0024" data-source-line="47"><path d="M1561.41,258.947 L1561.41,290.244 A2.5,2.5 0 0 0 1563.91,292.744 L1664.086,292.744 A2.5,2.5 0 0 0 1666.586,290.244 L1666.586,266.447 L1656.586,256.447 L1563.91,256.447 A2.5,2.5 0 0 0 1561.41,258.947" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M1656.586,256.447 L1656.586,263.947 A2.5,2.5 0 0 0 1659.086,266.447 L1666.586,266.447" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="1571.41" y="279.442" fill="#FFF" font-size="14" textLength="85.176">Port: [Porta]</text></g><g class="entity" data-qualified-name="AWS Region .Regi.o..VPC .CIDR..Target Group.Health Check. .Path." id="ent0025" data-source-line="48"><path d="M1363.52,504.397 L1363.52,535.694 A2.5,2.5 0 0 0 1366.02,538.194 L1525.983,538.194 A2.5,2.5 0 0 0 1528.483,535.694 L1528.483,511.897 L1518.483,501.897 L1366.02,501.897 A2.5,2.5 0 0 0 1363.52,504.397" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><path d="M1518.483,501.897 L1518.483,509.397 A2.5,2.5 0 0 0 1520.983,511.897 L1528.483,511.897" style="stroke:#E7E7E7;stroke-width:0.5;" fill="#313139"/><text x="1373.52" y="524.892" fill="#FFF" font-size="14" textLength="144.963">Health Check: [Path]</text></g><g class="link" data-entity-1="ent0005" data-entity-2="ent0007" id="lnk26" data-source-line="53" data-link-type="dependency"><path d="M429.47,306.217 C432.87,322.917 436.95,343.997 440,362.897 C442.74,379.894 445.343,397.983 447.709,415.595 C448.893,424.401 450.017,433.089 451.07,441.461 C451.103,441.723 450.513,437.023 450.546,437.284" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ALB_A-to-EC2_A"/><polygon points="451.169,442.245,454.016,432.817,450.546,437.284,446.079,433.814,451.169,442.245" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="439" y="350.964" fill="#FFF" font-size="13" textLength="86.595">Target Group</text></g><g class="link" data-entity-1="ent0012" data-entity-2="ent0014" id="lnk27" data-source-line="54" data-link-type="dependency"><path d="M641,305.937 C641,352.587 641,436.437 641,483.317" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ALB_B-to-EC2_B"/><polygon points="641,488.317,645,479.317,641,483.317,637,479.317,641,488.317" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="642" y="350.964" fill="#FFF" font-size="13" textLength="86.595">Target Group</text></g><g class="link" data-entity-1="ent0016" data-entity-2="ent0007" id="lnk28" data-source-line="55" data-link-type="dependency"><path d="M829.36,306.257 C791.95,327.387 747.01,352.127 737,354.897 C716.63,360.527 564.99,351.807 547,362.897 C513.71,383.412 492.115,421.559 478.766,455.012 C475.429,463.375 472.607,471.445 470.247,478.872 C469.657,480.729 469.096,482.546 468.562,484.317 C468.429,484.76 469.721,480.406 469.592,480.843" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ASG-to-EC2_A"/><polygon points="468.168,485.636,474.565,478.148,469.592,480.843,466.896,475.87,468.168,485.636" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="770" y="350.964" fill="#FFF" font-size="13" textLength="56.558">gerencia</text></g><g class="link" data-entity-1="ent0016" data-entity-2="ent0014" id="lnk29" data-source-line="56" data-link-type="dependency"><path d="M869.79,306.297 C862.31,321.757 852.05,340.267 840,354.897 C795.44,408.997 735.095,455.443 691.725,485.593" style="stroke:#E7E7E7;stroke-width:1;" fill="none" id="ASG-to-EC2_B"/><polygon points="687.62,488.447,697.293,486.594,691.725,485.593,692.727,480.025,687.62,488.447" fill="#E7E7E7" style="stroke:#E7E7E7;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="852" y="350.964" fill="#FFF" font-size="13" textLength="56.558">gerencia</text></g><?plantuml-src nLDDRzD04BtxLmpX0eVKKX6N7f3iV55eI1H7L2A9geazjLTUxvhrR5i4-JKS-27zOwoJ9dMIIe1wm9QywtapyzwyrRuGAfOs8SYOo-hCzmtUdgI2Cxkq5PbOAoR59x4k_A78CnJoey4RuielyaJ7rLLf2-aNM34PdpCggF8JkaOhsK_Gv2Srxh5WIH2OhrOmiJK8Zh6ZYz8otl-w_wcX3RDFes4FkYCOJqOVUjFHmlEgNAWI3HQWT48Xndbgj5L9Hqjju6N_RVqsifpAKYkdzoYrzwP_skzwNjq7Mi5b11DAXLOmgrSdOD62xnx01lyyxi2iSzwTF4ItyU2BKwaBseMtG6INYhWzjaifudOmL_lLzRFJvjgKfKj3TlnpTQ4nWH0bgfXC2x22u2Ay2XxgLa_I6763J7_acKr5gHTpzMfshYgk2QRVIbgyNhFqEgTNGQCEu5guCshD-iv9kjKczvtEHUiu8I9p8nBdwYKjdyHP6qof0QtsfbdzkwFXynqD_yRHyBcEXl_HqQQjbZL4CKgXKXYuYr0-3jGOPoZKcVD_0JzWY7VhxLnrgHA6alNVnhrey3JB1LeLPp2befJElKUAZUnWUEwQkEzEzoQ-jSw1QpltqMZWuj7Wi2OOkl14owq9HsAcQ5BYms4trMEZMSTQkXRRxI7jM1kkORVW0VIUK786dOpYl4v1pXeYLjxAyzPN5jhjTm_NwWoQSjPmk8F38pWQxDMcP4Z50lU0i07y1W00?></g></svg></div></div>
+
+<h3 id="23-matriz-de-rastreamento">2.3. Matriz de Rastreamento<a class="headerlink" href="#23-matriz-de-rastreamento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito (Doc. Suplementar)</strong></th>
+<th style="text-align: left;"><strong>Pacote (Semana 4)</strong></th>
+<th style="text-align: left;"><strong>Classe de Análise</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">[Requisito 1]</td>
+<td style="text-align: left;">[Pacote]</td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Serviço]</td>
+<td style="text-align: left;">[Configuração]</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Requisito 2]</td>
+<td style="text-align: left;">[Pacote]</td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Serviço]</td>
+<td style="text-align: left;">[Configuração]</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Requisito 3]</td>
+<td style="text-align: left;">[Pacote]</td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Serviço]</td>
+<td style="text-align: left;">[Configuração]</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Requisito 4]</td>
+<td style="text-align: left;">[Pacote]</td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Serviço]</td>
+<td style="text-align: left;">[Configuração]</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Requisito 5]</td>
+<td style="text-align: left;">[Pacote]</td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Serviço]</td>
+<td style="text-align: left;">[Configuração]</td>
+</tr>
+<tr>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-especificacao-das-classes-de-analise">3. ESPECIFICAÇÃO DAS CLASSES DE ANÁLISE<a class="headerlink" href="#3-especificacao-das-classes-de-analise" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="31-classe-computeinstance">3.1. CLASSE: COMPUTEINSTANCE<a class="headerlink" href="#31-classe-computeinstance" title="Permanent link">&para;</a></h3>
+<h4 id="311-responsabilidade">3.1.1. Responsabilidade<a class="headerlink" href="#311-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>[Descrever a responsabilidade da classe no contexto do projeto]</p>
+<p><strong>Exemplo:</strong> Representar a instância EC2 que executa a API administrativa [Framework] da [NOME DO PROJETO], gerenciando sua configuração, disponibilidade, performance e segurança.</p>
+<h4 id="312-atributos">3.1.2. Atributos<a class="headerlink" href="#312-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instanceType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ami</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[AMI]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>vpcId</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[VPC ID]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>subnetId</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Sub-rede]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>securityGroup</code></td>
+<td style="text-align: left;">SecurityGroup</td>
+<td style="text-align: left;">[SG]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>iamRole</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Role]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ebsVolume</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Tamanho] GB [Tipo]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>userData</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Script]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>privateIp</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[IP]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>publicIp</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>monitoring</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ebsOptimized</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>detailedMonitoring</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="313-responsabilidades-metodos">3.1.3. Responsabilidades (Métodos)<a class="headerlink" href="#313-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>start()</code></td>
+<td style="text-align: left;">Inicia a instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>stop()</code></td>
+<td style="text-align: left;">Para a instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terminate()</code></td>
+<td style="text-align: left;">Termina a instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getMetrics()</code></td>
+<td style="text-align: left;">Retorna métricas de performance.</td>
+<td style="text-align: left;"><code>Metrics</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>applyUserData()</code></td>
+<td style="text-align: left;">Executa o script de inicialização.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>attachToTargetGroup(group)</code></td>
+<td style="text-align: left;">Registra a instância em um target group.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getPrivateIp()</code></td>
+<td style="text-align: left;">Retorna o IP privado da instância.</td>
+<td style="text-align: left;"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="314-relacionamentos">3.1.4. Relacionamentos<a class="headerlink" href="#314-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>AutoScalingGroup</code></td>
+<td style="text-align: left;">1..* : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>LaunchTemplate</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>SecurityGroup</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>TargetGroup</code></td>
+<td style="text-align: left;">1..* : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="315-justificativa-do-dimensionamento">3.1.5. Justificativa do Dimensionamento<a class="headerlink" href="#315-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TPS (pico)</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU por requisição</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU total</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>vCPU com margem</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória por requisição</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conexões simultâneas</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória total</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instância escolhida</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS por instância</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de instâncias (base)</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de instâncias (pico)</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="316-estimativa-de-custo">3.1.6. Estimativa de Custo<a class="headerlink" href="#316-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>EC2 ([N] × [instanceType])</strong></td>
+<td style="text-align: left;">[On-Demand/Reserved], [Multi-AZ]</td>
+<td style="text-align: left;">[Custo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS ([N] × [Tamanho] GB [Tipo])</strong></td>
+<td style="text-align: left;">[Tamanho] GB por instância</td>
+<td style="text-align: left;">[Custo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Transfer</strong></td>
+<td style="text-align: left;">[Volume]/mês</td>
+<td style="text-align: left;">[Custo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal ComputeInstance</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>[Custo]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-classe-autoscalinggroup">3.2. CLASSE: AUTOSCALINGGROUP<a class="headerlink" href="#32-classe-autoscalinggroup" title="Permanent link">&para;</a></h3>
+<h4 id="321-responsabilidade">3.2.1. Responsabilidade<a class="headerlink" href="#321-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>[Descrever a responsabilidade da classe no contexto do projeto]</p>
+<p><strong>Exemplo:</strong> Gerenciar automaticamente o número de instâncias EC2 com base na demanda, garantindo disponibilidade, performance e otimização de custos.</p>
+<h4 id="322-atributos">3.2.2. Atributos<a class="headerlink" href="#322-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Nome]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>minSize</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maxSize</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>desiredCapacity</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[ELB/EC2]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckGracePeriod</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]s</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>defaultCooldown</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]s</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>availabilityZones</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;">[AZs]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>launchTemplate</code></td>
+<td style="text-align: left;">LaunchTemplate</td>
+<td style="text-align: left;">[Nome]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>targetGroupArns</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;">[ARNs]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scalingPolicies</code></td>
+<td style="text-align: left;">List<ScalingPolicy></td>
+<td style="text-align: left;">[N] políticas</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terminationPolicies</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;">[Política]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-responsabilidades-metodos">3.2.3. Responsabilidades (Métodos)<a class="headerlink" href="#323-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>scaleOut()</code></td>
+<td style="text-align: left;">Adiciona instâncias (até maxSize).</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scaleIn()</code></td>
+<td style="text-align: left;">Remove instâncias (até minSize).</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>updateDesiredCapacity(capacity)</code></td>
+<td style="text-align: left;">Atualiza a capacidade desejada.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getInstances()</code></td>
+<td style="text-align: left;">Retorna a lista de instâncias ativas.</td>
+<td style="text-align: left;"><code>List&lt;ComputeInstance&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>attachToTargetGroup(group)</code></td>
+<td style="text-align: left;">Registra o ASG no target group.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>applyScalingPolicy(policy)</code></td>
+<td style="text-align: left;">Aplica uma política de escalonamento.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getHealthStatus()</code></td>
+<td style="text-align: left;">Retorna o status de saúde do ASG.</td>
+<td style="text-align: left;"><code>HealthStatus</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="324-relacionamentos">3.2.4. Relacionamentos<a class="headerlink" href="#324-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>ComputeInstance</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>LaunchTemplate</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>ScalingPolicy</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>TargetGroup</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="325-justificativa-do-dimensionamento">3.2.5. Justificativa do Dimensionamento<a class="headerlink" href="#325-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Capacidade base</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacidade de pico</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS por instância</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS total (base)</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS total (pico)</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tempo de scale out</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tempo de scale in</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="326-estimativa-de-custo">3.2.6. Estimativa de Custo<a class="headerlink" href="#326-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Auto Scaling Group</strong></td>
+<td style="text-align: left;">[N] instâncias base</td>
+<td style="text-align: left;">[Custo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Picos (média)</strong></td>
+<td style="text-align: left;">+[N] instâncias ([%] do tempo)</td>
+<td style="text-align: left;">[Custo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal AutoScalingGroup</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>[Custo]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33-classe-loadbalancer">3.3. CLASSE: LOADBALANCER<a class="headerlink" href="#33-classe-loadbalancer" title="Permanent link">&para;</a></h3>
+<h4 id="331-responsabilidade">3.3.1. Responsabilidade<a class="headerlink" href="#331-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>[Descrever a responsabilidade da classe no contexto do projeto]</p>
+<p><strong>Exemplo:</strong> Distribuir o tráfego de entrada entre as instâncias EC2 da API, garantindo alta disponibilidade, balanceamento de carga e terminação SSL.</p>
+<h4 id="332-atributos">3.3.2. Atributos<a class="headerlink" href="#332-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Nome]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>type</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Application/Network]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scheme</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[internet-facing/internal]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>securityGroup</code></td>
+<td style="text-align: left;">SecurityGroup</td>
+<td style="text-align: left;">[SG]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>subnets</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;">[Sub-redes]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>listeners</code></td>
+<td style="text-align: left;">List<Listener></td>
+<td style="text-align: left;">[Portas]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>certificate</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[ARN]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>idleTimeout</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]s</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deletionProtection</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>accessLogs</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dnsName</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[DNS]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="333-responsabilidades-metodos">3.3.3. Responsabilidades (Métodos)<a class="headerlink" href="#333-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>addListener(listener)</code></td>
+<td style="text-align: left;">Adiciona um listener (porta/protocolo).</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>removeListener(listener)</code></td>
+<td style="text-align: left;">Remove um listener.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getDnsName()</code></td>
+<td style="text-align: left;">Retorna o DNS name do ALB.</td>
+<td style="text-align: left;"><code>String</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheck()</code></td>
+<td style="text-align: left;">Verifica a saúde das instâncias.</td>
+<td style="text-align: left;"><code>HealthStatus</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terminateSsl()</code></td>
+<td style="text-align: left;">Termina conexões SSL/TLS.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>redirectHttpToHttps()</code></td>
+<td style="text-align: left;">Redireciona HTTP para HTTPS.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="334-relacionamentos">3.3.4. Relacionamentos<a class="headerlink" href="#334-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>LoadBalancer</code> → <code>TargetGroup</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LoadBalancer</code> → <code>SecurityGroup</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="335-justificativa-do-dimensionamento">3.3.5. Justificativa do Dimensionamento<a class="headerlink" href="#335-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tráfego de entrada</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacidade do ALB</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Latência adicional</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo do ALB</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Certificado SSL</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="336-estimativa-de-custo">3.3.6. Estimativa de Custo<a class="headerlink" href="#336-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>[ALB/NLB]</strong></td>
+<td style="text-align: left;">1 LB, Multi-AZ</td>
+<td style="text-align: left;">[Custo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LCU (Load Balancer Capacity Units)</strong></td>
+<td style="text-align: left;">[Volume]/mês</td>
+<td style="text-align: left;">[Custo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Certificado SSL (ACM)</strong></td>
+<td style="text-align: left;">Gratuito</td>
+<td style="text-align: left;">$0,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal LoadBalancer</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>[Custo]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="34-classe-targetgroup">3.4. CLASSE: TARGETGROUP<a class="headerlink" href="#34-classe-targetgroup" title="Permanent link">&para;</a></h3>
+<h4 id="341-responsabilidade">3.4.1. Responsabilidade<a class="headerlink" href="#341-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>[Descrever a responsabilidade da classe no contexto do projeto]</p>
+<p><strong>Exemplo:</strong> Agrupar instâncias EC2 para o Load Balancer, gerenciando o registro, desregistro e health check das instâncias.</p>
+<h4 id="342-atributos">3.4.2. Atributos<a class="headerlink" href="#342-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Nome]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>protocol</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[HTTP/HTTPS/TCP]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>port</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[Porta]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>vpcId</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[VPC ID]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckPath</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Path]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckInterval</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]s</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckTimeout</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]s</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthyThreshold</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unhealthyThreshold</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>stickiness</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deregistrationDelay</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]s</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="343-responsabilidades-metodos">3.4.3. Responsabilidades (Métodos)<a class="headerlink" href="#343-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>registerInstance(instance)</code></td>
+<td style="text-align: left;">Registra uma instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deregisterInstance(instance)</code></td>
+<td style="text-align: left;">Remove uma instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheck()</code></td>
+<td style="text-align: left;">Verifica a saúde das instâncias.</td>
+<td style="text-align: left;"><code>HealthStatus</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getHealthyInstances()</code></td>
+<td style="text-align: left;">Retorna instâncias saudáveis.</td>
+<td style="text-align: left;"><code>List&lt;ComputeInstance&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getUnhealthyInstances()</code></td>
+<td style="text-align: left;">Retorna instâncias não saudáveis.</td>
+<td style="text-align: left;"><code>List&lt;ComputeInstance&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="344-relacionamentos">3.4.4. Relacionamentos<a class="headerlink" href="#344-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>TargetGroup</code> → <code>ComputeInstance</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TargetGroup</code> → <code>LoadBalancer</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="345-justificativa-do-dimensionamento">3.4.5. Justificativa do Dimensionamento<a class="headerlink" href="#345-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Health Check</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Timeout</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Healthy Threshold</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unhealthy Threshold</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Deregistration Delay</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="346-estimativa-de-custo">3.4.6. Estimativa de Custo<a class="headerlink" href="#346-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Target Group</strong></td>
+<td style="text-align: left;">[Protocolo]/[Porta]</td>
+<td style="text-align: left;">$0,00 (gratuito)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal TargetGroup</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$0,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="35-classe-launchtemplate">3.5. CLASSE: LAUNCHTEMPLATE<a class="headerlink" href="#35-classe-launchtemplate" title="Permanent link">&para;</a></h3>
+<h4 id="351-responsabilidade">3.5.1. Responsabilidade<a class="headerlink" href="#351-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>[Descrever a responsabilidade da classe no contexto do projeto]</p>
+<p><strong>Exemplo:</strong> Definir a configuração padronizada para o lançamento de instâncias EC2, incluindo AMI, tipo de instância, security groups, IAM role e user data.</p>
+<h4 id="352-atributos">3.5.2. Atributos<a class="headerlink" href="#352-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Nome]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ami</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[AMI]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>instanceType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>securityGroups</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;">[SGs]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>iamRole</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Role]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>userData</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Script]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ebsOptimized</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>monitoring</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">[true/false]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>keyName</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Chave]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>blockDeviceMappings</code></td>
+<td style="text-align: left;">List<Mapping></td>
+<td style="text-align: left;">[Volume]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>metadataOptions</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[IMDSv2]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="353-responsabilidades-metodos">3.5.3. Responsabilidades (Métodos)<a class="headerlink" href="#353-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>createVersion()</code></td>
+<td style="text-align: left;">Cria uma nova versão do template.</td>
+<td style="text-align: left;"><code>LaunchTemplateVersion</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getLatestVersion()</code></td>
+<td style="text-align: left;">Retorna a versão mais recente.</td>
+<td style="text-align: left;"><code>LaunchTemplateVersion</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setDefaultVersion(version)</code></td>
+<td style="text-align: left;">Define a versão padrão.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>validateConfiguration()</code></td>
+<td style="text-align: left;">Valida a configuração do template.</td>
+<td style="text-align: left;"><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="354-relacionamentos">3.5.4. Relacionamentos<a class="headerlink" href="#354-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>LaunchTemplate</code> → <code>AutoScalingGroup</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LaunchTemplate</code> → <code>ComputeInstance</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="355-justificativa-do-dimensionamento">3.5.5. Justificativa do Dimensionamento<a class="headerlink" href="#355-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AMI</strong></td>
+<td style="text-align: left;">[AMI]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instance Type</strong></td>
+<td style="text-align: left;">[Classe]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Security Group</strong></td>
+<td style="text-align: left;">[SG]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IAM Role</strong></td>
+<td style="text-align: left;">[Role]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User Data</strong></td>
+<td style="text-align: left;">[Script]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS</strong></td>
+<td style="text-align: left;">[Volume]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="356-estimativa-de-custo">3.5.6. Estimativa de Custo<a class="headerlink" href="#356-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Launch Template</strong></td>
+<td style="text-align: left;">Configuração</td>
+<td style="text-align: left;">$0,00 (gratuito)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal LaunchTemplate</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$0,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="36-classe-scalingpolicy">3.6. CLASSE: SCALINGPOLICY<a class="headerlink" href="#36-classe-scalingpolicy" title="Permanent link">&para;</a></h3>
+<h4 id="361-responsabilidade">3.6.1. Responsabilidade<a class="headerlink" href="#361-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>[Descrever a responsabilidade da classe no contexto do projeto]</p>
+<p><strong>Exemplo:</strong> Definir as regras de escalonamento automático do Auto Scaling Group, com base em métricas de performance (CPU, memória, rede).</p>
+<h4 id="362-atributos">3.6.2. Atributos<a class="headerlink" href="#362-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Nome]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>metric</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Métrica]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>threshold</code></td>
+<td style="text-align: left;">Double</td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>adjustmentType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Tipo]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>adjustmentValue</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[Valor]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cooldown</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]s</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>evaluationPeriods</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">[N]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>statistic</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Average/Sum]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>namespace</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">[Namespace]</td>
+<td style="text-align: left;">[Justificativa]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="363-responsabilidades-metodos">3.6.3. Responsabilidades (Métodos)<a class="headerlink" href="#363-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>execute()</code></td>
+<td style="text-align: left;">Executa a política de escalonamento.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>validate()</code></td>
+<td style="text-align: left;">Valida a configuração da política.</td>
+<td style="text-align: left;"><code>Boolean</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getMetricValue()</code></td>
+<td style="text-align: left;">Retorna o valor atual da métrica.</td>
+<td style="text-align: left;"><code>Double</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="364-relacionamentos">3.6.4. Relacionamentos<a class="headerlink" href="#364-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ScalingPolicy</code> → <code>AutoScalingGroup</code></td>
+<td style="text-align: left;">1..* : 1</td>
+<td style="text-align: left;">[Descrição]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="365-justificativa-do-dimensionamento">3.6.5. Justificativa do Dimensionamento<a class="headerlink" href="#365-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Métrica</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Período de avaliação</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cooldown</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ajuste</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS por instância</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacidade de pico</strong></td>
+<td style="text-align: left;">[Cálculo]</td>
+<td style="text-align: left;">[Resultado]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="366-estimativa-de-custo">3.6.6. Estimativa de Custo<a class="headerlink" href="#366-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Scaling Policy</strong></td>
+<td style="text-align: left;">[N] políticas</td>
+<td style="text-align: left;">$0,00 (gratuito)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal ScalingPolicy</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$0,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-diagrama-de-classes-plantuml">4. DIAGRAMA DE CLASSES (PLANTUML)<a class="headerlink" href="#4-diagrama-de-classes-plantuml" title="Permanent link">&para;</a></h2>
+<p>```plantuml
+@startuml
+title Modelo de Análise (Classes) - Computação [NOME DO PROJETO]</p>
+<p>skinparam classAttributeIconSize 0
+skinparam classBackgroundColor #F5F5F5</p>
+<p>package "Computação" {</p>
+<p>class "ComputeInstance" as CI {
+    - instanceType: [Classe]
+    - ami: [AMI]
+    - vpcId: [VPC ID]
+    - subnetId: [Sub-rede]
+    - securityGroup: [SG]
+    - iamRole: [Role]
+    - ebsVolume: [Tamanho] GB [Tipo]
+    - userData: [Script]
+    - privateIp: [IP]
+    - publicIp: [true/false]
+    - monitoring: [true/false]
+    - ebsOptimized: [true/false]
+    - detailedMonitoring: [true/false]
+    + start(): void
+    + stop(): void
+    + terminate(): void
+    + getMetrics(): Metrics
+    + applyUserData(): void
+    + attachToTargetGroup(group): void
+    + getPrivateIp(): String
+  }</p>
+<p>class "AutoScalingGroup" as ASG {
+    - name: [Nome]
+    - minSize: [N]
+    - maxSize: [N]
+    - desiredCapacity: [N]
+    - healthCheckType: [Tipo]
+    - healthCheckGracePeriod: [N]
+    - defaultCooldown: [N]
+    - availabilityZones: [AZs]
+    - terminationPolicies: [Política]
+    + scaleOut(): void
+    + scaleIn(): void
+    + updateDesiredCapacity(capacity): void
+    + getInstances(): List<ComputeInstance>
+    + attachToTargetGroup(group): void
+    + applyScalingPolicy(policy): void
+    + getHealthStatus(): HealthStatus
+  }</p>
+<p>class "LoadBalancer" as LB {
+    - name: [Nome]
+    - type: [Tipo]
+    - scheme: [Scheme]
+    - securityGroup: [SG]
+    - subnets: [Sub-redes]
+    - listeners: [Portas]
+    - certificate: [ARN]
+    - idleTimeout: [N]
+    - deletionProtection: [true/false]
+    - accessLogs: [true/false]
+    - dnsName: [DNS]
+    + addListener(listener): void
+    + removeListener(listener): void
+    + getDnsName(): String
+    + healthCheck(): HealthStatus
+    + terminateSsl(): void
+    + redirectHttpToHttps(): void
+  }</p>
+<p>class "TargetGroup" as TG {
+    - name: [Nome]
+    - protocol: [Protocolo]
+    - port: [Porta]
+    - vpcId: [VPC ID]
+    - healthCheckPath: [Path]
+    - healthCheckInterval: [N]
+    - healthCheckTimeout: [N]
+    - healthyThreshold: [N]
+    - unhealthyThreshold: [N]
+    - stickiness: [true/false]
+    - deregistrationDelay: [N]
+    + registerInstance(instance): void
+    + deregisterInstance(instance): void
+    + healthCheck(): HealthStatus
+    + getHealthyInstances(): List<ComputeInstance>
+    + getUnhealthyInstances(): List<ComputeInstance>
+  }</p>
+<p>class "LaunchTemplate" as LT {
+    - name: [Nome]
+    - ami: [AMI]
+    - instanceType: [Classe]
+    - securityGroups: [SGs]
+    - iamRole: [Role]
+    - userData: [Script]
+    - ebsOptimized: [true/false]
+    - monitoring: [true/false]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
