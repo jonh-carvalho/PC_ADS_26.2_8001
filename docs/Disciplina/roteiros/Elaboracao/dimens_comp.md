@@ -592,7 +592,8 @@ package "Computação" {
     - availabilityZones: [us-east-1a, us-east-1b]
     - terminationPolicies: [OldestInstance]
     + scaleOut(): void
-    + scaleIn(): void    + updateDesiredCapacity(capacity): void
+    + scaleIn(): void
+    + updateDesiredCapacity(capacity): void
     + getInstances(): List<ComputeInstance>
     + attachToTargetGroup(group): void
     + applyScalingPolicy(policy): void

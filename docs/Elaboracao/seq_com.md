@@ -2,9 +2,11 @@
 
 ## CONSOLIDAÇÃO DA ARQUITETURA
 
-## [NOME DO PROJETO] - [DESCRIÇÃO CURTA DO PROJETO]
+### [NOME DO PROJETO] - [DESCRIÇÃO CURTA DO PROJETO]
 
 ---
+
+## Informações do Documento
 
 | **Informação do Documento** | |
 | :--- | :--- |

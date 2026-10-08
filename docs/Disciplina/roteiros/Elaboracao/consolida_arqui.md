@@ -1,8 +1,8 @@
-# MODELO DE DESIGN (DIAGRAMAS DE SEQUÊNCIA/COMUNICAÇÃO)
+# CONSOLIDAÇÃO DA ARQUITETURA
 
-## CONSOLIDAÇÃO DA ARQUITETURA
+**Modelo de Design (Diagramas de Sequência/Comunicação)**
 
-## SWIFTTRACK IOT - PLATAFORMA DE TELEMETRIA E GESTÃO LOGÍSTICA
+**SwiftTrack IoT — Plataforma de Telemetria e Gestão Logística**
 
 ---
 

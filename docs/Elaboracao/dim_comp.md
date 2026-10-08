@@ -568,7 +568,7 @@ skinparam classAttributeIconSize 0
 skinparam classBackgroundColor #F5F5F5
 
 package "Computação" {
-  
+
   class "ComputeInstance" as CI {
     - instanceType: [Classe]
     - ami: [AMI]
@@ -591,7 +591,7 @@ package "Computação" {
     + attachToTargetGroup(group): void
     + getPrivateIp(): String
   }
-  
+
   class "AutoScalingGroup" as ASG {
     - name: [Nome]
     - minSize: [N]
@@ -610,7 +610,7 @@ package "Computação" {
     + applyScalingPolicy(policy): void
     + getHealthStatus(): HealthStatus
   }
-  
+
   class "LoadBalancer" as LB {
     - name: [Nome]
     - type: [Tipo]
@@ -630,7 +630,7 @@ package "Computação" {
     + terminateSsl(): void
     + redirectHttpToHttps(): void
   }
-  
+
   class "TargetGroup" as TG {
     - name: [Nome]
     - protocol: [Protocolo]
@@ -649,7 +649,7 @@ package "Computação" {
     + getHealthyInstances(): List<ComputeInstance>
     + getUnhealthyInstances(): List<ComputeInstance>
   }
-  
+
   class "LaunchTemplate" as LT {
     - name: [Nome]
     - ami: [AMI]
@@ -659,3 +659,54 @@ package "Computação" {
     - userData: [Script]
     - ebsOptimized: [true/false]
     - monitoring: [true/false]
+    - keyName: [Chave]
+    - blockDeviceMappings: [Volume]
+    - metadataOptions: [IMDSv2]
+    + createVersion(): LaunchTemplateVersion
+    + getLatestVersion(): LaunchTemplateVersion
+    + setDefaultVersion(version): void
+    + validateConfiguration(): Boolean
+  }
+
+  class "ScalingPolicy" as SP {
+    - name: [Nome]
+    - metric: [Métrica]
+    - threshold: [Valor]
+    - adjustmentType: [Tipo]
+    - adjustmentValue: [Valor]
+    - cooldown: [N]
+    - evaluationPeriods: [N]
+    - statistic: [Average/Sum]
+    - namespace: [Namespace]
+    + execute(): void
+    + validate(): Boolean
+    + getMetricValue(): Double
+  }
+
+  CI --> ASG : é gerenciado por
+  ASG --> LT : usa
+  CI --> LT : é criado por
+  ASG --> TG : registra em
+  LB --> TG : distribui tráfego para
+  TG --> CI : monitora
+  ASG --> SP : aplica
+  LB --> CI : encaminha requisições
+}
+
+@enduml
+```
+
+---
+
+### 5. CONSIDERAÇÕES FINAIS
+
+- A arquitetura de computação deve garantir alta disponibilidade, escalabilidade horizontal e desempenho consistente para a API.
+- O dimensionamento deve ser validado com base em métricas reais de carga, latência e uso de CPU/memória.
+- O Auto Scaling Group deve ajustar a capacidade conforme a demanda, mantendo o SLA e reduzindo custos operacionais.
+- A combinação de ALB + ASG + Target Group + Launch Template proporciona uma solução estável, segura e escalável na AWS.
+
+---
+
+### 6. APÊNDICE
+
+- [Adicionar referências, cálculos detalhados, custos e justificativas específicas do projeto.]
