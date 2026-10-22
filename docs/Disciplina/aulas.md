@@ -11,9 +11,9 @@
 | Aula 07 - 17/09/2026 | :material-check:  Análise - [Pacotes](../Disciplina/docs/aula07/Aws_Security.pdf) |
 | Aula 08 - 24/09/2026 | :material-check: AP1  |
 | Aula 09 - 01/10/2026 | :material-check: [Dimensionamento](../Disciplina/docs/aula09/Dimensionamento_RDS.pdf) - RDS |
-| Aula 10 - 08/10/2026 | :material-check: S3  |
+| Aula 10 - 08/10/2026 | :material-check: [Dimensionamento de EC2](../Disciplina/docs/aula10/Arquitetura_EC2_SwiftTrack.pdf) <br> [Consolidação Arquitetura](../Disciplina/docs/aula10/SwiftTrack_IoT_Architecture_Blueprint.pdf)  |
 | Aula 11 - 15/10/2026 | :material-check: Feriado |
-| Aula 12 - 22/10/2026 | :material-check:  |
+| Aula 12 - 22/10/2026 | :material-check: [Estratégias de Deploy](../Disciplina/docs/aula12/Estratégias_de_Deploy_em_Produção.pdf) <br> [Deploy SwiftTrack](../Disciplina/docs/aula12/SwiftTrack_Zero_Downtime_Deployments.pdf) |
 | Aula 13 - 29/10/2026 | :material-check:  |
 | Aula 14 - 05/11/2026 | :material-check:  |
 | Aula 15 - 12/11/2026 | :material-check: AP2 |
