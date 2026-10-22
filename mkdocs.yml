@@ -19,10 +19,10 @@ nav:
         - Modelo de Análise (Dimensionamento BD): Disciplina\roteiros\Elaboracao\dimensionamento_rds.md
         - Modelo de Análise (Modelo de Computação): Disciplina\roteiros\Elaboracao\dimens_comp.md
         - Modelo de Design (Consolidação Arquitetural): Disciplina\roteiros\Elaboracao\consolida_arqui.md
-      - Construção:
-        - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Construcao\atividades_deploy.md
+#      - Construção:
+#        - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Construcao\atividades_deploy.md
       - Transição:
-        - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Transicao\atividades_deploy.md)
+        - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Transicao\atividades_deploy.md
 #      - Ambiente: Disciplina/ambiente.md
 #      - Roteiro:
 #        - 01- AWS: Disciplina/roteiros/02 - aws.md
