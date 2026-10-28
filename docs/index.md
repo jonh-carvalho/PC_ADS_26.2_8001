@@ -11,6 +11,14 @@ hide:
     <h1 class="bdcc-title">
       Projeto Cloud Computing
     </h1>
+<section class="bdcc-card">
+    <div class="card" markdown>
+    <a href="https://iskills.ibmec.edu.br" target="_blank"><img src="assets/iskills.png" alt="ibmec iskills" style="max-width:220px; width:auto; height:240px; border-radius:6px; align: center;" /></a>
+    </div>
+        <div class="bdcc-accent-line" aria-hidden="true"></div>
+      </section>
+
+
 
     <div class="bdcc-grid">
       <section class="bdcc-card">
