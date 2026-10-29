@@ -8,6 +8,8 @@ nav:
   - Home: index.md
   - Disciplina:
       - Aulas: Disciplina/aulas.md
+      - Roteiros:
+        - 13 - Django Sqlite no Docker EC2: Disciplina/roteiros/13 - djangosqlitedocker.md
       - Iniciação: 
         - Desafios: Disciplina/roteiros/Iniciacao/desafios.md
         - Case Template: Disciplina/roteiros/Iniciacao/case_template.md
@@ -24,7 +26,7 @@ nav:
       - Transição:
         - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Transicao\atividades_deploy.md
 #      - Ambiente: Disciplina/ambiente.md
-#      - Roteiros:
+      
 #        - 01- AWS: Disciplina/roteiros/02 - aws.md
 #        - 04 - EC2: Disciplina/roteiros/04 - ec2.md
 #        - 04 - Linux Bash: Disciplina/roteiros/04 - linux.md
@@ -33,7 +35,7 @@ nav:
 #        - 07 - BE: Disciplina/roteiros/07 - eb.md
 #        - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
-#        - 13 - Django Sqlite no Docker EC2: Disciplina/roteiros/13 - djangosqlitedocker.md
+        
 
   - Iniciação: 
     - Index: Iniciacao/index.md
