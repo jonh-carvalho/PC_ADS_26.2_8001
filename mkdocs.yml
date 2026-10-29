@@ -19,12 +19,12 @@ nav:
         - Modelo de Análise (Dimensionamento BD): Disciplina\roteiros\Elaboracao\dimensionamento_rds.md
         - Modelo de Análise (Modelo de Computação): Disciplina\roteiros\Elaboracao\dimens_comp.md
         - Modelo de Design (Consolidação Arquitetural): Disciplina\roteiros\Elaboracao\consolida_arqui.md
-#      - Construção:
-#        - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Construcao\atividades_deploy.md
+      - Construção:
+        - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Construcao\atividades_deploy.md
       - Transição:
         - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Transicao\atividades_deploy.md
 #      - Ambiente: Disciplina/ambiente.md
-#      - Roteiro:
+#      - Roteiros:
 #        - 01- AWS: Disciplina/roteiros/02 - aws.md
 #        - 04 - EC2: Disciplina/roteiros/04 - ec2.md
 #        - 04 - Linux Bash: Disciplina/roteiros/04 - linux.md
@@ -33,6 +33,8 @@ nav:
 #        - 07 - BE: Disciplina/roteiros/07 - eb.md
 #        - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
+#        - 13 - Django Sqlite no Docker EC2: Disciplina/roteiros/13 - djangosqlitedocker.md
+
   - Iniciação: 
     - Index: Iniciacao/index.md
     - Documento de Visão Preenchido: Iniciacao/dv.md
