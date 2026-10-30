@@ -285,6 +285,7 @@ Ao terminar os testes, pare o ambiente local com `docker compose down`.
 mkdir -p ~/.docker/cli-plugins/
 curl -SL https://github.com -o ~/.docker/cli-plugins/docker-compose
 chmod +x ~/.docker/cli-plugins/docker-compose
+https://www.google.com/search?q=docker+compose+up+-d+--build+na+ec2+aws&newwindow=1&sca_esv=652a474648989aa3&sxsrf=AKL5yDhQUjj4sOYhRRtvtCAezWFL0TvwYg%3A1793318348728&source=chrome.ob&fbs=ACAhTvwDHIJOqwlL4Oqvyxosc1dFIDgJZaoFWGV79uMcXVW5UVJPM_Rs8l7DPD8HG7BtN_p-qfQw5ZeNTqPOsUZWzhnSw7A8CMzwCfpv7kuD6n8St4ONbBTdDCyFCZ-NvtYjgU2aCtRcD6oRnOXP9U5jT2eVLfptyeyDzarw0xON3814IRspmxP8kmlGSqkiLpibjndbgnwmTF_jPKsm53TXMBYHLzfh8A&vsint=&aep=1&ntc=1&cs=0&sa=X&ved=2ahUKEwi5jZS5t-CXAxUTs5UCHYhbNbcQ2J8OegQIEhAD&biw=820&bih=526&dpr=1.25&mstk=AUtExfCfhPkb_NlF-gRQE1A6kdVHVWpvILxd0sr3MiFXBt8o5ZE2f_Z-r2ykc301my5KurVwdLhVfRw51PyuGpIuY9GsEBTi7IpxebOfv7XlRcMqOLgWZAh4vopEqznp6DA5NBZeY_KgaKV_OxTV6ArNpNe2OHqdWkB2s8QMmkxVZkTWB_qLfOuUmzdY2Dz_-mcVa7d-L2LMdHUvsWE7UUvMCtTqIvBntwQ05ylXFOIUXOVvJj3fpc3mcnna-Zg_LOKbobd1tKoRNUaox3l0sIbjs-KhEx_EgCjqT_vtWBq5JAZvDmzr2bZsiQFfTkP2H7U325CaBwShP3hqgg&csuir=1&mtid=z93jatUfr9LWxA-w97egBQ&udm=50
 ```
 
 No PowerShell, na pasta `minha-api`:
