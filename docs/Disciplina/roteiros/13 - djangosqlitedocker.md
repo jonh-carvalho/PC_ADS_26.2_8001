@@ -279,6 +279,14 @@ Ao terminar os testes, pare o ambiente local com `docker compose down`.
 
 ## Parte 5 - Sincronizar com o GitHub (Windows → GitHub)
 
+### Instalar Docker Compose
+
+```bash
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+```
+
 No PowerShell, na pasta `minha-api`:
 
 ```powershell
