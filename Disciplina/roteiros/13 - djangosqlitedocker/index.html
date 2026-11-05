@@ -2087,8 +2087,8 @@
 </span></code></pre></div>
 <p>No PowerShell, use <code>curl.exe</code> ou <code>Invoke-RestMethod</code>. Também é possível abrir <code>http://localhost:8000/api/tarefas/</code> no navegador.</p>
 <h3 id="testar-a-persistencia">Testar a persistência<a class="headerlink" href="#testar-a-persistencia" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker-compose<span class="w"> </span>down
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>curl<span class="w"> </span>http://localhost:8000/api/tarefas/
 </span></code></pre></div>
 <p>A tarefa criada deve continuar na lista.</p>
