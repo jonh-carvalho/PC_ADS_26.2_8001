@@ -18,13 +18,13 @@ Resultado: `http://localhost:8000/api/tarefas/` funcionando com os dados gravado
 | 1. Desenvolver | **Windows** | Partes 1 a 3: alterar os arquivos, subir o Docker e testar localmente |
 | 2. Versionar | **Windows → GitHub** | Parte 4: `git commit` e `git push` |
 | 3. Sincronizar | **GitHub → EC2** | Parte 5: `git pull` na EC2 |
-| 4. Deploy | **EC2 (Docker)** | Parte 6: criar o `.env`, `docker compose up -d --build` e testar pelo IP público |
+| 4. Deploy | **EC2 (Docker)** | Parte 6: criar o `.env`, `docker-compose up -d --build` e testar pelo IP público |
 
 ```mermaid
 flowchart LR
     A[Windows<br/>altera e testa] -->|git push| B[GitHub]
     B -->|git pull| C[EC2 AWS]
-    C -->|docker compose up| D[Django + Postgres<br/>em containers]
+    C -->|docker-compose up| D[Django + Postgres<br/>em containers]
 ```
 
 Regra: o código é alterado **somente no Windows**. A EC2 apenas recebe as mudanças via Git e executa o deploy. A única exceção é o `.env`, que contém a senha e por isso **não vai para o GitHub**: ele é criado manualmente em cada máquina.
@@ -36,7 +36,7 @@ Regra: o código é alterado **somente no Windows**. A EC2 apenas recebe as muda
 Na pasta `minha-api`, com o ambiente antigo parado:
 
 ```bash
-docker compose down
+docker-compose down
 ```
 
 ### 1.1 `requirements.txt`
@@ -123,15 +123,15 @@ volumes:
 Execute no PowerShell, na pasta `minha-api`, com o Docker Desktop em execução. Só avance para a Parte 4 depois que a API responder corretamente aqui.
 
 ```bash
-docker compose up -d --build
-docker compose logs -f web
+docker-compose up -d --build
+docker-compose logs -f web
 ```
 
 `Ctrl+C` para de acompanhar os logs; os containers continuam em execução.
 
 ```bash
 curl.exe http://localhost:8000/api/tarefas/
-curl.exe -X POST http://localhost:8000/api/tarefas/ -H "Content-Type: application/json" -d "{\"titulo\":\"Estudar Postgres\"}"
+curl -X POST http://localhost:8000/api/tarefas/ -H "Content-Type: application/json" -d '{"titulo":"Estudar Docker"}'
 curl.exe http://localhost:8000/api/tarefas/
 ```
 
@@ -142,20 +142,20 @@ curl.exe http://localhost:8000/api/tarefas/
 ### Confirmar que os dados estão no Postgres
 
 ```bash
-docker compose exec db sh -c 'psql -U $POSTGRES_USER -d $POSTGRES_DB -c "SELECT * FROM tarefas_tarefa;"'
+docker-compose exec db sh -c 'psql -U $POSTGRES_USER -d $POSTGRES_DB -c "SELECT * FROM tarefas_tarefa;"'
 ```
 
 ### Testar a persistência
 
 ```bash
-docker compose down
-docker compose up -d
+docker-compose down
+docker-compose up -d
 curl.exe http://localhost:8000/api/tarefas/
 ```
 
-A tarefa deve continuar na lista. Evite `docker compose down -v`: ele apaga o volume `pgdata`.
+A tarefa deve continuar na lista. Evite `docker-compose down -v`: ele apaga o volume `pgdata`.
 
-Ao terminar, pare o ambiente local com `docker compose down`.
+Ao terminar, pare o ambiente local com `docker-compose down`.
 
 ---
 
@@ -216,10 +216,10 @@ Use uma senha diferente da usada no Windows.
 Se o ambiente SQLite antigo ainda estiver rodando, pare-o primeiro (o volume `sqlitedata` antigo pode ser mantido ou removido depois):
 
 ```bash
-docker compose down
-docker compose up -d --build
-docker compose ps
-docker compose logs -f web
+docker-compose down
+docker-compose up -d --build
+docker-compose ps
+docker-compose logs -f web
 ```
 
 ### 6.3 Testar
@@ -234,9 +234,9 @@ O banco da EC2 começa vazio: os dados do Windows e do SQLite antigo **não** s�
 
 ### Ciclo de atualização
 
-1. **Windows**: altere o código, teste com `docker compose up -d --build` e execute `git push`.
+1. **Windows**: altere o código, teste com `docker-compose up -d --build` e execute `git push`.
 2. **EC2**: execute `git pull`.
-3. **EC2**: execute `docker compose up -d --build`.
+3. **EC2**: execute `docker-compose up -d --build`.
 
 Os dados ficam no volume `pgdata` de cada máquina; não use `down -v` na EC2 se quiser preservá-los.
 
@@ -246,17 +246,17 @@ Os dados ficam no volume `pgdata` de cada máquina; não use `down -v` na EC2 se
 
 | Ação | Onde | Comando |
 |---|---|---|
-| Ver containers | Windows / EC2 | `docker compose ps` |
-| Logs da API | Windows / EC2 | `docker compose logs -f web` |
-| Logs do banco | Windows / EC2 | `docker compose logs -f db` |
-| Shell do Postgres | Windows / EC2 | `docker compose exec db sh -c 'psql -U $POSTGRES_USER -d $POSTGRES_DB'` |
-| Parar | Windows / EC2 | `docker compose down` |
-| Parar e **apagar dados** | Windows / EC2 | `docker compose down -v` |
+| Ver containers | Windows / EC2 | `docker-compose ps` |
+| Logs da API | Windows / EC2 | `docker-compose logs -f web` |
+| Logs do banco | Windows / EC2 | `docker-compose logs -f db` |
+| Shell do Postgres | Windows / EC2 | `docker-compose exec db sh -c 'psql -U $POSTGRES_USER -d $POSTGRES_DB'` |
+| Parar | Windows / EC2 | `docker-compose down` |
+| Parar e **apagar dados** | Windows / EC2 | `docker-compose down -v` |
 
 ## Problemas comuns
 
 - **`could not translate host name "db"`**: o `POSTGRES_HOST` não é `db` ou o serviço `db` não está no Compose.
-- **`password authentication failed`**: o volume `pgdata` já foi criado com outra senha. Em ambiente de teste, rode `docker compose down -v` e suba de novo.
-- **`ModuleNotFoundError: psycopg`**: faltou `psycopg[binary]` no `requirements.txt`; rode `docker compose up -d --build`.
+- **`password authentication failed`**: o volume `pgdata` já foi criado com outra senha. Em ambiente de teste, rode `docker-compose down -v` e suba de novo.
+- **`ModuleNotFoundError: psycopg`**: faltou `psycopg[binary]` no `requirements.txt`; rode `docker-compose up -d --build`.
 - **`env file .env not found` na EC2**: o `.env` não vai pelo GitHub; crie-o conforme a Parte 6.1.
 - **Dados antigos do SQLite**: não são migrados; o Postgres começa vazio.
