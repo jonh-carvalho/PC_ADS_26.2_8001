@@ -258,8 +258,8 @@ No PowerShell, use `curl.exe` ou `Invoke-RestMethod`. Também é possível abrir
 ### Testar a persistência
 
 ```bash
-docker compose down
-docker compose up -d
+docker-compose down
+docker-compose up -d
 curl http://localhost:8000/api/tarefas/
 ```
 
