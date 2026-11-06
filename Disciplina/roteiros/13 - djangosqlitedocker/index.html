@@ -1214,17 +1214,53 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Parte 7 - Deploy com Docker (EC2)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instalar-docker-compose" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-instalar-e-iniciar-o-docker" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalar Docker Compose
+      I. Instalar e iniciar o Docker
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-permitir-que-o-usuario-use-docker-sem-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      II. Permitir que o usuário use Docker sem sudo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-instalar-o-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      III. Instalar o Docker Compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-instalar-ou-atualizar-o-docker-buildx" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV. Instalar ou atualizar o Docker Buildx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-verificar-a-instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      V. Verificar a instalação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V. Verificar a instalação">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ciclo-de-atualizacao" class="md-nav__link">
@@ -2131,21 +2167,86 @@
 <p>Se o repositório for privado, use um Personal Access Token ou uma deploy key.</p>
 <hr />
 <h2 id="parte-7-deploy-com-docker-ec2">Parte 7 - Deploy com Docker (EC2)<a class="headerlink" href="#parte-7-deploy-com-docker-ec2" title="Permanent link">&para;</a></h2>
-<h3 id="instalar-docker-compose">Instalar Docker Compose<a class="headerlink" href="#instalar-docker-compose" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.docker/cli-plugins/
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>curl<span class="w"> </span>-SL<span class="w"> </span>https://github.com<span class="w"> </span>-o<span class="w"> </span>~/.docker/cli-plugins/docker-compose
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>chmod<span class="w"> </span>+x<span class="w"> </span>~/.docker/cli-plugins/docker-composeS
+<h2 id="i-instalar-e-iniciar-o-docker">I. Instalar e iniciar o Docker<a class="headerlink" href="#i-instalar-e-iniciar-o-docker" title="Permanent link">&para;</a></h2>
+<p>Teste se o Docker já está instalado:  <br />
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker<span class="w"> </span>--version
+</span></code></pre></div></p>
+<p>Se estiver instalado, execute os comandos a seguir:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>docker
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>docker
 </span></code></pre></div>
-<p>Testar se o docker compose funciona:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>docker-compose<span class="w"> </span>version
+<p>O DNF instala automaticamente as dependências necessárias.</p>
+<h2 id="ii-permitir-que-o-usuario-use-docker-sem-sudo">II. Permitir que o usuário use Docker sem <code>sudo</code><a class="headerlink" href="#ii-permitir-que-o-usuario-use-docker-sem-sudo" title="Permanent link">&para;</a></h2>
+<p>Na imagem padrão do EC2, o usuário costuma ser <code>ec2-user</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>ec2-user
 </span></code></pre></div>
-<p>Execute na <strong>EC2</strong>, na pasta do projeto:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>docker-compose<span class="w"> </span>ps
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>web
+<p>Saia da sessão SSH e entre novamente para aplicar a associação ao grupo.
+Enquanto isso, você pode executar comandos Docker com <code>sudo</code>.</p>
+<blockquote>
+<p><strong>Atenção:</strong> o grupo <code>docker</code> concede privilégios equivalentes aos de root.
+Adicione somente usuários confiáveis.</p>
+</blockquote>
+<h2 id="iii-instalar-o-docker-compose">III. Instalar o Docker Compose<a class="headerlink" href="#iii-instalar-o-docker-compose" title="Permanent link">&para;</a></h2>
+<p>O pacote <code>docker</code> do repositório do Amazon Linux não instala necessariamente o
+Compose. Instale o plugin oficial no diretório global de plugins do Docker CLI:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nv">ARCH</span><span class="o">=</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ARCH</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">  </span>x86_64<span class="o">)</span><span class="w"> </span><span class="nv">COMPOSE_ARCH</span><span class="o">=</span>x86_64<span class="w"> </span><span class="p">;;</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">  </span>aarch64<span class="o">)</span><span class="w"> </span><span class="nv">COMPOSE_ARCH</span><span class="o">=</span>aarch64<span class="w"> </span><span class="p">;;</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">  </span>*<span class="o">)</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Arquitetura não suportada: </span><span class="nv">$ARCH</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">;;</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="k">esac</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="nv">COMPOSE_VERSION</span><span class="o">=</span>v5.7.0
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="nv">PLUGIN_DIR</span><span class="o">=</span>/usr/local/lib/docker/cli-plugins
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PLUGIN_DIR</span><span class="s2">&quot;</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-fL<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="w">  </span><span class="s2">&quot;https://github.com/docker/compose/releases/download/</span><span class="si">${</span><span class="nv">COMPOSE_VERSION</span><span class="si">}</span><span class="s2">/docker-compose-linux-</span><span class="si">${</span><span class="nv">COMPOSE_ARCH</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="w">  </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PLUGIN_DIR</span><span class="s2">/docker-compose&quot;</span>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PLUGIN_DIR</span><span class="s2">/docker-compose&quot;</span>
+</span></code></pre></div>
+<p>O plugin é instalado para todos os usuários. Para atualizar, altere
+<code>COMPOSE_VERSION</code> para a versão desejada e repita o download e o <code>chmod</code>.
+Consulte as versões publicadas em
+<a href="https://github.com/docker/compose/releases">Docker Compose releases</a>.</p>
+<h2 id="iv-instalar-ou-atualizar-o-docker-buildx">IV. Instalar ou atualizar o Docker Buildx<a class="headerlink" href="#iv-instalar-ou-atualizar-o-docker-buildx" title="Permanent link">&para;</a></h2>
+<p>O Buildx é necessário para executar builds pelo Compose. Instale o plugin
+oficial no mesmo diretório global de plugins do Docker CLI. A versão estável
+mais recente em 6 de novembro de 2026 é <code>v0.38.2</code>; consulte
+<a href="https://github.com/docker/buildx/releases">Buildx releases</a> para verificar
+atualizações antes de repetir estes comandos.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">ARCH</span><span class="o">=</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ARCH</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">  </span>x86_64<span class="o">)</span><span class="w"> </span><span class="nv">BUILDX_ARCH</span><span class="o">=</span>amd64<span class="w"> </span><span class="p">;;</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">  </span>aarch64<span class="o">)</span><span class="w"> </span><span class="nv">BUILDX_ARCH</span><span class="o">=</span>arm64<span class="w"> </span><span class="p">;;</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">  </span>*<span class="o">)</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Arquitetura não suportada: </span><span class="nv">$ARCH</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">;;</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="k">esac</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="nv">BUILDX_VERSION</span><span class="o">=</span>v0.38.2
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="nv">PLUGIN_DIR</span><span class="o">=</span>/usr/local/lib/docker/cli-plugins
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PLUGIN_DIR</span><span class="s2">&quot;</span>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-fL<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="w">  </span><span class="s2">&quot;https://github.com/docker/buildx/releases/download/</span><span class="si">${</span><span class="nv">BUILDX_VERSION</span><span class="si">}</span><span class="s2">/buildx-</span><span class="si">${</span><span class="nv">BUILDX_VERSION</span><span class="si">}</span><span class="s2">.linux-</span><span class="si">${</span><span class="nv">BUILDX_ARCH</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a><span class="w">  </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PLUGIN_DIR</span><span class="s2">/docker-buildx&quot;</span>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PLUGIN_DIR</span><span class="s2">/docker-buildx&quot;</span>
+</span></code></pre></div>
+<h2 id="v-verificar-a-instalacao">V. Verificar a instalação<a class="headerlink" href="#v-verificar-a-instalacao" title="Permanent link">&para;</a></h2>
+<p>Depois de entrar novamente na sessão (ou usando <code>sudo</code> antes de entrar no grupo):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>docker<span class="w"> </span>--version
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>version
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>docker<span class="w"> </span>buildx<span class="w"> </span>version
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>docker<span class="w"> </span>info
+</span></code></pre></div>
+<p>Confirme que <code>docker buildx version</code> mostra <code>v0.38.2</code> ou posterior. Em seguida,
+construa e inicie os serviços:</p>
+<p>Agora Execute na <strong>EC2</strong> para criar o ambiente Django/Postgres. Na pasta do projeto:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>docker-compose<span class="w"> </span>ps
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>web
 </span></code></pre></div>
 <p>Teste de qualquer máquina (inclusive o Windows):</p>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">curl</span><span class="p">.</span><span class="n">exe</span> <span class="n">http</span><span class="p">://&lt;</span><span class="n">IP_PUBLICO_EC2</span><span class="p">&gt;:</span><span class="n">8000</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">tarefas</span><span class="p">/</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">curl</span><span class="p">.</span><span class="n">exe</span> <span class="n">http</span><span class="p">://&lt;</span><span class="n">IP_PUBLICO_EC2</span><span class="p">&gt;:</span><span class="n">8000</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">tarefas</span><span class="p">/</span>
 </span></code></pre></div>
 <p>Para restringir o acesso, defina <code>DJANGO_ALLOWED_HOSTS</code> no Compose (ex.: <code>&lt;IP_PUBLICO_EC2&gt;</code>) em vez de usar <code>*</code>.</p>
 <h3 id="ciclo-de-atualizacao">Ciclo de atualização<a class="headerlink" href="#ciclo-de-atualizacao" title="Permanent link">&para;</a></h3>
@@ -2157,14 +2258,14 @@
 <p>altere o código, teste com: </p>
 </li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>git<span class="w"> </span>push
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>git<span class="w"> </span>push
 </span></code></pre></div>
 <ol>
 <li><strong>EC2</strong>: </li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>git<span class="w"> </span>pull
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>git<span class="w"> </span>pull
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
 </span></code></pre></div>
 <p>Os dados ficam no volume <code>sqlitedata</code> da EC2, separado do volume local do Windows; não use <code>down -v</code> na EC2 se quiser preservá-los.</p>
 <hr />
