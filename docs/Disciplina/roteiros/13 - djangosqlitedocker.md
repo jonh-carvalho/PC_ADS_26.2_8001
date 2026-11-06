@@ -329,21 +329,105 @@ Se o repositório for privado, use um Personal Access Token ou uma deploy key.
 
 ## Parte 7 - Deploy com Docker (EC2)
 
-### Instalar Docker Compose
+## I. Instalar e iniciar o Docker
 
+Teste se o Docker já está instalado:    
 ```bash
-mkdir -p ~/.docker/cli-plugins/
-curl -SL https://github.com -o ~/.docker/cli-plugins/docker-compose
-chmod +x ~/.docker/cli-plugins/docker-composeS
+docker --version
 ```
 
-Testar se o docker compose funciona:
+Se estiver instalado, execute os comandos a seguir:
 
 ```bash
-docker-compose version
+sudo dnf install -y docker
+sudo systemctl enable --now docker
 ```
 
-Execute na **EC2**, na pasta do projeto:
+O DNF instala automaticamente as dependências necessárias.
+
+## II. Permitir que o usuário use Docker sem `sudo`
+
+Na imagem padrão do EC2, o usuário costuma ser `ec2-user`:
+
+```bash
+sudo usermod -aG docker ec2-user
+```
+
+Saia da sessão SSH e entre novamente para aplicar a associação ao grupo.
+Enquanto isso, você pode executar comandos Docker com `sudo`.
+
+> **Atenção:** o grupo `docker` concede privilégios equivalentes aos de root.
+> Adicione somente usuários confiáveis.
+
+## III. Instalar o Docker Compose
+
+O pacote `docker` do repositório do Amazon Linux não instala necessariamente o
+Compose. Instale o plugin oficial no diretório global de plugins do Docker CLI:
+
+```bash
+ARCH=$(uname -m)
+case "$ARCH" in
+  x86_64) COMPOSE_ARCH=x86_64 ;;
+  aarch64) COMPOSE_ARCH=aarch64 ;;
+  *) echo "Arquitetura não suportada: $ARCH" >&2; exit 1 ;;
+esac
+
+COMPOSE_VERSION=v5.7.0
+PLUGIN_DIR=/usr/local/lib/docker/cli-plugins
+
+sudo mkdir -p "$PLUGIN_DIR"
+sudo curl -fL \
+  "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-linux-${COMPOSE_ARCH}" \
+  -o "$PLUGIN_DIR/docker-compose"
+sudo chmod +x "$PLUGIN_DIR/docker-compose"
+```
+
+O plugin é instalado para todos os usuários. Para atualizar, altere
+`COMPOSE_VERSION` para a versão desejada e repita o download e o `chmod`.
+Consulte as versões publicadas em
+[Docker Compose releases](https://github.com/docker/compose/releases).
+
+## IV. Instalar ou atualizar o Docker Buildx
+
+O Buildx é necessário para executar builds pelo Compose. Instale o plugin
+oficial no mesmo diretório global de plugins do Docker CLI. A versão estável
+mais recente em 6 de novembro de 2026 é `v0.38.2`; consulte
+[Buildx releases](https://github.com/docker/buildx/releases) para verificar
+atualizações antes de repetir estes comandos.
+
+```bash
+ARCH=$(uname -m)
+case "$ARCH" in
+  x86_64) BUILDX_ARCH=amd64 ;;
+  aarch64) BUILDX_ARCH=arm64 ;;
+  *) echo "Arquitetura não suportada: $ARCH" >&2; exit 1 ;;
+esac
+
+BUILDX_VERSION=v0.38.2
+PLUGIN_DIR=/usr/local/lib/docker/cli-plugins
+
+sudo mkdir -p "$PLUGIN_DIR"
+sudo curl -fL \
+  "https://github.com/docker/buildx/releases/download/${BUILDX_VERSION}/buildx-${BUILDX_VERSION}.linux-${BUILDX_ARCH}" \
+  -o "$PLUGIN_DIR/docker-buildx"
+sudo chmod +x "$PLUGIN_DIR/docker-buildx"
+```
+
+## V. Verificar a instalação
+
+Depois de entrar novamente na sessão (ou usando `sudo` antes de entrar no grupo):
+
+```bash
+docker --version
+docker compose version
+docker buildx version
+docker info
+```
+
+Confirme que `docker buildx version` mostra `v0.38.2` ou posterior. Em seguida,
+construa e inicie os serviços:
+
+Agora Execute na **EC2** para criar o ambiente Django/Postgres. Na pasta do projeto:
 
 ```bash
 docker-compose up -d --build
